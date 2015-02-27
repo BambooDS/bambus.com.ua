@@ -1,0 +1,17 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: #202020;
+    overflow: hidden !important;
+
+    -webkit-touch-callout: $green;
+    -webkit-user-select: $green;
+    -khtml-user-select: $green;
+    -moz-user-select: $green;
+    -ms-user-select: $green;
+    user-select: $green;
+}
+::-webkit-selection { color: white;  background: $green;; }
+::-moz-selection { color: white;  background: $green;; }
+::selection      { color: white;  background: $green;; }

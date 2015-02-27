@@ -1,0 +1,207 @@
+.slider-holder {
+    position: relative;
+    min-height: 352px;
+    .slider{
+        /*display: block !important; - ToDo fis sliter to fit all screen sizes*/
+        right: 0;
+        height: 100%;
+        overflow: hidden;
+        height: 100%;
+        position: absolute;
+        img{
+            max-width: none;
+        }
+    }
+}
+
+.thesis{
+    max-width: 400px;
+    padding-top: 24px;
+    min-height: 374px;
+    .icon{
+        background-image: image-url('about/icons/40x40-bambukicon.svg');
+    }
+    @media only screen and (max-width:960px){
+        min-height: 0;
+    }
+}
+
+.team{
+    position: relative;
+    margin-bottom: 24px;
+    .group{
+        width: 50%;
+        float: left;
+        &.description{
+            width: 100%;
+            padding-bottom: 48px;
+        }
+        /* transform last block to row */
+        @media #{$medium-only}  {
+            &:last-child {
+                width: 40%;
+                .man {
+                    width: 25%;
+                    &:nth-child(3){
+                        background: white;
+                    }
+                    &:nth-child(4){
+                        background: #ececec;
+                    }
+                }
+            }
+            .description-box{
+                padding: 16px 16px 0 16px;
+                .copy{
+                    width: 100%;
+                }
+            }
+        }
+        @media #{$medium-up}{
+            width: 20%;
+            &.description{
+                width: 100%;
+            }
+        }
+
+        @media #{$large}{
+            width: 20%;
+
+        }
+        .man{
+            float: left;
+            width: 50%;
+            position: relative;
+//            height: 176px;
+            overflow: hidden;
+            &:nth-child(2n),&:nth-child(3n){
+                background: #ececec;
+            }
+            &:nth-child(4n), &.placeholder{
+                background: transparent;
+            }
+            @extend %block-slide-hover-animation;
+            .front-wrapper img{
+                max-width: 100%;
+            }
+//            @media only screen and (max-width:1700px){
+//                height: auto;
+//            }
+        }
+    }
+    @media #{$medium-up} {
+        margin-bottom: 72px;
+    }
+
+}
+
+
+.job{
+
+    .icon{
+        background-image: image-url('about/icons/upload-icon.svg');
+        &:hover{
+            animation: slide-icon;
+            animation-duration: 1;
+        }
+    }
+    .vacancy {
+        overflow: hidden;
+    }
+}
+
+/* CV submit */
+    #submit-profile{
+        @include clearfix();
+        width: 300%;
+        transition: transform .3s, background-color .3s;
+        transform: translateX(-66.6666%);
+        .head{
+
+        }
+        progress{
+            position: absolute;
+            top: 49px;
+            width: 252px;
+            height: 54px;
+            outline: none;
+            border: 0;
+            opacity: .5;
+            background: none;
+            &[value="0"]{
+                display: none;
+            }
+            &::progress-value{
+                background: $green;
+            }
+            &::-webkit-progress-value{
+                background: $green;
+            }
+        }
+        input{
+            position: absolute;
+            top: 46px;
+            z-index: -1;
+            opacity: 0;
+            width: 26%;
+            height: 56px;
+        }
+        button{
+            border: none;
+            outline: none;
+            &[disabled]{
+                opacity: .3;
+            }
+        }
+        label{
+            height: 56px;
+            cursor: pointer;
+            display: block;
+            line-height: 56px;
+            padding-left: 22px;
+            font-style: italic;
+            border:1px solid rgba(255,255,255,.5);
+            background: rgba(255,255,255,.2);
+            font-size: 14px;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 10px;
+        }
+        &>div{
+            float: left;
+            width: 100 / 3 * 1%;
+        }
+        &.state-2{
+            transform: translateX(-33.3333%);
+            .icon{
+                transform: translateX(-100%);
+            }
+        }
+        &.state-3{
+            transform: translateX(0%);
+        }
+        .success,.error{display: none;}
+
+        &.success{
+            .success{display: block;}
+        }
+        &.error{
+            background: #c24034;
+            .error{display: block;}
+        }
+    }
+    .step-2{
+        .head{
+            width: 84%;
+        }
+    }
+    .step-3{
+        min-height: 1px;
+        .title{
+            width: 111%;
+            padding-left: 40px;
+        }
+    }
+

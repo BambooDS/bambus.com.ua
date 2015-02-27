@@ -1,0 +1,93 @@
+.intro{
+    // phone styles
+    color: #FFF;
+    height: 100vh;
+    background: $green;
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    .copy-text {
+        line-height: 1.3em;
+        font-family: 'Roboto';
+        font-weight: 100;
+        margin-bottom: 2em;
+        padding-right: 24px;
+        text-shadow: 1px 1px 1px grey;
+    }
+    .panda{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        img {
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: 50%;
+            z-index: 0;
+            max-width: 72%;
+            transform: translateX(-50%);
+        }
+    }
+    .copy{
+        margin-top: 28px;
+        position: relative;
+        z-index: 1;
+    }
+    .title{
+        margin-left: 48px;
+        color: inherit;
+        padding: 0;
+    }
+    .button {
+        float: left;
+    }
+
+    // phone horizontal
+    @media #{$small-only} and (orientation:landscape) {
+        .panda {
+            opacity: .15;
+        }
+        .title {
+            font-size: 36px;
+        }
+        .copy-text {
+            font-size: 22px;
+        }
+    }
+
+    // tablets and larger
+    @media #{$medium-up} {
+        height: auto;
+        min-height: 600px;
+        .wow{
+            transform: translateX(1000px);
+        }
+        .copy-text {
+            font-size: 22px;
+        }
+        .panda {
+            width: 50%;
+            left: 0;
+            height: 100%;
+            img {
+                max-width: 100%;
+            }
+        }
+        .copy {
+            width: 50%;
+            position: absolute;
+            left: 52%;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 560px;
+        }
+        .title {
+            font-size: 44px;
+            margin-left: 0;
+            padding: 0;
+        }
+    }
+    @media #{$large-up} {
+        height: 100vh;
+    }
+}

@@ -1,0 +1,124 @@
+#team-switch{
+    background: #fafafa;
+    min-height: 374px;
+    padding: 24px;
+    font-size: 12px;
+    @media #{$large} {
+        font-size: inherit;
+        padding: 24px 124px;
+    }
+    #back{
+        position: absolute;
+        z-index: -1;
+    }
+    .title{
+        line-height: 1.25em;
+        font-size: 24px;
+        font-weight: 100;
+        text-align: right;
+    }
+    .graph{
+        padding: 4.5em 0 0 0;
+    }
+    .icons{
+
+        padding-bottom: 1em;
+        text-align: justify;
+
+        &:after{
+            display: inline-block;
+            content: '';
+            width: 100%;
+            height: 1px;
+        }
+        div{
+            // fix for touch background
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-tap-highlight-color: transparent; /* For some Androids */
+            display: inline-block;
+            position: relative;
+            width: 4.125em;
+            height: 4.125em;
+            padding: 5px;
+            background: white;
+            border-radius: 100%;
+            svg{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            span{
+                left: -100%;
+                top: -2.5em;
+                transform: translateX(25%);
+                position: absolute;
+                opacity: 0;
+                display: block;
+                text-align: center;
+                width: 200%;
+                transition: opacity .3s;
+            }
+        }
+        div{
+            border-radius: 60%;
+            cursor: pointer;
+            transition: background-color .3s, box-shadow .3s;
+            &.active{
+                background-color: $green;
+                span{
+                    opacity: 1;
+                }
+                svg *{
+                    fill:white
+                }
+            }
+        }
+    }
+    .people{
+        span{
+            width: 17px;
+            height: 48px;
+            display: inline-block;
+            background: #ccc;
+            background-size: 100%;
+            //transition: background-color .1s;
+            &.active{
+                background-color: $green;
+            }
+        }
+        .man, .women {
+            text-align: justify;
+            font-size: 0;
+            &>div {
+                padding-top: 10px ;
+                font-family: $title-font-family;
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: 100;
+                width: 100%;
+                display: inline-block;
+                div{ 
+                    font-size: 24px;
+                    display: inline;
+                }
+            }
+        }
+        .man {
+            width: 43%;
+            float: left;
+            span{
+                background-image: image-url('about/icons/switch/man.svg');
+            }
+        }
+        .women {
+            width: 51%;
+            float: right;
+            div {
+                text-align: right;
+            }
+            span{
+                background-image: image-url('about/icons/switch/women.svg');
+            }
+        }
+    }
+}

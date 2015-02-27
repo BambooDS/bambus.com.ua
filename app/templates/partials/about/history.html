@@ -1,0 +1,54 @@
+{{#about.company.history}}
+<div class="row">
+    <div class="column">
+        <h1 class="title">{{title}}</h1>
+        <p class="people-text show-for-small">У команді 25 людей</p>
+    </div>
+</div>
+<div class="row">
+    <div class="graph-history">
+        <div class="scene">
+            <div class="meters">
+                <div class="years">
+                    {{#years}}
+                    <div><span>{{.}}</span></div>
+                    {{/years}}
+                </div>
+                <div class="people">
+                    {{#people}}
+                    <div class="sector"><div>{{.}}</div></div>
+                    {{/people}}
+                </div>
+            </div>
+            <div class="sectors">
+                {{#sectors}}
+                <div><img src="{{.}}" alt=""></div>
+                {{/sectors}}
+            </div>
+            <div class="projects">
+                {{#items}}
+                <div class="project" style="left:{{date}}%">
+                    <div class="icon">
+                        <div>
+                            {{#img}}
+                                <img src="{{.}}" alt="">
+                            {{/img}}
+                        </div>
+                    </div>
+                    <div class="description {{#class}}{{.}}{{/class}}">
+                        <div class="title">{{title}}</div>
+                        <p>{{text}}</p>
+                    </div>
+                </div>
+                {{/items}}
+            </div>
+        </div>
+        <ul class="legend clearfix">
+            {{#legend}}
+            <li>{{.}}</li>
+            {{/legend}}
+            <li class="project-important show-for-medium-up">{{project-important}}</li>
+        </ul>
+    </div>
+</div>
+{{/about.company.history}}

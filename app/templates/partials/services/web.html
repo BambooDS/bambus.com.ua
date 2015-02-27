@@ -1,0 +1,203 @@
+<div id="service-web" class="service-web-page">
+    {{#service_web}}
+    <div class="intro">
+        {{#intro}}
+        <div class="columns large-5">
+            <canvas id="panda-lines"></canvas>
+            <img src="&#x2F;pictures&#x2F;about&#x2F;panda&#x2F;1.jpg" alt="Promo sites" class="icon">
+        </div>
+        <div class="columns large-5">
+            <div class="text-holder">
+                <h1 class="title">
+                    {{{title}}}
+                </h1>
+                <a href="#" class="button green">{{button}}</a>
+            </div>
+        </div>
+        <div class="gradien-fix"></div>
+        <div class="scroll-icon"><div>{{scroll_text}}</div></div>
+        {{/intro}}
+    </div>
+    <div class="services-section">
+        {{#services}}
+        <div class="row"><h2 class="title heading">{{title}}</h2></div>
+        <div class="row">
+            {{#list}}
+            <div class="columns large-1-3 medim-5 small-10 single-service  {{animation}} wow"> 
+                <div class="front">
+                    <img src="{{icon}}" alt="{{title}}" class="icon">
+                    <h3 class="title">{{title}}</h3>
+                    <p class="text">{{text}}</p>
+                </div>
+                <div class="back">
+                    <div class="holder">
+                        <div class="title">{{title}}</div>
+                        <p class="text">{{text_full}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/list}}
+        </div>
+        {{/services}}
+    </div>
+    <div class="production">
+        {{#production}}
+        <div class="row"><h2 class="title heading">{{title}}</h2></div>
+        <div class="switcher">
+            <div class="image-frame">
+                {{#slides}}
+                    <div class="slide"><img src="{{.}}" alt="{{title}}"></div>
+                {{/slides}}
+            </div>
+            <div class="nav row bullets">
+                {{#steps}}
+                    <div class="step">
+                        <div class="step-holder">
+                            <div class="number-in-circle">{{number}}</div>
+                            <div class="description">
+                                <div class="title">{{{title}}}</div>
+                                <div class="text">{{{text}}}</div>
+                            </div>
+                        </div>
+                    </div>
+                {{/steps}}
+            </div>
+        </div>
+        {{/production}}
+    </div>
+    <div class="strategy">
+        {{#strategy}}
+        <div class="row">
+            <h2 class="title heading">{{title}}</h2>
+            <div class="text columns large-centered large-6">{{{text}}}</div>
+        </div>
+        <div class="row">
+            <div class="table">
+            {{#arguments-pairs}}
+                <div class="table-row">
+                {{#arguments}}<div class="block">
+                        <div class="number"><div>{{number}}</div></div>
+                        <div class="idea">
+                            <div class="text-holder">
+                                <div class="title">{{title}}</div>
+                                <p class="text">{{text}}</p>
+                            </div>
+                        </div>
+                        <div class="icon">
+                            <div class="regular {{class}}"></div>
+                            <div class="hover {{class-hover}}"></div>
+                        </div>
+                        <div class="comment-holder">
+                            <div class="comment-holder-inner">
+                                <div class="proof">{{proof}}</div>
+                                <div class="comment">{{{comment}}}</div>
+                            </div>
+                        </div>
+                    </div>{{/arguments}}
+                </div>
+            {{/arguments-pairs}}
+            </div>
+        </div>
+        {{/strategy}}
+    </div>
+    <div class="technologies">
+        {{#technologies}}
+        <div class="row"><h2 class="title heading">{{title}}</h2></div>
+        <div class="row">
+            <div class="table">
+            {{#list}}
+                <div class="table-row">
+                   {{#row}}
+                    <div class="column large-2 small-5 block">
+                        <div class="front-wrapper">
+                            <div class="front">
+                                <img src="{{icon}}" alt="{{title}}" class="icon">
+                            </div>
+                        </div>
+                        <div class="back" style="background:{{color}}">
+                            <div class="desc">
+                                <div class="title">{{title}}</div>
+                                <p class="text">{{text}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{/row}}
+                </div>
+            {{/list}}
+            </div>
+        </div>
+        {{/technologies}}
+    </div>
+    <div class="vectors">
+        {{#vectors}}
+        <div class="row"><h2 class="title heading">{{title}}</h2></div>
+        <div class="row">
+            {{#list}}
+            <div class="columns large-1-3 medim-5 small-10 single-service {{animation}} wow">
+                <div class="front">
+                    <img src="{{icon}}" alt="{{title}}" class="icon">
+                    <h3 class="title">{{title}}</h3>
+                    <p class="text">{{text}}</p>
+                </div>
+                <div class="back">
+                    <div class="holder">
+                        <div class="title">{{title}}</div>
+                        <p class="text">{{text_full}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/list}}
+        </div>
+        {{/vectors}}
+    </div>
+    <div class="process">
+        {{#process}}
+        <div class="row"><h2 class="title heading">{{title}}</h2></div>
+            <div class="graph wow">
+            {{#list}}
+                <div class="step">
+                    <div class="number-in-circle">{{number}}</div>
+                    <div class="holder">
+                        <div class="title">{{title}}</div>
+                        <div class="text">{{text}}</div>
+                    </div>
+                    <div class="lines">
+                        {{#lines}}
+                        <div class="line"></div>
+                        {{/lines}}
+                        <div class="connector"></div>
+                    </div>
+                </div>
+            {{/list}}
+            </div>
+        {{/process}}
+    </div>
+    <section class="showreel">
+        <video id="about-showreel" poster="/pictures/services/web/poster.jpg">
+            {{#showreel.sources}}
+            <source src="{{url}}" type="{{type}}">
+            {{/showreel.sources}}
+        </video>
+        <div class="play"><h2 class="title">{{showreel.text}}</h2></div>
+    </section>
+    <div class="cta">
+        {{#cta}}
+        <div class="columns large-5">
+            <canvas id="bamboo-lines"></canvas>
+        </div>
+        <div class="columns large-5">
+            <div class="text-holder">
+                <h1 class="title">
+                    {{{title}}}
+                </h1>
+                <a href="/files/brief-web.doc" class="button green">{{button}}</a>
+                <div class="contacts">
+                    <div class="phone">{{phone}}</div>
+                    <a href="{{mail}}" class="mail">{{mail}}</a>
+                </div>
+            </div>
+        </div>
+        {{/cta}}
+    </div>
+    {{/service_web}}
+</div>

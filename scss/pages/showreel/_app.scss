@@ -1,0 +1,14 @@
+.showreel-page {
+    // common settings
+
+    /* page appear section */
+    @include page(showreel);
+
+    video{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}

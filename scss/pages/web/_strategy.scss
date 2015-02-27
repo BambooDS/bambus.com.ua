@@ -1,0 +1,338 @@
+.service-web-page {
+    .strategy {
+        > .row > .text {
+            padding: 0 10px;
+        }
+        .table-row:hover {
+            .block:first-child:not(:hover) {
+                transform: translate3d(-50%, 0, 0);
+                & + .block:hover {
+                    transform: translate3d(-50%, 0, 0);
+                    @media only screen and (max-width: 1024px) {
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+                @media only screen and (max-width: 1024px) {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+            .block:first-child:hover {
+                & + .block {
+                    transform: translate3d(50%, 0, 0);
+                    @media only screen and (max-width: 1024px) {
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+            }
+        }
+        .block {
+            position: relative;
+            width: 50%;
+            background: white;
+            min-height: 208px;
+            transition: transform .3s, background-color .3s, color .3s, width .3s;
+            backface-visibility: hidden;
+            &:hover {
+                .comment-holder {
+                    background: $green;
+                    transform: translate3d(-16%, 0, 0);
+                    @media only screen and (max-width: 1024px) {
+                        transform: translate3d(-368px, 0px, 0px);
+                        z-index: 1;
+                    }
+                }
+                color: white;
+                background: $green;
+                .number div {
+                    @media only screen and (max-width: 480px) {
+                        display: none !important;
+                    }
+                }
+                .icon {
+                    background: $green;
+                    transform: translate3d(-20%, 0, 0);
+                    @media only screen and (max-width: 1280px) {
+                        left: 25%;
+                    }
+                    @media only screen and (max-width: 1024px) {
+                        transform: translate3d(0%, 0px, 0px);
+                    }
+                    @media only screen and (max-width: 980px) {
+                        left: 25%;
+                        transform: translate3d(-34%, 0px, 0px);
+                    }
+                }
+                .idea {
+                    @media only screen and (max-width: 1280px) {
+                        opacity: 0;
+                        display: none;
+                    }
+                    @media only screen and (max-width: 1024px) {
+                        display: block;
+                        opacity: 1;
+                    }
+                    @media only screen and (max-width: 980px) {
+                        opacity: 0;
+                        display: none;
+                    }
+                }
+                .regular {
+                    opacity: 0;
+                }
+                .hover {
+                    opacity: 1;
+                }
+                .comment-holder-inner {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                    transition: opacity .3s .2s, transform .3s .2s;
+                    @media only screen and (max-width: 1210px) {
+                        transform: translate3d(-30px, 0px, 0px);
+                    }
+                    @media only screen and (max-width: 1160px) {
+                        transform: translate3d(-60px, 0px, 0px);
+                    }
+                    @media only screen and (max-width: 1060px) {
+                        transform: translate3d(-80px, 0px, 0px);
+                    }
+                    @media only screen and (max-width: 1024px) {
+                        transform: translate3d(0px, 0px, 0px);
+                    }
+                }
+            }
+            @media only screen and (max-width: 1024px) {
+                border: 0;
+                width: 100%;
+                border-bottom: rgb(34, 34, 34) solid 1px;
+            }
+        }
+        .icon {
+            width: 50%;
+            left: 50%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            background: white;
+            transition: background-color .3s, transform .3s;
+            transform: translate3d(0, 0, 0);
+            div {
+                position: absolute;
+                left: calc(50% - 148px );
+                top: calc(50% - 78px );
+                width: 296px;
+                height: 156px;
+                transition: opacity .3s;
+                background: image-url("web/icons.png");
+                @media only screen and (max-width: 1024px) {
+                    left: calc(50% - 172px );
+                }
+            }
+            .hover {
+                opacity: 0;
+            }
+            .better-searching {
+                background-position: 0 0;
+            }
+            .better-searching-white {
+                background-position: 0 -156px;
+            }
+            .massive-demand {
+                background-position: 0 -312px;
+            }
+            .massive-demand-white {
+                background-position: 0 -468px;
+            }
+            .one-for-all {
+                background-position: 0 -624px;
+            }
+            .one-for-all-white {
+                background-position: 0 -780px;
+            }
+            .saving-your-money {
+                background-position: 0 -936px;
+            }
+            .saving-your-money-white {
+                background-position: 0 -1092px;
+            }
+            .sustainability {
+                background-position: 0 -1248px;
+                transform: scale(0.8);
+            }
+            .sustainability-white {
+                background-position: 0 -1404px;
+                transform: scale(0.8);
+                @media only screen and (max-width: 1060px) {
+                    background-position: 14px -1404px;
+                    background-repeat: no-repeat;
+                    width: 400px;
+                }
+                @media only screen and (max-width: 1024px) {
+                    background-position: -2px -1404px;
+                    z-index: 1;
+                }
+            }
+            .they-will-stay {
+                background-position: 0 -1560px;
+            }
+            .they-will-stay-white {
+                background-position: 0 -1716px;
+            }
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+        .text-holder {
+            z-index: 2;
+            width: 210px;
+            @extend %center-block-vertical;
+        }
+        .idea {
+            .title {
+                font-size: 24px;
+                font-weight: normal;
+                text-align: left;
+            }
+            .text {
+                margin: 8px 0 0 0;
+                padding-right: 20%;
+                padding-right: 50px;
+            }
+            text-align: left;
+            position: absolute;
+            height: 100%;
+            left: 15%;
+            width: 35%;
+            @media only screen and (max-width: 768px) {
+                width: 80%;
+                .text-holder {
+                    width: 100%;
+                }
+            }
+        }
+        .comment-holder {
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            left: 100%;
+            background: white;
+            transform: translate3d(-100%, 0, 0);
+            transition: transform .3s, background-color .3s;
+        }
+        .comment-holder-inner {
+            position: absolute;
+            height: 100%;
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+            transition: opacity .1s, transform .1s;
+        }
+        .number {
+            position: absolute;
+            z-index: 9;
+            left: 0;
+            width: 15%;
+            text-align: center;
+            height: 100%;
+            font-size: 80px;
+            font-family: $title-font-family;
+            div {
+                @extend %center-block;
+            }
+        }
+        .proof {
+            position: absolute;
+            font-size: 80px;
+            line-height: 80px;
+            font-family: $title-font-family;
+            top: calc(50% - 40px );
+        }
+        .comment {
+            font-style: italic;
+            left: 154px;
+            width: 200px;
+            line-height: 24px;
+            @extend %center-block-vertical;
+            @media only screen and (max-width: 1240px) {
+                .row .table {
+                    width: 190px;
+                }
+            }
+        }
+        @media only screen and (max-width: 1600px) {
+            .row .table {
+                margin: 56px 10px 72px;
+            }
+        }
+        @media only screen and (max-width: 1160px) {
+            .row > p.text {
+                width: 80%;
+                float: none;
+                margin: 0 auto;
+                width: 80%;
+            }
+            .row .idea p.text {
+                padding: 0;
+            }
+        }
+        @media only screen and (max-width: 1024px) {
+            .row .table {
+                border-bottom: 0 none;
+            }
+        }
+        @media only screen and (max-width: 840px) {
+            .row > p.text {
+                padding: 0 24px;
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            margin-bottom: 80px;
+            .row:first-child {
+                margin-bottom: 70px;
+            }
+            .row:last-child {
+                position: relative;
+                height: 1220px;
+                .table {
+                    border: 0;
+                }
+                .comment-holder {
+                    z-index: 0;
+                }
+            }
+            .table-row .block {
+                position: absolute;
+                overflow: hidden;
+                border: rgb(34, 34, 34) solid 1px;
+                border-bottom: 0;
+                right: 10px;
+                left: 10px;
+                width: auto;
+            }
+            .table-row:first-child {
+                .block:first-child {
+                    top: 0;
+                }
+                .block:last-child {
+                    top: 622px;
+                }
+            }
+            .table-row:nth-child(2) {
+                .block:first-child {
+                    top: 207px;
+                }
+                .block:last-child {
+                    top: 830px;
+                }
+            }
+            .table-row:last-child {
+                .block:first-child {
+                    top: 414px;
+                }
+                .block:last-child {
+                    top: 1036px;
+                    border-bottom: rgb(34, 34, 34) solid 1px;
+                }
+            }
+        }
+    }
+}

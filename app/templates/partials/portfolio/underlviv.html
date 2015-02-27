@@ -1,0 +1,164 @@
+<div class="portfolio-single-page portfolio-theme underlviv-color">
+    <!-- header-project -->
+    <div class="header-project">
+        <div class="row">
+            <div class="name-project">
+                <span class="close-page"></span>
+                <h1>Львів підземний</h1>
+            </div>
+            <div class="wrapper">
+                <div class="details">
+                    <div class="site clearfix">
+                        <div class="control">
+                            {{#prevLink}}<a class="left-button" href="/portfolio/{{prevLink}}" title="Попередній проект"></a>{{/prevLink}}
+                            {{#nextLink}}<a class="right-button" href="/portfolio/{{nextLink}}" title="Наступний проект"></a>{{/nextLink}}
+                        </div>
+                        <a href="" class="link" target="_blank">underlviv.com.ua</a>
+                    </div>
+                    <div class="customer">
+                        <p class="title">Замовник:</p>
+                        <p>"Риба" не тільки успішно пережила п'ять століть</p>
+                    </div>
+                    <div class="problem">
+                        <p class="title">Задача:</p>
+                        <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
+                    </div>
+                    <div class="tags">
+                        <p class="title">Теги:</p>
+                        <div class="block-tags">
+                            <a href="">pizza hut</a>
+                            <a href="">food</a>
+                            <a href="">italian</a>
+                            <a href="">delovery</a>
+                            <a href="">packaging</a>
+                            <a href="">express</a>
+                            <a href="">speed</a>
+                        </div>
+                    </div>
+                    <div class="team">
+                        <p class="title">Команда:</p>
+                        <div class="block-team">
+                            <span class="person">
+                                <div class="img">
+                                    <img src="/pictures/about/people/Kucherenko.png" alt="">
+                                </div>
+                                <div class="name">
+                                    <span>Art director</span>
+                                    <p>Олесь Кучеренко</p>
+                                </div>
+                            </span>
+                            <span class="person">
+                                <div class="img">
+                                    <img src="/pictures/about/people/Kobernyk.png" alt="">
+                                </div>
+                                <div class="name">
+                                    <span>Web designer</span>
+                                    <p>Юра Коберник</p>
+                                </div>
+                            </span>
+                            <span class="person">
+                                <div class="img">
+                                    <img src="/pictures/about/people/Taraban.png" alt="">
+                                </div>
+                                <div class="name">
+                                    <span>Front End Development</span>
+                                    <p>Роман Тарабань</p>
+                                </div>
+                            </span>
+                            <span class="person">
+                                <div class="img">
+                                    <img src="/pictures/about/people/Golubyatnikova.png" alt="">
+                                </div>
+                                <div class="name">
+                                    <span>Illustrator</span>
+                                    <p>Олена Голубятникова</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="visual">
+                    <span class="data">01.01.2014</span>
+                    <div class="img-block">
+                        <img src="../../../pictures/portfolio/underlviv/img-projekt.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- stop header-project -->
+    
+    <!-- presentation -->
+    {{#underlviv}}
+    <div class="presentation-underlviv">
+       
+        {{#step-1}}
+        <div class="step-1">
+            <div class="row">
+                <div class="text">
+                    <h3>{{{title}}}</h3>
+                    <h2>{{{subtitle}}}</h2>
+                    <p>{{{text}}}</p>
+                </div>
+                <div class="basic-animation wow">
+                    <div>
+                        <img class="anim-1" src="../../../pictures/portfolio/underlviv/basic-animation/slide-1.png" alt="">
+                        <img class="anim-2" src="../../../pictures/portfolio/underlviv/basic-animation/slide-2.png" alt="">
+                        <img class="anim-3" src="../../../pictures/portfolio/underlviv/basic-animation/slide-3.png" alt="">
+                        <img class="anim-4" src="../../../pictures/portfolio/underlviv/basic-animation/slide-4.png" alt="">
+                    </div>
+                </div>
+                <div class="part">
+                    <img src="../../../pictures/portfolio/underlviv/step-1-page-2.png" alt="">
+                    <table>
+                        {{#part}}
+                        <tr>
+                            <td>{{{title}}}</td>
+                            <td>{{{value}}}</td>
+                        </tr>
+                        {{/part}}
+                    </table>
+                </div>
+            </div>
+        </div>
+        {{/step-1}}
+        
+        <div class="row top-line">
+            <div class="bg-line">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+            </div>
+        </div>
+        
+        {{#step-2}}
+        <div class="step-2">
+            <div class="row">
+                <div class="bg-line">
+                    <span class="line-3"></span>
+                </div>
+                <div class="home-animation wow">
+                    <img class="anim-1" src="../../../pictures/portfolio/underlviv/anim-1.png" alt="">
+                    <img class="anim-2" src="../../../pictures/portfolio/underlviv/anim-2.png" alt="">
+                    <img class="anim-3" src="../../../pictures/portfolio/underlviv/anim-3.png" alt="">
+                </div>
+                <div class="text wow">
+                    <h2>{{{title}}}</h2>
+                    <p>{{{text}}}</p>
+                </div>
+            </div>
+        </div>
+        {{/step-2}}
+        
+    </div>
+    {{/underlviv}}
+    <!-- end presentation -->
+
+    <!-- view more works -->
+    <div class="portfolio-theme-wrapper">
+        <h3>View more works</h3>
+        <div class="row projects-list">
+
+        </div>
+    </div>
+    <!-- stop view more works -->
+</div>

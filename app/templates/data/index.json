@@ -1,0 +1,1149 @@
+{
+    "mainmenu": {
+        "home": "Головна",
+        "about": "Про студію",
+        "contacts": "Контакти",
+        "portfolio": "Портфоліо",
+        "services": "Послуги",
+        "showreel": "Showreel",
+        "services_list": [
+            {
+                "name": "Web Production",
+                "path": "/services/web",
+                "slug": "web",
+                "img": "/pictures/services/web.svg"
+            },
+            {
+                "name": "Брендінг",
+                "path": "/services/branding",
+                "slug": "branding",
+                "img": "/pictures/services/branding.svg"
+            },
+            {
+                "name": "Іллюстрація",
+                "path": "/services/illustration",
+                "slug": "illustration",
+                "img": "/pictures/services/illustration.svg"
+            }, 
+            {
+                "name": "Сувеніри",
+                "path": "/services/souveniers",
+                "slug": "souveniers",
+                "img": "/pictures/services/souveniers.svg"
+            }
+        ]
+    },
+    "home":{
+        "cta":"Відкрий",
+        "showreel": "Showreel",
+        "slider": [
+            {
+                "img_src": "/pictures/slider/2.jpg",
+                "img_src_mobile": "/pictures/slider/2_mob.jpg",
+                "img_alt": "",
+                "heading": "Енергія можливостей",
+                "text": "Вона завжди дає нам те - про що ми мріємо лише, якщо ми віримо всім серцем."
+            },
+            {
+                "img_src": "/pictures/slider/1.jpg",
+                "img_src_mobile": "/pictures/slider/1_mob.jpg",
+                "img_alt": "",
+                "heading": "Простір перетворень",
+                "text": "В якому створюєм нове і змінюючи світ навколо - ми змінюємо і себе."
+            },
+            {
+                "img_src": "/pictures/slider/3.jpg",
+                "img_src_mobile": "/pictures/slider/3_mob.jpg",
+                "img_alt": "",
+                "heading": "Політ дизайну",
+                "text": "Захоплює, даруючи нам настрій, свободу думки й волю до наступного польоту теж."
+            }
+        ]
+    }, 
+    "portfolio-tags": [
+        {
+            "name": "Web Design",
+            "path": "portfolio/web-design",
+            "class": "web-design"
+        }, {
+            "name": "Branding",
+            "path": "portfolio/branding",
+            "class": "branding"
+        }, {
+            "name": "Illustration",
+            "path": "portfolio/illustration",
+            "class": "illustration"
+        }, {
+            "name": "Production",
+            "path": "portfolio/production",
+            "class": "production"
+        }, {
+            "name": "Publishing",
+            "path": "portfolio/publishing",
+            "class": "publishing"
+        }, {
+            "name": "Souveniers",
+            "path": "portfolio/souveniers",
+            "class": "souveniers"
+        }
+    ],
+    "about": {
+        "intro": {
+            "title": "Живий дизайн змінює",
+            "copy": "Допомогаємо брендам, компаніям та людям краще комунікувати між собою. Покращуємо зовнішній світ з надією на покращення внутрішнього в кожному з нас.",
+            "cta": "Поринути"
+        },
+        "company": {
+            "history": {
+                "title": "Беремо початок з 2006",
+                "items": [
+                    {
+                        "title": "UIG",
+                        "text": "Лого та фірмстиль Універсальної Інвестиційної Групи",
+                        "date": "0",
+                        "img": [
+                            "/pictures/about/history/uig-1.png",
+                            "/pictures/about/history/uig-2.png",
+                            "/pictures/about/history/uig-3.png"
+                        ]
+                    },
+                    {
+                        "title": "Fishka",
+                        "text": "Народження бренду та корпоративного персонажу",
+                        "date": "10",
+                        "img": [
+                            "/pictures/about/history/fishka-1.png",
+                            "/pictures/about/history/fishka-2.png",
+                            "/pictures/about/history/fishka-3.png"
+                        ]
+                    },
+                    {
+                        "title": "Pulls",
+                        "text": "Народження бренду та корпоративного персонажу",
+                        "date": "20",
+                        "img": [
+                            "/pictures/about/history/pulls-1.png",
+                            "/pictures/about/history/pulls-2.png",
+                            "/pictures/about/history/pulls-3.png"
+                        ]
+                    },
+                    {
+                        "title": "УПА",
+                        "text": "Сувенірна колода бойових карт",
+                        "date": "30",
+                        "img": [
+                            "/pictures/about/history/upa-1.png",
+                            "/pictures/about/history/upa-2.png",
+                            "/pictures/about/history/upa-3.png"
+                        ]
+                    },
+                    {
+                        "title": "VENCEREMOS",
+                        "text": "Програма хорошого настрою для АЗК ОККО",
+                        "date": "55",
+                        "img": [
+                            "/pictures/about/history/venceremos-1.png",
+                            "/pictures/about/history/venceremos-2.png",
+                            "/pictures/about/history/venceremos-3.png"
+                        ]
+                    },
+                    {
+                        "title": "OKKO-inform",
+                        "text": "Анімаційний інфографічний ролик",
+                        "date": "60",
+                        "img": [
+                            "/pictures/about/history/okko-in-1.png",
+                            "/pictures/about/history/okko-in-2.png",
+                            "/pictures/about/history/okko-in-3.png"
+                        ]
+                    },
+                    {
+                        "title": "LWO.AERO",
+                        "text": "Сайт львівського аеропорту ім. Короля Данила",
+                        "date": "75",
+                        
+                        "img": [
+                            "/pictures/about/history/lwo-1.png",
+                            "/pictures/about/history/lwo-2.png",
+                            "/pictures/about/history/lwo-3.png"
+                        ]
+                    },
+                    {
+                        "title": "ОККО",
+                        "text": "Соціальний звіт компанії Галнафтогаз",
+                        "date": "85",
+                        "class": "left",
+                        "img": [
+                            "/pictures/about/history/okko-1.png",
+                            "/pictures/about/history/okko-2.png",
+                            "/pictures/about/history/okko-3.png"
+                        ]
+                    },
+                    {
+                        "title": "UNDERLVIV",
+                        "text": "Сайт проекту реконструкції львівського підземелля",
+                        "date": "95",
+                        "class": "left",
+                        "img": [
+                            "/pictures/about/history/underlviv-1.png",
+                            "/pictures/about/history/underlviv-2.png",
+                            "/pictures/about/history/underlviv-3.png"
+                        ]
+                    }
+                ],
+                "legend":[
+                    "Веб",
+                    "Анімація",
+                    "Сувеніри",
+                    "Графічний дизайн"
+                ],
+                "years":[
+                    2006,2008,2010,2012,2014
+                ],
+                "people":[
+                    25,10,5
+                ],
+                "sectors":[
+                    "/img/about/history/sector-4.svg",
+                    "/img/about/history/sector-3.svg",
+                    "/img/about/history/sector-2.svg",
+                    "/img/about/history/sector-1.svg"
+                ],
+                "project-important":"Знакові проекти"
+            },
+            "workflow": {
+                "pipeline": {
+                    "title": "На студії Бамбук, дизайн - найвища цінність",
+                    "copy": "<p>Перш за все, студія орієнтована на продукт, і в процесі його реалізації йдеться не лише про технічну якість та ідейний рівень, а й доцільність його творення впринципі. Всі найкращі роботи реалізовані студією - це <strong>командний</strong> результат, де кожен зі спеціалістів доповнив його своїми знаннями, ідеями й душею. На \"Бамбуці\" дизайн - <strong>найвища цінність</strong>, яка грунтована на багатогранному досвіді, впертих пошуках та внутрішній енергії виконавців. </p><p>Важливою ціллю в роботі студії є досягнути своєрідної унікальності, особливості дизайну, наявність якої й говоритиме про те, що робота не є серійного виробництва, а ми отримали ідеально \"пошитий професійним майстром костюм на замовлення\", що ідеально сидить на замовнику.</p><p>Професійна команда з впевненістю готова втілювати усе, що представлено у портфоліо і навіть більше. Щоразу підвищуючи рівень якості виконання, ми прагнемо віднайти нове дизайнерське трактування, яке й буде змінювати світ на більш багатогранний.</p>"
+                }
+            },
+            "ebrr": {
+                "title": "Кваліфіковані BAS ЄБРР",
+                "copy": "<p>Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках Програми ділових консультаційних послуг BAS ЄБРР.</p>"
+            },
+            "thesis": {
+                "title": "Більше ніж просто студія",
+                "copy": "Bambuk - це місце творчих людей, які працюють для створення нового, реалізації, розвитку та зміни світу навколо. Тут ми покладаємось на себе, ближнього й сукупний досвід нашої команди."
+
+            },
+            "planets":{
+                "text": "Студія",
+                "orbits":[
+                    {
+                        "id": 3,
+                        "list":[
+                            {
+                                "id":0,
+                                "text":"WOW!",
+                                "color":"#AAA"
+                                
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "list":[
+                            {
+                                "id":1,
+                                "text":"Упаковка",
+                                "img":"/pictures/about/planets/orbital_04.jpg",
+                                "color": "#383838"
+                            },
+                            {
+                                "id":2,
+                                "text":"Сувеніри",
+                                "img":"/pictures/about/planets/orbital_06.jpg",
+                                "color": "#B8B8B8"
+                            },
+                            {
+                                "id":3,
+                                "text":"Видання",
+                                "img":"/pictures/about/planets/orbital_05.jpg",
+                                "color": "#808080"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 1,
+                        "list":[
+                            {
+                                "id":4,
+                                "text":"Персонажі",
+                                "img":"/pictures/about/planets/orbital_02.jpg",
+                                "color": "#C24034"
+                            },
+                            {
+                                "id":5,
+                                "text":"Анімація",
+                                "img":"/pictures/about/planets/orbital_09.jpg",
+                                "color": "#F57F45"
+                            },
+                            {
+                                "id":6,
+                                "text":"Відео",
+                                "img":"/pictures/about/planets/orbital_08.jpg",
+                                "color": "#545454"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 0,
+                        "list":[
+                            {
+                                "id":7,
+                                "text":"Брендінг",
+                                "img":"/pictures/about/planets/orbital_07.jpg",
+                                "color": "#E0E0E0"
+                            },
+                            {
+                                "id":8,
+                                "text":"Ілюстрація",
+                                "img":"/pictures/about/planets/orbital_01.jpg",
+                                "color": "#B3BF8C"
+                            },
+                            {
+                                "id":9,
+                                "text":"Веб",
+                                "img":"/pictures/about/planets/orbital_03.jpg",
+                                "color": "#FA3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "team": {
+            "switch":{
+                "title":"Наші Уподобання",
+                "icons":{
+                        "bicycle": "Велосипедисти",                        
+                        "cakes": "Кулінари",                        
+                        "games": "Геймери",                        
+                        "music": "Музиканти",                        
+                        "cloth": "Рукодільники",                        
+                        "love":" Закохані",                        
+                        "psyho": "Психологи",                        
+                        "ski": "Лижники",                        
+                        "travel": "Туристи",                        
+                        "yoga": "Йоги"
+                }
+            },
+            "groups": [
+                {
+                    "description": {
+                        "title": "Команда",
+                        "copy": "<span>Bambuk<span> - перш за все, місце створення командного продукту, де колектив досягає набагато якіснішого результату разом, а ніж вміння та інтелект її учасників по-одинці. Об'єднання спеціалістів з різними компетенціями і є основною перевагою студії, що надає їй неймовірної гнучкості, творчості та результативності."
+                    }
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "Zavacky"
+                        },
+                        {
+                            "picture": "Zavacky"
+                        },
+                        {
+                            "picture": "Zamriy"
+                        },
+                        {
+                            "picture": "Golubyatnikova"
+                        }
+                    ]
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "Muzychuk"
+                        },
+                        {
+                            "picture": "Kobceva"
+                        },
+                        {
+                            "picture": "Kobceva"
+                        },
+                        {
+                            "picture": "Zasoba"
+                        }
+                    ]
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "Fedyna"
+                        },
+                        {
+                            "picture": "Gorbovcova"
+                        },
+                        {
+                            "picture": "Nesterenko"
+                        },
+                        {
+                            "picture": "Bazinyak"
+                        }
+                    ]
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "Shpyrka"
+                        },
+                        {
+                            "picture": "Kucherenko"
+                        },
+                        {
+                            "picture": "Cyapalo"
+                        },
+                        {
+                            "picture": "Mayhrych"
+                        }
+                    ]
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "Hlystun"
+                        },
+                        {
+                            "picture": "Vytak"
+                        },
+                        {
+                            "picture": "Voronina"
+                        },
+                        {
+                            "picture": "Pashchuk"
+                        }
+                    ]
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "Spolsky"
+                        },
+                        {
+                            "picture": "Pelehata"
+                        },
+                        {
+                            "picture": "Shyrokova"
+                        },
+                        {
+                            "picture": "Tatomur"
+                        }
+                    ]
+                }
+            ]
+        },
+        "slider": [
+            {
+                "url":"/pictures/about/slider/1.jpg",
+                "title":"Вірастюк нас любить"
+            },
+            {
+                "url":"/pictures/about/slider/2.jpg",
+                "title":"Вірастюк нас любить"
+            },
+            {
+                "url":"/pictures/about/slider/3.jpg",
+                "title":"Вірастюк нас любить"
+            },
+            {
+                "url":"/pictures/about/slider/4.jpg",
+                "title":"Вірастюк нас любить"
+            },
+            {
+                "url":"/pictures/about/slider/5.jpg",
+                "title":"Вірастюк нас любить"
+            },
+            {
+                "url":"/pictures/about/slider/6.jpg",
+                "title":"Вірастюк нас любить"
+            },
+            {
+                "url":"/pictures/about/slider/7.jpg",
+                "title":"Вірастюк нас любить"
+            }
+        ],
+        "job": {
+            "title": "Робота в студії",
+            "copy": "Надсилайте своє портфоліо та особову інформацію. Цікавить як постійна робота у команді, так і фріланс? Тоді не баріться!  Кожна людина унікальна, так само як і те, що вона творить, як бачить світ. І чим різнобарвнішим буде букет світоглядів, тим цікавішим буде результат.",
+            "vacancy": {
+                "title": "Надіслати своє резюме",
+                "copy": "В портфоліо бажано включити роботи які про Вас говорять як в творчому, так і технічному плані",
+                "help": "Для завантаження оберіть PDF-файл, або файл .doc. Розміром не більше 24 Мб",
+                "input": "Оберіть файл для завантаження",
+                "placeholder":"Оберіть файл для завантаження",
+                "error_message": "Спробуйте трішки пізніше, або зателефонуйте нам",
+                "error": "Сталась помилка =(",
+                "success": "Ваше резюме надіслано",
+                "success_message":"Дякуємо. Ми з Вами сконтактуємось!"
+            }
+        },
+        "showreel": {
+            "text": "Showreel",
+            "sources": [
+                {
+                    "type": "video/mp4",
+                    "url": "/pictures/showreel.mp4"
+                }
+            ]
+        },
+        "clients": {
+            "title": "Друзі. Партнери. Клієнти",
+            "copy": "Час підтверджує думку, що насправді співпрацюють не стільки компанії, скільки люди. І коли менеджери двох компаній починають вболівати за результат один одного - настає та магія, що й дарує задоволення в роботі та результат, до якого хочеться вертатись знову і знову.",
+            "list": [
+                {
+                    "color": "#5a1b73",
+                    "logo": "/pictures/about/logo/mondelez.svg",
+                    "title": "mondelez",
+                    "large": "true",
+                    "copy": "Один з ключових партнерів у реалізації цікавих внутрішньо-корпоративних замовлень від сувенірів до продукці. Направду солодка співпраця."
+                },
+                {
+                    "color": "#ff9000",
+                    "logo": "/pictures/about/logo/lvbs.svg",
+                    "title": "lvbs",
+                    "large": "true",
+                    "copy": "Разом з часу заснування школи - тепер вже навчального бізнес-центру №1 у Західній Україні. Від логотипу до оформлення управлінських програм з MBA."
+                },
+                {
+                    "color": "#0060af",
+                    "logo": "/pictures/about/logo/kraftfoods.svg",
+                    "title": "7 років",
+                    "large": "true",
+                    "copy": "Плідна співпраця в сфері корпоративного дизайну вже декілька років народжує нові яскраві ідеї та сміливі реалізації."
+                },
+                {"placeholder":true, "large": "true"},
+                {
+                    "color": "#93d600",
+                    "logo": "/pictures/about/logo/eskada.svg",
+                    "title": "eskada",
+                    "copy": "Молода співпраця створила цікаві дизайнерські рішення з використанням продукції компанії - шпону."
+                },
+                {
+                    "color": "#6fbb44",
+                    "logo": "/pictures/about/logo/okko.svg",
+                    "title": "okko",
+                    "large": "true",
+                    "copy": "Перший клієнт студії що понад вісім років реалізовує найрізноманітніші дизайнерські рішення та залишається основним замовником у сфері рітейлу."
+                },
+                {
+                    "color": "#8f2d54",
+                    "logo": "/pictures/about/logo/kredens.svg",
+                    "title": "kredens",
+                    "large": "true",
+                    "copy": "Тривала співпраця з мережею вишуканих кав'ярень часто радує своїх клієнтів смачними новинками та цікаво оформленими пропозиціями."
+                },
+                {
+                    "color": "#f2b51a",
+                    "logo": "/pictures/about/logo/hlibprom.svg",
+                    "title": "hlibprom",
+                    "copy": "Пройдено складний шлях ребрендингу в рамках корпоративної ідентифікації та фото хлібної продукції."
+                },
+                {
+                    "color": "#00347e",
+                    "logo": "/pictures/about/logo/kse.svg",
+                    "title": "KSE",
+                    "large": "true",
+                    "copy": "Віднедавна розпочали плідні пошуки у візуальному самовизначенні школи - цікаві проекти з точки зору представленя аналітичної та економічної складової в корпоративній продукції KSE."
+                },
+                {
+                    "color": "#33b42f",
+                    "logo": "/pictures/about/logo/mriya.svg",
+                    "title": "Мрія",
+                    "copy": "За плечима декілька цікавих проектів у сфері корпоративного дизайну, та презентаційних матеріалів."
+                },
+                {"placeholder":true},
+                {
+                    "color": "#caab00",
+                    "logo": "/pictures/about/logo/obolon.svg",
+                    "title": "obolon",
+                    "large": "true",
+                    "copy": "Один з самих національно свідомих клієнтів, з яким хочеться втілювати корпоративний дизайн - низка проектів закарбувались в пам'яті, як «особливі»."
+                },
+                {
+                    "color": "#b82924",
+                    "logo": "/pictures/about/logo/uku.svg",
+                    "title": "uku",
+                    "copy": "Прогресивні підходи в традиційних проектах - співпраця у створенні поліграфії та візуальної ідентифікації."
+                }, 
+                {
+                    "color": "#833135",
+                    "logo": "/pictures/about/logo/alaminute.svg",
+                    "title": "alaminute",
+                    "copy": "Ресторану - смачний дизайн. Тривала співпраця з мережею, як у фуд-фотографії так і в поліграфії."
+                },
+                {
+                    "color": "#ff9000",
+                    "logo": "/pictures/about/logo/svarog.svg", 
+                    "title": "svarog",
+                    "large": "true",
+                    "copy": "Редизайн логотипу, фірмового стилю та інших візуальних елментів стало початком співпраці з агропромисловою корпорацією Сварог."
+                },
+                {
+                    "color": "#6d6e71",
+                    "logo": "/pictures/about/logo/gng.svg",
+                    "title": "Галнафтогаз",
+                    "large": "true",
+                    "copy": "Найбільш тривала співпраця у сфері корпоративного дизайну, створенні торгових марок та брендів, які бачила вся Україна."
+                },
+                {"placeholder":true},
+                {
+                    "color": "#ff8301",
+                    "logo": "/pictures/about/logo/tobi.svg",
+                    "title": "tobi",
+                    "copy": "Мережа магазинів, що часто потребує створення нових брендів, в чому студія постійно їй допомагає."
+                },
+                {"placeholder":true},
+                {"placeholder":true}
+            ]
+        },
+        "cta":{
+            "copy":"Ваша компанія <strong>бажає теж?</strong>"
+        },
+        "footer": {
+            "title": "СПЕЦИФІКАЦІЯ НАШОЇ СУДІЇ",
+            "text": "Допомогаємо брендам, компаніям, людям краще комунікувати між собою - покращуємо зовнішній світ з надією на покращення внутрішнього в кожному з нас.",
+            "links": [
+                {
+                    "text": "Веб",
+                    "href": "/services/web"
+                },
+                {
+                    "text": "Брендінг",
+                    "href": "/services/branding"
+                },
+                {
+                    "text": "Ілюстрація",
+                    "href": "/services/illustration"
+                },
+                {
+                    "text": "Сувеніри",
+                    "href": "/services/souvenirs"
+                },
+                {
+                    "text": "Портфоліо",
+                    "href": "/portfolio",
+                    "class":"special"
+                }
+                
+            ]
+        }
+    },
+    "service_web":{
+        "intro":{
+            "title": "Our work represents the culmination<br> of <strong>creative vision</strong>, <strong>great ideas</strong> and<br> <strong>full dedication</strong>.",
+            "button": "Поринь у digital",
+            "scroll_text": "скрольте вниз"
+        },
+        "services": {
+            "title": "Послуги",
+            "list": [
+                {
+                    "icon": "/pictures/services/web/services/landing.svg",
+                    "title": "Landing pages",
+                    "text": "Має стратегічне значення для прогнозованих дій відвідувачів. Ви отримаєте дійсно ефективну та дієву систему стимулювання продажів.",
+                    "text_full": "Цільова сторінка дозволить підсилити ефективність реклами та збільшити аудиторію. Зручна подача корисної, змістовної інформації допоможе Вам перетворити відвідувача на Вашого клієнта.",
+                    "animation":"animatetopleft"
+                },
+                {
+                    "icon": "/pictures/services/web/services/promosites.svg",
+                    "title": "Промо-сайт",
+                    "text": "Зручний інструмент для презентації Вашого бізнесу , що дозволить розповісти про всі переваги Ваших товарів та послуг.",
+                    "text_full": "Промо-сайт - це розміщення рекламного контенту, надання усієї потрібної інформації для прийняття рішення про покупку. Він допоможе Вам сформувати базу потенційних клієнтів та налагодити роботу з ними, максимально швидко досягаючи високих результатів.",
+                    "animation":"animatetop"
+                },
+                {
+                    "icon": "/pictures/services/web/services/corporative.svg",
+                    "title": "Корпоративний сайт",
+                    "text": "Обличчя бренду чи компанії. Цей інструмент допоможе Вам забезпечити максимальну впізнаваність та відкритість.",
+                    "text_full": "Корпоративний сайт допоможе надати Вашим відвідувачам повну інформацію про Ваш бізнес. Діліться новинами, працюйте з контентом, підтримуйте комунікацію – формуйте довіру в тих, хто цікавиться Вами.",
+                    "animation":"animatetopright"
+                },
+                {
+                    "icon": "/pictures/services/web/services/e-commerce.svg",
+                    "title": "Електронна комерція",
+                    "text": "Прогресивний та дієвий спосіб продажу та купівлі товарів і послуг. Використавши кращі рішення, Ви зможете вийти на новий рівень розвитку Вашого бізнесу.",
+                    "text_full": "Електронна комерція відкриває необмежені можливості технологій та сервісів для швидких та ефективних продажів. Ми допоможемо Вам досягнути високих результатів завдяки кращим розробкам, що відповідають вимогам часу.",
+                    "animation":"animatebottomleft"
+                },
+                {
+                    "icon": "/pictures/services/web/services/services.svg",
+                    "title": "Сервісний додаток",
+                    "text": "Якісна мобільна аплікація дозволить Вам відповідати на потреби та задовольняти попит клієнтів у будь-якому місці та в будь-який час.",
+                    "text_full": "Мобільний додаток - це корисна інформація, що регулярно оновлюється та постійний доступ до пропозицій Вашої компанії. Його створення, впровадження та покращення допоможе Вам залучити більше клієнтів.",
+                    "animation":"animatebottom"
+                },
+                {
+                    "icon": "/pictures/services/web/services/cms-services.svg",
+                    "title": "Bambus CMS",
+                    "text": "Правильне поєднання та подання інформації без допомоги професіоналів та спеціальної підготовки - це можливо з CMS сервісом.",
+                    "text_full": "CMS – це основа будь-якого сайту, технологія зручності та простого використання. Вонадопомагатиме Вам ефективно вирішувати задачі з розміщення та редагування даних, швидко реагувати на зміни.",
+                    "animation":"animatebottomright"
+                }
+            ]
+        },
+        "production": {
+            "title": "Від тз до готового продукту",
+            "slides": [
+                "/pictures/services/web/slider/structure.jpg",
+                "/pictures/services/web/slider/technology.jpg",
+                "/pictures/services/web/slider/product.jpg"
+            ],
+            "steps": [
+                {
+                    "number": 1,
+                    "title": "Архітектура",
+                    "text": "Lorem Ipsum"
+                },
+                {
+                    "number": 2,
+                    "title": "Передові технології",
+                    "text": "Lorem Ipsum"
+                },
+                {
+                    "number": 3,
+                    "title": "клієнтський продукт",
+                    "text": "Lorem Ipsum"
+                }
+            ]
+        },
+        "strategy": {
+            "title": "Адаптивний дизайн: краще рішення для кожного клієнта",
+            "text": "<p>Концепція адаптивного веб-дизайну з кожним днем стає дедалі популярнішою. Потужні світові компанії обирають адаптивний дизайн для створення сайтів, роблячи ставку на найважливішу технологічну перевагу сучасності – універсальність.</p><p>Обираючи адаптивний веб-дизайн, Ви оптимізовуєте свій сайт. Відтак кожен користувач, переглядаючи Вашу веб-сторінку, отримує повну інформацію у зручний спосіб, незалежно від пристрою, який він використовує та роздільної здатності його екрану. Це означає, що власники мобільних пристроїв на рівні з користувачами звичайних комп’ютерів чи ноутбуків отримають швидкий та правильно структурований доступ до ресурсу. І навіть повільний Інтернет не стане перешкодою для доступу до Вашого сайту, якщо у його основі – адаптивний дизайн.</p>",
+            "arguments-pairs": [
+                {"arguments": [{
+                    "number": 1,
+                    "title": "Універсальний сайт",
+                    "text": "Коректне та швидке відображення сайту на усіх пристроях",
+                    "icon": "/pictures/services/web/strategy/response.svg",
+                    "proof": "90%",
+                    "class": "one-for-all",
+                    "class-hover": "one-for-all-white",
+                    "comment": "людей використовують декілька екранів, працюючи в Інтернеті"
+                },
+                {
+                    "number": 4,
+                    "title": "Гарантована стійкість",
+                    "text": "Відсутність відволікаючих відмінностей між основним та адаптивним сайтом",
+                    "icon": "/pictures/services/web/strategy/response.svg",
+                    "proof": "150",
+                    "class": "sustainability",
+                    "class-hover": "sustainability-white",
+                    "comment": "разів на день людина переводить погляд з одного пристрою на інший без втрати уваги"
+                }]},
+                {"arguments": [{
+                    "number": 2,
+                    "title": "Розумна ціна",
+                    "text": "Оперативна розробка сайту без зайвих витрат",
+                    "icon": "/pictures/services/web/strategy/responve.svg",
+                    "proof": "75%",
+                    "class": "saving-your-money",
+                    "class-hover": "saving-your-money-white",
+                    "comment": "<strong>Ви заощаджуєте</strong> на роботі розробників завдяки адаптивному дизайну"
+                },
+                {
+                    "number": 5,
+                    "title": "Зростаюча аудиторія",
+                    "text": "Утримання аудиторії завдяки стабільній роботі сайту",
+                    "icon": "/pictures/services/web/strategy/response.svg",
+                    "proof": "88%",
+                    "class": "they-will-stay",
+                    "class-hover": "they-will-stay-white",
+                    "comment": "користувачів залишаться з Вами, якщо Ваш сайт адаптовано для різних екранів"
+                }]},
+                {"arguments": [{
+                    "number": 3,
+                    "title": "Ефективний пошук",
+                    "text": "Покращення результативності мережевого пошуку",
+                    "icon": "/pictures/services/web/strategy/response.svg",
+                    "proof": "+30%",
+                    "class": "better-searching",
+                    "class-hover": "better-searching-white",
+                    "comment": "до пошуку Вашого сайту в Google - простіше ніж будь-коли!"
+                },
+                {
+                    "number": 6,
+                    "title": "Масовий попит",
+                    "text": "Задоволення потреб користувачів усього спектру пристроїв",
+                    "icon": "/pictures/services/web/strategy/responve.svg",
+                    "proof": "5.1",
+                    "class": "massive-demand",
+                    "class-hover": "massive-demand-white",
+                    "comment": "мільярд людей з 6.8 мільярдів населення планети вже мають мобільний телефон!"
+                }]}
+            ]
+        },
+        "technologies": {
+            "title": "Технології які ми використовуємо",
+            "list": [
+                {"row":[
+                {
+                    "icon": "/pictures/services/web/technologies/mysql.svg",
+                    "title": "MySQL",
+                    "text": "The world's most popular open source database",
+                    "color": "#5c87a1"
+                },
+                {
+                    "icon": "/pictures/services/web/technologies/php.svg",
+                    "title": "PHP",
+                    "text": "Більшість наших продуктів базується на даній мові, так як вона швидка і надійна у роботі",
+                    "color": "#6182b9"
+                },
+                {
+                    "icon": "/pictures/services/web/technologies/nodejs.svg",
+                    "title": "nodejs",
+                    "text": "Для неординарних та сладних рішень ми вокристовуємо nodejs у звязці із іншими технологіями",
+                    "color": "#8bc74a"
+                },
+                {
+                    "icon": "/pictures/services/web/technologies/symfony.svg",
+                    "title": "symfony",
+                    "text": "Даний фреймворк написаний на PHP є одним із найбільш надійних та високо продуктивних рішень",
+                    "color": "#231f20"
+                },
+                {
+                    "icon": "/pictures/services/web/technologies/bambuscms.svg",
+                    "title": "bambuscms",
+                    "text": "Власна модульна та зручна, система управління контетом",
+                    "color": "#8bb22b"
+                },              
+                {
+                    "icon": "/pictures/services/web/technologies/response.svg",
+                    "title": "response",
+                    "text": "Ми розумію на слідуємо принципам доступності да мобільності інформації всюди же це можливо, більшість наших рішень є кросплатформенними та зручними у користуванні з будь-якого пристрою",
+                    "color": "#2f2f2f"
+                },
+                {
+                    "icon": "/pictures/services/web/technologies/html-js-css.svg",
+                    "title": "html-js-css",
+                    "text": "Досконале знання технології дає нам можливість створювати багаті та зручні інтерфейси",
+                    "color": "#ea9a00"
+                },
+                {
+                    "icon": "/pictures/services/web/technologies/webrtc.svg",
+                    "title": "webrtc",
+                    "text": "Сучасні технології потокових данних дозволяють інструменти взаємодії та звязку, які до недавна були неможливі",
+                    "color": "#eeca2b"
+                },
+                {
+                    "icon": "/pictures/services/web/technologies/webgl.svg",
+                    "title": "webgl",
+                    "text": "Технології 3d у бразурі відкривають нові горизонти для маркетингу та розваг",
+                    "color": "#990000"
+                },
+                {
+                    "icon": "/pictures/services/web/technologies/backbone.svg",
+                    "title": "backbone",
+                    "text": "Надійний та гнучнкий фреймворк дня створення веб аплікації",
+                    "color": "#0372b4"
+                }]}
+            ]
+        },
+        "vectors": {
+            "title": "Напрямки руху",
+            "list": [
+                {
+                    "icon": "/pictures/services/web/vector/mobile-app.svg",
+                    "title": "Мобільні додатки",
+                    "text": "Від сучасного до прогресивного, від статичного до мобільного та гнучкого. Додатки для мобільних пристроїв – це нові можливості для Вашого бізнесу.",
+                    "text_full": "Ми допоможемо вам презентувати Ваш бізнес та знайдемо найзручніший спосіб для того, щоб Ви могли ділитися потрібною інформацією саме з Вашою цільовою аудиторією. Комунікація, просування бренду, продажі: мобільні додатки – це комплексне рішення для Вас.",
+                    "animation":"animatetopleft"
+                },
+                {
+                    "icon": "/pictures/services/web/vector/games.svg",
+                    "title": "Ігри",
+                    "text": "Прагнете випередити очікування клієнта та запропонувати йому щось інноваційне? Ми розробимо для Вас гру, яка здивує та захопить увагу Вашої аудиторії.",
+                    "text_full": "Презентуйте свій бізнес нестандартно: ми навчимо Вас використовувати ігри для промоції Вашого бренду, підтримки інтересу до Вашого бізнесу в існуючих клієнтів та залучення нового сегменту аудиторії.",
+                    "animation":"animatetop"
+                },
+                {
+                    "icon": "/pictures/services/web/vector/3d-virtual.svg",
+                    "title": "3D Virtual",
+                    "text": "Використання найсучасніших технологій - запорука успішного розвитку Вашої справи. 3D Virtual дозволить Вам розповісти аудиторії про свій бізнес та виокремити себе з-поміж інших компаній Вашої галузі.",
+                    "text_full": "За допомоги технологій 3D Virtual Ви зможете запам'ятатися клієнтам не лише якісної пропозицією, а й оригінальним підходом до ведення бізнесу. Креативність технології дозволить Вам стимулювати ріст продажів на довгу перспективу.",
+                    "animation":"animatetopright"
+                },
+                {
+                    "icon": "/pictures/services/web/vector/crm-system.svg",
+                    "title": "CRM System (CRM-система)",
+                    "text": "Успішність бізнесу залежить від ефективності Вашої взаємодії з замовником. Впровадження CRM-системи у Вашій компанії дозволить автоматизувати важливі комунікаційні процеси.",
+                    "text_full": "Оптимізація маркетингу, покращення обслуговування клієнтів, збільшення продажів - ми  знаємо як вирішити одразу усі ці задачі. Прикладне ПЗ - CRM-система - дозволить Вам вивчити аудиторію та запропонувати їй саме те, чого вона потребує.",
+                    "animation":"animatebottomleft"
+                },
+                {
+                    "icon": "/pictures/services/web/vector/digital-campanions.svg",
+                    "title": "Digital companion",
+                    "text": "Цифрові технології - це доступність та зрозумілість. Корисна інформація, що подається зручно - найдієвіший спосіб роботи з Вашим клієнтом.",
+                    "text_full": "Digital companion у Вашому бізнесі - це ефективний маркетинг та комплексність. Ми допоможемо Вам досягнути високих результатів та збільшити прибутки, запровадивши у Ваш бізнес промоційні рішення, цікаві та зручні для будь-якого клієнта.",
+                    "animation":"animatebottom"
+                },
+                {
+                    "icon": "/pictures/services/web/vector/etc.svg",
+                    "title": "ETC",
+                    "text": "Бажаєте запровадити у Ваш бізнес щось незвичне? Ми щодня продукуємо нові дієві рішення і допоможемо Вам з креативними ідеями та їх втіленням.",
+                    "text_full": "Якщо Ви відкриті до інновацій і хочете презентувати та вести свій бізнес із урахуванням найсвіжіших світових бізнес-трендів – звертайтеся до нас. Ми знаємо як зробити Вашу справу успішною, відомою та цікавою!",
+                    "animation":"animatebottomright"
+                }
+            ]
+        },
+        "process": {
+            "title": "Організація",
+            "copy": "",
+            "list": [
+                {
+                    "number": 1,
+                    "title": "Аналітика бізнес-процесів",
+                    "text": "This is Photoshop's version  of Lorem Ipsum. Proin",
+                    "lines":[1,1,1,1,1]
+                },
+                {
+                    "number": 2,
+                    "title": "Проектування UX та UI",
+                    "text": "This is Photoshop's version  of Lorem Ipsum. Proin",
+                    "lines":[1,1,1,1]
+                },
+                {
+                    "number": 3,
+                    "title": "Frontend прогармування",
+                    "text": "",
+                    "lines":[1,1,1]
+                },
+                {
+                    "number": 4,
+                    "title": "Backend прогармування",
+                    "text": "Розробка серверної частини програми",
+                    "lines":[1,1]
+                },
+                {
+                    "number": 5,
+                    "title": "Тестування",
+                    "text": "This is Photoshop's version  of Lorem Ipsum. Proin",
+                    "lines":[1]
+                },
+                {
+                    "number": 6,
+                    "title": "Підтримка",
+                    "text": "This is Photoshop's version  of Lorem Ipsum. Proin",
+                    "lines":[1]
+                }
+            ]
+        },
+        "cta": {
+            "title": "Our work represents the culmination<br> of <strong>creative vision</strong>, <strong>great ideas</strong> and<br> <strong>full dedication</strong>.",
+            "button": "Завантажити бріф",
+            "phone": "т/ф 032. 2420460",
+            "mail": "office.bambuk@gmail.com"
+        },
+        "showreel": {
+            "text": "Showreel",
+            "sources": [
+                {
+                    "type": "video/mp4",
+                    "url": "/pictures/showreel-web.mp4"
+                }
+            ]
+        }
+    },
+    "showreel":{
+        "sources": [
+            {
+                "type": "video/mp4",
+                "url": "/pictures/showreel.mp4"
+            }
+        ]
+    },
+    "404page":{
+        "text": {
+             "alert-text": "Oh No!",
+             "massage-text": "The angry panda drop <br/> kicked one of our services!",
+             "notfound-text": "Page was not found",
+             "bottom-text": "Lorem Ipsum - це текст-\"риба\", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною \"рибою\" аж з XVI сторіччя, коли невідомий друкар"
+         }
+    },
+    "nosupport":{
+        "text": {
+             "main-text": "Sorry your browser does not support our functionality"
+         }
+    },
+    
+    "aeroport-lviv": {
+        "step-1": {
+            "step-1-title": "Будова головної сторінки",
+            "step-1-text": "Ідея головної сторінки – коректне відображення онлайн табла та спрощення доступу до основних сервісів сайту. Розроблено зрозумілу та зручну навігацію. Користувачі ресурсу отримують швидкий доступ до усієї найважливішої інформації, пов’язаної з мандрівкою – точного часу, актуальної погоди, розкладу, що оновлюється кожні 30 секунд, достовірної інформації про рейси за попередній, сьогоднішній та наступний день. Також користувачі сайту можуть з легкістю ознайомитися з усіма сервісами аеропорту та рекламними пропозиціями. Сайт також передбачає соціальний блок та доступ до соціальних мереж, які дозволять подорожуючим залишатися на зв’язку, обмінюватися інформацією та мати доступ до розваг, що роблять очікування в аеропорті невідчутним." ,
+            "remote-elements-1": "Футер",
+            "remote-elements-2": "Онлайн табло",
+            "remote-elements-3": "Шапка сайту",
+            "remote-elements-4": "Ротаційний банер",
+            "remote-elements-5": "Сервіси аеропорту",
+            "remote-elements-6": "Соціальний додаток"
+        },
+        "step-3": {
+            "step-3-title": "КАРТА АЕРОПОРТУ",
+            "step-3-text": "Карта аеропорту схематично і точно відображає усі приміщення. Логічно та доступно у ній поєднано плани поверхів та маркіровані функціональні зони. Цікаві дизайнерські рішення в оформленні карти та зручна подача інформації допоможуть подорожуючому з легкістю зорієнтуватися на місці. Саме ця карта отримала визнання та використовується у буклетах, флаєрах аеропорту та іншій фірмовій поліграфії.",
+            "left-details": [
+                {
+                    "class": "item-1",
+                    "text": "Кафе"
+                }, {
+                    "class": "item-2",
+                    "text": "Туалети"
+                }, {
+                    "class": "item-3",
+                    "text": "Таксі"
+                }, {
+                    "class": "item-4",
+                    "text": "Довідка міста"
+                }, {
+                    "class": "item-5",
+                    "text": "Продаж авіаквитків"
+                }, {
+                    "class": "item-6",
+                    "text": "Виліт"
+                }, {
+                    "class": "item-7",
+                    "text": "Стійка реєстрації для негабаритного багажу"
+                }, {
+                    "class": "item-8",
+                    "text": "Автобусна зупинка"
+                }, {
+                    "class": "item-9",
+                    "text": "Довідка Аеропорту"
+                }, {
+                    "class": "item-10",
+                    "text": "Інформаційні кіоски"
+                }, {
+                    "class": "item-11",
+                    "text": "Приліт"
+                }, {
+                    "class": "item-12",
+                    "text": "Медпункт"
+                }, {
+                    "class": "item-13",
+                    "text": "Паркінг"
+                }, {
+                    "class": "item-14",
+                    "text": "Тікет-офіси авіакомпаній"
+                }, {
+                    "class": "item-15",
+                    "text": "Місце для паління"
+                }, {
+                    "class": "item-17",
+                    "text": "Ресторани"
+                }, {
+                    "class": "item-18",
+                    "text": "Камера зберігання"
+                }, {
+                    "class": "item-19",
+                    "text": "Банкомати"
+                }, {
+                    "class": "item-20",
+                    "text": "Митний контроль"
+                }
+            ],
+            "right-details": [
+                {
+                    "class": "item-21",
+                    "text": "Зал очікування"
+                }, {
+                    "class": "item-22",
+                    "text": "Кімната матері і дитини"
+                }, {
+                    "class": "item-23",
+                    "text": "Міліція"
+                }, {
+                    "class": "item-24",
+                    "text": "Магазин преси"
+                }, {
+                    "class": "item-25",
+                    "text": "Паспортний контроль"
+                }, {
+                    "class": "item-26",
+                    "text": "Телефонний автомат"
+                }, {
+                    "class": "item-27",
+                    "text": "Прокат авто"
+                }, {
+                    "class": "item-28",
+                    "text": "Duty free"
+                }, {
+                    "class": "item-29",
+                    "text": "Ліфт"
+                }, {
+                    "class": "item-30",
+                    "text": "Стійки реєстрації"
+                }, {
+                    "class": "item-31",
+                    "text": "Бізнес зал"
+                }, {
+                    "class": "item-32",
+                    "text": "Обмін валют"
+                }, {
+                    "class": "item-33",
+                    "text": "Контроль на авіаційну безпеку"
+                }, {
+                    "class": "item-34",
+                    "text": "Ескалатор"
+                }, {
+                    "class": "item-35",
+                    "text": "Кіоски самореєстрації на рейс"
+                }, {
+                    "class": "item-36",
+                    "text": "Багаж"
+                }, {
+                    "class": "item-37",
+                    "text": "Магазини"
+                }, {
+                    "class": "item-38",
+                    "text": "Сходи"
+                }
+            ]
+        }, 
+        "step-4": {
+            "step-4-title": "АДАПТОВАНІСТЬ ПІД МОБІЛЬНІ ПРИСТРОЇ",
+            "step-4-text": "Сайт адаптовано під мобільні пристрої, враховуючи також вимоги пристроїв з retina дисплеєм. У мобільній версії сайт не втрачає по швидкості та доступності – миттєве завантаження, зручна навігація, справно функціонуюча логіка пріоритетів у поданні інформації роблять використання сайту легким та дозволяють користувачеві швидко отримати відповіді на важливі запитання."
+        },
+        "step-5": {
+            
+        },
+        "step-6": {
+            "title": "RESULTS AND STATISTICS",
+            "text-top": "The social significance of the project and result of which has been achieved after the launch of the website of the International Aeroportu 'Lviv'",
+            "text-bottom": "For more information please contact us at - <a href=''>info@bambus.com.ua</a>",
+            "text-l-1": "Passengers who used the services of the airport during 2013",
+            "text-l-2": "Unique users who visited website of airport during 2013",
+            "text-r-1": "Every 5th passenger enjoyed the site<br>of International Airport 'Lviv'",
+            "text-r-2": "<a href=''>Lwo.aero</a>- official site of the airport"
+        }
+    },
+    "underlviv": {
+        "step-1": {
+            "title": "«Львів Підземний»",
+            "subtitle": "Проект, покликаний зберігати та популяризувати культурну спадщину Львова.",
+            "text": "Втілений у віртуальній реальності за допомогою найсучасніших технологій та креативних рішень, він поєднав цінності минулих сторіч із можливостями сучасності. Завдяки об’єднаним зусиллям усіх, хто працював над реалізацією проекту, львів’яни та гості міста отримали можливість ознайомитися з дивовижним підземним туристичним маршрутом.<br>Реалізацію проекту «Львів Підземний» було ініційовано Львівською міською радою за підтримки Європейського Союзу у рамках Програми транскордонного співробітництва Польща-Білорусьія-Україна на 2007-2013 роки. У рамках бюджету було знайдено краще рішення, і сьогодні кожен може пройти підземним маршрутом, завітавши на сайт «Підземного Львова»!",
+            "part": [
+                {
+                    "title": "Розмір 1-го сегменту:",
+                    "value": "240 х 240 рх"
+                },
+                {
+                    "title": "Оригінальний розмір:",
+                    "value": "480 х 480 рх"
+                },
+                
+                {
+                    "title": "Роздільна здатність:",
+                    "value": "72 пікс/дюйм"
+                },
+                {
+                    "title": "Розмір:",
+                    "value": "----"
+                }
+            ]
+        },
+        "step-2": { 
+            "title": "Новий та неочікуваний погляд на таємниче місто Лева!",
+            "text": "У розробці ми використали векторну технологію, яка забезпечує кросбраузерність та однаково якісну роботу сайту на усіх пристроях, враховуючи також retina-дисплеї. Для переходів між локаціями сайту використано нестандартні та абсолютно інноваційні рішення позиціонування та трансформації, розроблене нашими спеціалістами спеціально для «Львова Підземного».<br>Проект втілено у життя, і він готовий допомагати подальшому розвитку культурного та туристичного потенціалу Львова. Кожен елемент сайту «Львів Підземний» зроблений з душею - для міста, його мешканців та гостей."
+        }
+        
+    }
+} 

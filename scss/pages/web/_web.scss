@@ -1,0 +1,51 @@
+
+@keyframes services-hover {
+    0% {
+        transform: translate3d(-98%, 98%, 0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        transform: translate3d(0, 98%, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        animation-timing-function: cubic-bezier(0, 1, 0, 1);
+    }
+}
+
+
+@keyframes services-hover-hide {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate3d(0, 98%, 0);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(-98%, 98%, 0);
+        opacity: 0;
+    }
+}
+
+
+@keyframes scroll-suggestion {
+    0% {
+        transform: translate3d(0, -3px, 0);
+    }
+    50% {
+        transform: translate3d(0, 1px, 0);
+    }
+    100% {
+        transform: translate3d(0, -3px, 0);
+    }
+}

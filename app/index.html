@@ -1,0 +1,68 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <title>Bambus</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700|Roboto:400,300&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>  
+<body>
+    <!--[if lt IE 9]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" rel=="external">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+<div id="preloader">
+    <div class="holder">
+        <div class="logo"></div>
+        <div class="line-block-1">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+        <div class="line-block-3"> 
+            <div class="line-4"></div>
+        </div>
+        <div class="line-block-2">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+        </div>
+        
+    </div>
+</div>
+<div class="menu-panel">
+    <div id="menu-wrapper" class="hide">
+        <div id="menu">
+            <a href="/contacts" class="contact-link">Контакти</a>
+            <a href="/" class="logo">design studio</a>
+            <nav>
+                <ul class="main-menu menu-list">
+<!--                    <li><a href="/home" class="show-for-small">Головна</a></li>-->
+                    <li><a href="/about">Про студію</a></li>
+                    <li><a href="/portfolio">Портфоліо</a></li>
+                    <li class="parent-link">
+                        <a href="#">Послуги</a>
+                        <ul class="submenu">
+                            <li><a href="&#x2F;services&#x2F;web" id="link-web">Web Production</a></li>
+                            <li><a href="&#x2F;services&#x2F;branding" id="link-branding">Брендінг</a></li>
+                            <li><a href="&#x2F;services&#x2F;illustration" id="link-illustration">Іллюстрація</a></li>
+                            <li><a href="&#x2F;services&#x2F;souveniers" id="link-souveniers">Сувеніри</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/showreel">Showreel</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="menu-icon"></div>
+</div>
+    <script src='//localhost:3000/socket.io/socket.io.js'></script>
+    <script src='//localhost:3001/client/browser-sync-client.min.js'></script>
+    <script data-main="/js/app/main.js" src="/bower_components/requirejs/require.js"></script>
+</body>
+</html>

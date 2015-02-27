@@ -1,0 +1,29 @@
+<div class="solar-system">
+    {{#about.company.planets}}
+    <div class="orbits-front">
+        <div class="orbit hint" data-id="1">
+            <div class="text" data-text="{{text}}">Студія</div>
+            <div class="images"></div>
+            <div class="effects">
+                <div class="effect"></div>
+            </div>
+        </div>
+    </div>
+    <div class="orbits">
+        <div class="orbit" data-id="2"></div>
+        <div class="orbit" data-id="3"></div>
+        <div class="orbit" data-id="4"></div>
+    </div>
+    <div class="planets">
+        {{#orbits}}
+        <div data-group="{{id}}">
+            {{#list}}
+            <div class="planet" data-id="{{id}}" style="background-color:{{color}}" data-text="{{text}}" data-img="{{img}}">
+                <div class="planet-inner"></div>
+            </div>
+            {{/list}}
+        </div>
+        {{/orbits}} 
+    </div>
+    {{/about.company.planets}}
+</div>

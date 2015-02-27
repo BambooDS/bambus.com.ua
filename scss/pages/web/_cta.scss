@@ -1,0 +1,70 @@
+.service-web-page {
+    .cta {
+        .columns {
+            @media only screen and (max-width: 840px) {
+                float: none;
+                width: 100%;
+            }
+        }
+        .text-holder {
+            @media only screen and (max-width: 840px) {
+                padding: 0 24px;
+                position: relative;
+                top: 0;
+                transform: translate(0px);
+                .button.green {
+                    float: left;
+                    font-size: 20px !important;
+                }
+            }
+        }
+        #bamboo-lines {
+            position: absolute;
+            bottom: 0;
+            @media only screen and (max-width: 840px) {
+                text-align: center;
+            }
+        }
+        .phone, .mail {
+            font-family: $title-font-family;
+            font-weight: 100;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        .contacts {
+            padding-left: 56px;
+            margin-top: 140px;
+            background: image-url("marker-small.svg") left center no-repeat;
+            @media only screen and (max-width: 840px) {
+                float: right;
+                padding-top: 10px;
+                margin: 0;
+            }
+        }
+        .phone {
+            color: white;
+        }
+        .mail {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        @media only screen and (max-width: 840px) {
+            height: auto;
+            padding-bottom: 140px;
+            .columns:first-child {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 580px) {
+            padding-bottom: 200px;
+            .button.green {
+                margin-bottom: 34px;
+            }
+            .contacts {
+                width: 100%;
+            }
+        }
+    }
+}

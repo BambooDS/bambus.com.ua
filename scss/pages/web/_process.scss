@@ -1,0 +1,306 @@
+.service-web-page {
+    .process {
+        $stepSpeed: 600;
+        $stepDelay: 300;
+        $index: 1;
+        $graphWidth: 800;
+        $process-cord: 360 0, 645 110, 714 350, 374 610, 0 510, 24 170;
+        $deg: 21deg 46deg 89deg 125deg, 75deg 118deg 148deg 174deg, 142deg 167deg 194deg, 195deg 231deg, -86deg, -28deg;
+        height: 1160px;
+        background: $charcoal;
+        position: relative;
+        @media only screen and (min-width: 1025px) {
+            height: 986px;
+        }
+        .heading {
+            color: white;
+        }
+        .graph {
+            padding: 0 40px;
+            width: auto;
+            position: relative;
+            height: 100%;
+            margin: 24px auto;
+            @media only screen and (min-width: 561px) {
+                padding: 0 80px;
+            }
+            @media only screen and (min-width: 1025px) {
+                padding: 0;
+                width: 800px;
+            }
+        }
+        .step {
+            position: absolute;
+            height: 88px;
+            width: 88px;
+            opacity: 0;
+            transition: opacity #{$stepSpeed}ms;
+
+            &.active {
+                .title {
+                    color: $green;
+                }
+                .text {
+                    color: white;
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0) !important;
+                }
+                .holder {
+                    opacity: 1;
+                }
+                @media only screen and (max-width: 1024px) {
+                    .lines {
+                        .connector {
+                            transform: rotate(90deg) scale(1) translate3d(-2px, -2px, 0px) !important;
+                        }
+                    }
+                }
+                .number-in-circle {
+                    background: $green;
+                    color: #fff;
+                    border-color: #fff;
+                    box-shadow: 0 0 4px 0  #aaa;
+                    transition: color .3s .3s, background-color .3s .3s, border-color .3s .3s, box-shadow .3s .3s;
+                }
+            }
+
+            &:nth-child(1) {
+                &.active {
+                    .holder {
+                        transform: translate3d(0, -80%, 0);
+                    }
+                }
+                .holder {
+                    width: 310px;
+                    @media only screen and (max-width: 1200px) {
+                        transform: translate3d(12px, -60px, 0px);
+                        width: 400px;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .holder {
+                    @media only screen and (max-width: 1200px) {
+                        transform: translate3d(-410px, -10px, 0px);
+                    }
+                }
+            }
+            &:nth-child(3) {
+                .holder {
+                    @media only screen and (max-width: 1400px) {
+                        left: 10px;
+                        top: 140px;
+                    }
+                    @media only screen and (max-width: 1200px) {
+                        transform: translate3d(-290px, -110px, 0px);
+                    }
+                }
+            }
+            &:nth-child(4) {
+                .holder {
+                    @media only screen and (max-width: 1400px) {
+                        top: 72px;
+                    }
+                    @media only screen and (max-width: 1200px) {
+                        top: 50px;
+                        width: 400px;
+                    }
+                }
+            }
+            &:nth-child(5) {
+                .holder {
+                    @media only screen and (max-width: 1320px) {
+                        right: 40px;
+                        top: 140px;
+                    }
+                    @media only screen and (max-width: 1200px) {
+                        transform: translate3d(450px, -170px, 0px);
+                        width: 400px;
+                    }
+                }
+            }
+            &:nth-child(6) {
+                .holder {
+                    @media only screen and (max-width: 1280px) {
+                        left: -256px;
+                        top: 130px;
+                    }
+                    @media only screen and (max-width: 1200px) {
+                        left: 100px;
+                        top: 78px;
+                    }
+                }
+                @media only screen and (max-width: 1024px) {
+                    .lines {
+                        display: none;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 1024px) {
+                position: relative !important;
+                left: auto !important;
+                top: auto !important;;
+                right: auto !important;
+                bottom: auto !important;
+                transform: translate(0) !important;
+                float: left;
+                clear: both;
+                margin: 0 0 76px 0;
+                padding: 0;
+                width: auto;
+                .line {
+                    width: 200px !important;
+                    transform: rotate(90deg) scale(1) translate3d(0, 0, 0px) !important;
+                }
+                .connector {
+                    width: 200px !important;
+                    transform: rotate(90deg) scale(0) translate3d(-2px, -2px, 0px) !important;
+                }
+            }
+        }
+        .holder {
+            @extend %center-block-vertical;
+            transform: translate3d(0, -50%, 0);
+            text-align: right;
+            color: #898989;
+            width: 260px;
+            transition: transform .3s, opacity .3s;
+            right: calc(100% + 32px );
+            .title {
+                text-align: right;
+                font-size: 24px;
+                margin: 0 0 12px 0;
+                transition: color .3s;
+
+            }
+        }
+        .graph .step.active .holder, .graph.wow .step .holder {
+            @media only screen and (max-width: 1024px) {
+                left: 0;
+                padding: 12px 0 0 94px;
+                position: relative ;
+                text-align: left;
+                top: auto;
+                transform: translate3d(0px, 0px, 0px);
+                width: auto ;
+                .title {
+                    text-align: left;
+                }
+            }
+        }
+        .text {
+            opacity: 0;
+            line-height: 24px;
+            transition: transform .3s, opacity .3s;
+            transform: translate3d(-50px, 0, 0);
+        }
+        .number-in-circle {
+            background: none;
+            background: $charcoal;
+            position: absolute;
+            cursor: pointer;
+            z-index: 1;
+            transition: color .3s , background-color .3s , border-color .3s , box-shadow .3s;
+            &:hover {
+                border-color: $green;
+            }
+        }
+        .lines {
+            .line {
+                opacity: 0;
+                transition: width #{$stepSpeed}ms, opacity #{$stepSpeed / 2}ms;
+                position: absolute;
+                border-top: 1px dashed white;
+                left: 44px;
+                top: 44px;
+                transform-origin: 0 0;
+                &:first-child {
+                    opacity: 1;
+                    @media only screen and (max-width: 1200px) {
+                        display: block;
+                    }
+                }
+                @media only screen and (max-width: 1200px) {
+                    display: none;
+                }
+            }
+            .connector {
+                position: absolute;
+                left: 44px;
+                top: 44px;
+                transform-origin: 0 0;
+                transition: transform #{$stepSpeed / 2}ms !important;
+                transition-delay: 0;
+                border-top: 5px solid $green;
+                margin-top: -2px;
+            }
+        }
+
+
+        @for $i from 1 through length($process-cord) {
+            $step: nth($process-cord, $i);
+            .step:nth-child(#{$i}) {
+                transition-delay: #{$i * $stepDelay}ms;
+                left: nth($step, 1) * 1px;
+                top: nth($step, 2) * 1px;
+                @if nth($step, 1) > $graphWidth / 2.2 {
+                    .holder {
+                        right: 0;
+                        left: calc(100% + 32px );
+                        text-align: left;
+                        .title {
+                            text-align: left;
+                        }
+                        .text {
+                            transform: translate3d(50px, 0, 0);
+                        }
+                    }
+                }
+                .lines {
+                    @for $line from 1 through length(nth($deg, $i)) {
+                        $next: $i + $line;
+                        @if $next > length($process-cord) {
+                            $next: 1;
+                        }
+                        $next_x: nth(nth($process-cord, $next), 1);
+                        $cur_x: nth($step, 1);
+                        $next_y: nth(nth($process-cord, $next), 2);
+                        $cur_y: nth($step, 2);
+                        @if $line == 1 {
+                            .connector {
+                                transform: rotate(nth(nth($deg, $i), $line)) scale(0, 1) translate3d(-2px, -2px, 0);
+                                width: sqrt(pow($next_x - $cur_x, 2) + pow($next_y - $cur_y, 2)) * 1px;
+                                &.active {
+                                    transform: rotate(nth(nth($deg, $i), $line)) scale(1) translate3d(-2px, -2px, 0);
+                                }
+                            }
+                        }
+                        .line:nth-child(#{$line}) {
+                            transition-delay: #{$i * $stepDelay + $stepDelay / 2}ms, 2.5s;
+                            transform: rotate(nth(nth($deg, $i), $line));
+                            width: sqrt(pow($next_x - $cur_x, 2) + pow($next_y - $cur_y, 2)) * 1px;
+                        }
+                    }
+                }
+            }
+        }
+        .graph:not(.animated) {
+            .lines .line:first-child {
+                width: 0px;
+                opacity: 1;
+            }
+        }
+        .animated {
+            .step {
+                opacity: 1;
+            }
+            .lines .line {
+                opacity: 1;
+            }
+        }
+        @media only screen and (max-width: 840px) {
+            height: 1240px;
+        }
+    }
+}

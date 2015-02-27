@@ -1,0 +1,67 @@
+.cta-section{
+    /* mobile */
+    background: #aaa;
+    display: block;
+    background-color: $green !important;
+    padding-top:48px;
+    ul{
+        list-style: none;
+        padding:0;
+    }
+    .title, &{
+        color: white;
+    }
+    .title{
+        font-weight: 100;
+    }
+    .copy{
+        max-width: 510px;
+        margin: 0 auto;
+    }
+    .text{
+        line-height: 1.5em;
+        font-family: 'Roboto';
+        font-weight: 100;
+        margin-bottom: 3em;
+        text-shadow: 1px 1px 1px grey;
+    }
+    .button{
+        text-align: center;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+
+    /* tablet and larger */
+    @media #{$medium-only} {
+        .copy{
+            max-width: none;
+            margin: 0 auto;
+        }
+        li{
+            width: 50%;
+            float: left;
+            &:nth-child(2n-1) {
+                padding-right: 12px;
+            }
+            &:nth-child(2n) {
+                padding-left: 12px;
+            }
+        }
+
+    }
+    @media #{$large-up} {
+        min-height: 100vh;
+        background:
+            image-url('about/footer/tree-2.png') 45% bottom no-repeat,
+            image-url('about/footer/tree.jpg') left bottom no-repeat,
+            image-url('about/footer/tree-3.png') right bottom no-repeat;
+        ul{
+            max-width: 320px;
+            margin: 0 auto;
+        }
+        .copy{
+            font-size: 22px;
+        }
+    }
+}

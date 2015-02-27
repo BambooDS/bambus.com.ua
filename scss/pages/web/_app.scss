@@ -1,0 +1,234 @@
+$slider-speed: 0.6s;
+
+$animationClasses: "animatetopleft", "animatetop", "animatetopright", "animatebottomright", "animatebottom", "animatebottomleft";
+$vector: 45deg;
+$delay: 0.35s;
+
+.animatetop,
+.animatetopleft,
+.animatetopright,
+.animatebottom,
+.animatebottomleft,
+.animatebottomright {
+    transition: transform .5s .5s, opacity .5s .5s;
+    transition-timing-function: cubic-bezier(0, 0.97, 0, 0.98);
+    z-index: 1;
+    opacity: 0;
+    &.animated {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+@each $animation in $animationClasses {
+    .#{$animation} {
+        transition-delay: #{$delay};
+        transform: translate3d(sin($vector) * -700px, cos($vector) * -700px, 0) scale(0);
+    }
+    @if $vector == -45deg {
+        $delay: 0.5s;
+        $vector: $vector - 45deg;
+    }
+    $delay: $delay + 0.2s;
+    $vector: $vector - 45deg;
+}
+
+
+.service-web-page {
+    // common settings
+    /* page appear section */
+    @include page(service-web);
+    /* page appear end */
+    background: white;
+    h1, h2 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .title {
+        text-align: center;
+        font-weight: 100;
+        font-family: $title-font-family;
+        text-transform: uppercase;
+        line-height: 125%;
+        &.heading {
+            margin: 64px 0;
+            @media only screen and (max-width: 1280px) {
+                margin: 40px 0;
+            }
+            @media only screen and (max-width: 840px) {
+                padding: 0 24px;
+            }
+        }
+    }
+    .table {
+        margin: 56px 0 72px 0;
+        border: 1px solid black;
+    }
+    .table-row {
+        overflow: hidden;
+    }
+    .block {
+        float: left;
+        border-bottom: 1px solid rgb(34, 34, 34);
+        @media only screen and (min-width: 1025px) {
+            border-bottom: none;
+        }
+    }
+    .block + .block {
+        border-left: 1px solid;
+    }
+    .table-row + .table-row {
+        @media only screen and (min-width: 1025px) {
+            border-top: 1px solid black;
+        }
+    }
+    .number-in-circle {
+        background: #fff;
+        height: 84px;
+        width: 84px;
+        border: 4px solid;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 76px;
+        font-family: $title-font-family;
+        font-size: 36px;
+        color: #898989;
+        transition: color .3s, border-color .3s;
+    }
+    
+    // section rules
+    .gradien-fix {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(rgba(45, 45, 45, 0) 20%, #2d2d2d);
+        bottom: 0;
+    }
+    
+    // intro, cta
+    .intro, .cta {
+        height: 100vh;
+        background: $charcoal;
+        position: relative;
+        .columns {
+            height: 100%;
+            width: 50%;
+            .text-holder {
+                @media only screen and (max-width: 1024px) {
+                    top: 45%;
+                    padding-right: 24px;
+                }
+            }
+        }
+        .text-holder {
+            @extend %center-block-vertical;
+        }
+        .title {
+            color: white;
+            font-size: 44px;
+            margin: 0 0 64px 0;
+            text-align: left;
+            strong {
+                font-weight: 400;
+            }
+            @media only screen and (max-width: 580px) {
+                font-size: 32px;
+            }
+        }
+        .scroll-icon {
+            margin: -140px 0 0 -44px;
+        }
+    }
+
+    // services-section, vectors
+    .services-section, .vectors {
+        .icon {
+            display: block;
+            margin: 0 auto;
+        }
+        .row {
+            text-align: justify;
+            max-width: 1340px;
+            @media only screen and (max-width: 1340px) {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+        .large-1-3 {
+            width: 320px;
+        }
+        .text {
+            text-align: center;
+            line-height: 24px;
+        }
+        .front {
+            .title {
+                margin-top: 36px;
+            }
+        }
+        .back {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            min-height: 100%;
+            left: 0;
+            background: $green;
+            opacity: 0;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 0 0 24px 0;
+            animation: services-hover-hide;
+            animation-duration: .5s;
+            animation-fill-mode: both;
+            .holder {
+                @extend %center-block-vertical;
+                width: 80%;
+                margin: 0 10%;
+            }
+            .title {
+                font-size: 24px;
+                margin: 32px 0 16px 0;
+            }
+        }
+        .single-service {
+            position: relative;
+            padding: 32px 0 24px 0;
+            margin: 32px 62px;
+            cursor: pointer;
+            overflow: hidden;
+            float: left;
+            &:hover {
+                .back {
+                    animation-name: services-hover;
+                }
+            }
+            &:nth-child(4) {
+                clear: left;
+            }
+            @media only screen and (max-width: 1340px) {
+                display: inline-block;
+                float: none !important;
+                margin: 1% 1% 62px;
+                width: 30%;
+            }
+            @media only screen and (max-width: 1280px) {
+                margin: 1% 1% 0;
+            }
+            @media only screen and (max-width: 768px) {
+                margin: 0;
+                width: 48%;
+            }
+            @media only screen and (max-width: 460px) {
+                width: 96%;
+            }
+        }
+    }
+}

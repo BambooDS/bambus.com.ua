@@ -1,0 +1,62 @@
+.about-showreel {
+    /* modile */
+    background: black;
+    position: relative;
+    background-size: 30%;
+    margin-bottom: 24px;
+    video{
+        display: block;
+        width: 100%;
+        opacity: .5;
+    }
+    .title{
+        text-align: center;
+        padding-top: .8em;
+        font-weight: 100;
+        font-size: inherit;
+        color: white;
+        font-size: 14px;
+    }
+    .play{
+        font-size: 10px;
+        display: block;
+        position: absolute;
+        width: 7em;
+        padding-top: 7em;
+        top: 50%;
+        left: 50%;
+        margin: -5em 0 0 -3.5em;
+        opacity: .75;
+        cursor: pointer;
+        background: image-url('about/icons/play-button.svg') no-repeat center top;
+        background-size: 100% auto;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    .play, video {
+        transition: opacity .3s;
+    }
+
+    /* playback state */
+    &.playing{
+        video{
+            opacity: 1;
+        }
+        .play{
+            opacity: 0;
+        }
+    }
+
+
+    /* tablet and larger */
+    @media #{$medium-up} {
+        background-size: auto;
+        .play{
+            font-size: 36px;
+            .title{
+                font-size: inherit;
+            }
+        }
+    }
+}

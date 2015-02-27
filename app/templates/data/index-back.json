@@ -1,0 +1,387 @@
+{
+    "slider": [
+        {
+            "img_src": "/pictures/slider/1.jpg",
+            "img_alt": "",
+            "heading": "Простір перетворень",
+            "text": "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin. More"
+        },
+        {
+            "img_src": "/pictures/slider/2.jpg",
+            "img_alt": "",
+            "heading": "Енергія можливостей",
+            "text": "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin. More"
+        },
+        {
+            "img_src": "/pictures/slider/3.jpg",
+            "img_alt": "",
+            "heading": "Політ дизайну",
+            "text": "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin. More"
+        }
+    ],
+    "services": [
+        {
+            "name": "Web Design",
+            "path": "/services/web-design",
+            "slug": "web-design",
+            "img": "/pictures/services/web-design.png"
+        }, {
+            "name": "Branding",
+            "path": "/services/branding",
+            "slug": "branding",
+            "img": "/pictures/services/branding.png"
+        }, {
+            "name": "Illustration",
+            "path": "/services/illustration",
+            "slug": "illustration",
+            "img": "/pictures/services/illustration.png"
+        }, {
+            "name": "Production",
+            "path": "/services/production",
+            "slug": "production",
+            "img": "/pictures/services/production.png"
+        }, {
+            "name": "Publishing",
+            "path": "/services/publishing",
+            "slug": "publishing",
+            "img": "/pictures/services/publishing.png"
+        }, {
+            "name": "Souveniers",
+            "path": "/services/souveniers",
+            "slug": "souveniers",
+            "img": "/pictures/services/souveniers.png"
+        }
+    ],
+    "portfolio-tags": [
+        {
+            "name": "Web Design",
+            "path": "portfolio/web-design",
+            "class": "web-design"
+        }, {
+            "name": "Branding",
+            "path": "portfolio/branding",
+            "class": "branding"
+        }, {
+            "name": "Illustration",
+            "path": "portfolio/illustration",
+            "class": "illustration"
+        }, {
+            "name": "Production",
+            "path": "portfolio/production",
+            "class": "production"
+        }, {
+            "name": "Publishing",
+            "path": "portfolio/publishing",
+            "class": "publishing"
+        }, {
+            "name": "Souveniers",
+            "path": "portfolio/souveniers",
+            "class": "souveniers"
+        }
+    ],
+    "about": {
+        "intro": {
+            "title": "when you need custom",
+            "subtitle": "Коли потрібен особливий",
+            "copy": "Допомогаємо брендам, компаніям, людям краще комунікувати між собою - покращуємо зовнішній світ з надією на покращення внутрішнього в кожному з нас."
+        },
+        "company": {
+            "history": {
+                "title": "We are Since 2006"
+            },
+            "workflow": {
+                "pipeline": {
+                    "title": "Як виглядає наш робочий процес",
+                    "copy": "<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p> <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc.</p> <p> tiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.  Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. </p>"
+                }
+            },
+            "ebrr": {
+                "title": "Кваліфіковані BAS ЄБРР",
+                "copy": "<p>Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках Програми ділових консультаційних послуг BAS ЄБРР.</p>"
+            },
+            "thesis": {
+                "title": " Super important thesis",
+                "copy": "<p>Bambuk  - не просто студія - це місце творчих людей, які працюють для створення нового, реалізації, розвитку та зміни світу навколо, розвитку та зміни світу навколо, розвитку.</p>"
+
+            }
+        },
+        "team": {
+            "switch":{
+                "title":"Наші Уподобання",
+                "icons":[
+                    {
+                        "url":"img/about/icons/switch/bicycle.svg",
+                        "id":""
+                    },
+                    {
+                        "url":"img/about/icons/switch/coocking.svg",
+                        "id":""
+                    },
+                    {
+                        "url":"img/about/icons/switch/eagames.svg",
+                        "id":""
+                    },
+                    {
+                        "url":"img/about/icons/switch/guitar.svg",
+                        "id":""
+                    },
+                    {
+                        "url":"img/about/icons/switch/handmade.svg",
+                        "id":""
+                    },
+                    {
+                        "url":"img/about/icons/switch/love.svg",
+                        "id":""
+                    },
+                    {
+                        "url":"img/about/icons/switch/psyho.svg",
+                        "id":""
+                    },
+                    {
+                        "url":"img/about/icons/switch/ski.svg",
+                        "id":""
+                    },
+                    {
+                        "url":"img/about/icons/switch/travel.svg",
+                        "id":""
+                    },
+                    {
+                        "url":"img/about/icons/switch/yoga.svg",
+                        "id":""
+                    }
+                ]
+            },
+            "groups": [
+                {
+                    "placeholder": true
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "pictures/about/people/Zavacky.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Taraban.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Andreeva.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Golubyatnikova.png"
+                        }
+                    ]
+                },
+                {
+                    "description": {
+                        "title": "Команда",
+                        "copy": "<span>Bambuk<span> - перш за все, місце створення командного продукту, де колектив досягає набагато якіснішого результату разом, а ніж вміння та інтелект її учасників по-одинці. Об”єднання спеціалістів з різними компетенціями і є основною перевагою студії, що надає їй неймовірної гнучкості, творчості та результативності."
+                    }
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "pictures/about/people/Muzychuk.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Kobernyk.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Kobceva.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Zasoba.png"
+                        }
+                    ]
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "pictures/about/people/Fedyna.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Grobovcova.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Nesterenko.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Byznyak.png"
+                        }
+                    ]
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "pictures/about/people/Shpyrka.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Kucherenko.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Cyapalo.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Mayhrych.png"
+                        }
+                    ]
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "pictures/about/people/Hlystun.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Vytak.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Voronina.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Pashchuk.png"
+                        }
+                    ]
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "pictures/about/people/Spolsky.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Pelehata.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Shyrokova.png"
+                        },
+                        {
+                            "picture": "pictures/about/people/Tatomur.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        "job": {
+            "title": "Робота в студії",
+            "copy": "Надсилайте своє портфоліо та особову інформацію. Цікавить як постійна робота у команді, так і фріланс? Тоді не баріться!  Кожна людина унікальна, так само як і те, що вона творить, як бачить світ. І чим різнобарвнішим буде букет світоглядів, тим цікавішим буде результат.",
+            "vacancy": {
+                "title": "Завантажити своє резюме",
+                "copy": "В портфоліо бажано включити роботи які про Вас говорять як в творчому, так і технічному плані - макети, ескізи, концепти, музика, вірші, фото."
+            }
+        },
+        "showreel": {
+            "text": "Showreel"
+        },
+        "clients": {
+            "title": "Друзі. Партнери. Клієнти",
+            "copy": "Надсилайте своє портфоліо та особову інформацію. Цікавить як постійна робота у команді, так і фріланс? Тоді не баріться!  Кожна людина унікальна, так само як і те, що вона творить, як бачить світ. І чим різнобарвнішим буде букет світоглядів, тим цікавішим буде результат.",
+            "list": [
+                {
+                    "color": "#5a1b73",
+                    "logo": "pictures/about/logo/mondelez.svg",
+                    "title": "mondelez",
+                    "large": "true",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {
+                    "color": "#ff9000",
+                    "logo": "pictures/about/logo/lvbs.svg",
+                    "title": "lvbs",
+                    "large": "true",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {
+                    "color": "#0060af",
+                    "logo": "pictures/about/logo/kraftfoods.svg",
+                    "title": "7 років",
+                    "large": "true",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {"placeholder":true, "large": "true"},
+                {
+                    "color": "#93d600",
+                    "logo": "pictures/about/logo/eskada.svg",
+                    "title": "eskada",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {
+                    "color": "#6fbb44",
+                    "logo": "pictures/about/logo/okko.svg",
+                    "title": "okko",
+                    "large": "true",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {
+                    "color": "#8f2d54",
+                    "logo": "pictures/about/logo/kredens.svg",
+                    "title": "kredens",
+                    "large": "true",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {
+                    "color": "#f2b51a",
+                    "logo": "pictures/about/logo/hlibprom.svg",
+                    "title": "hlibprom",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {
+                    "color": "#00347e",
+                    "logo": "pictures/about/logo/kse.svg",
+                    "title": "KSE",
+                    "large": "true",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {
+                    "color": "#33b42f",
+                    "logo": "pictures/about/logo/mriya.svg",
+                    "title": "Мрія",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {"placeholder":true},
+                {
+                    "color": "#caab00",
+                    "logo": "pictures/about/logo/obolon.svg",
+                    "title": "obolon",
+                    "large": "true",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {
+                    "color": "#b82924",
+                    "logo": "pictures/about/logo/uku.svg",
+                    "title": "uku",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                }, 
+                {
+                    "color": "#833135",
+                    "logo": "pictures/about/logo/alaminute.svg",
+                    "title": "alaminute",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {
+                    "color": "#ff9000",
+                    "logo": "pictures/about/logo/svarog.svg",
+                    "title": "svarog",
+                    "large": "true",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {
+                    "color": "#6d6e71",
+                    "logo": "pictures/about/logo/gng.svg",
+                    "title": "Галнафтогаз",
+                    "large": "true",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {"placeholder":true},
+                {
+                    "color": "#ff8301",
+                    "logo": "pictures/about/logo/tobi.svg",
+                    "title": "tobi",
+                    "copy": "Дизайн-cтудія Bambuk успішно пройшла стадію підтвердження кваліфікації для реалізації проектів в рамках"
+                },
+                {"placeholder":true},
+                {"placeholder":true}
+            ]
+        },
+        "cta":{
+            "copy":"Maybe, You are the <strong>next one?</strong>"
+        }
+    }
+}

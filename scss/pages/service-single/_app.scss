@@ -1,0 +1,103 @@
+.service-single{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity:0;
+    visibility:hidden;
+    padding-left: 240px;
+    transition: opacity .5s, visibility 0 .5s, z-index 0 .5s;
+    &.visible{
+        visibility:visible;
+        z-index:0;
+        opacity:1;
+        transition: opacity .5s, visibility 0 , z-index 0 ;
+    }
+    .close{
+        display:block;
+        position:absolute;
+        top:-1px;
+        left:239px;
+        width:66px;
+        height:66px;
+        border:1px solid $green;
+        z-index:1;
+        opacity:.5;
+        transition:opacity .3s;
+        &:before,&:after{
+            display:block;
+            content:'';
+            position:absolute;
+            width:46px;
+            height:2px;
+            background:$green;
+            left:10px;
+            top:32px;
+        }
+        &:before{
+            transform:rotate(45deg);    
+        }
+        &:after{
+            transform:rotate(-45deg);
+        }
+        &:hover{
+            opacity:1;
+        }
+    }
+    &>div{
+        position:relative;
+        height:100%;
+    }
+    .content,.works{
+        height:100%;
+        width:50%;
+        position:relative; 
+        float:left;
+    }
+    .content{
+        background:white;
+    }
+    .works{
+        background:rgb(150, 176, 60);
+        overflow-y:scroll;
+        div{
+            float:left;
+            position:relative;
+            width:33.333%;
+            a {
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-top: 75%;
+                overflow: hidden;
+                background: image-url('482.gif') no-repeat center
+            }
+            img {
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                transition: opacity .5s .5s;
+                width: 100%;
+                height: 100%
+            }
+            .echo-loaded {
+                opacity: 1
+            }
+        }
+    }
+}
+html.services-inner{
+    #regular-menu{
+        transition: transform .3s;
+        transform:translate3d(0,-100%,0);
+    }
+    #services-menu{
+        transition:transform .4s .3s, opacity .4s .3s;
+        opacity:1;
+        transform:translate3d(0,0,0);
+    }
+}
+

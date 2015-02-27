@@ -1,0 +1,100 @@
+.about-page{
+    /* page appear section */
+    @include page(about);
+    /* page appear end */
+
+    text-align: left;
+    background: #fff;
+    line-height: 24px;    
+    .row {
+        max-width: 1600px;
+    }
+    h1.title{
+        font-size: 26px;
+        line-height: em-calc(56,44);
+        font-weight: 100;
+        margin-bottom: em-calc(28,44);
+        color:#1a1a1a;
+        @media #{$medium-up} {
+            font-size: 36px;
+            font-weight: 100;
+            line-height: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+
+    .title, .subtitle {
+        font-family: $title-font-family;
+        text-transform: uppercase;
+    }
+
+
+
+
+    .box{
+        background: #fffbe6;
+        padding: 0;
+        text-align: left;
+        .head{
+            font-size: 25px;
+            line-height: em-calc(36px,32px);
+            font-weight: 100;
+            @include clearfix;
+        }
+        .copy{
+            padding-bottom: 20px;
+        }
+        &.small{
+            .head{
+                font-size: 24px;
+            } 
+            .copy{
+                padding-bottom: 40px;
+            }
+        }
+        &.green{
+            color:#fff;
+            background: $green;
+        }
+        @media #{$medium}{
+            .icon {
+                background-size: auto;
+                background: rgba(255,255,255,.2) no-repeat center;
+                width: em-calc(56px,26px);
+                height: em-calc(56px,26px);
+                margin-right: 24px;
+                float: left;
+                background-size: 60%;
+                margin-bottom: 12px;
+            }
+            .head{
+                font-size: 32px;
+                max-width: 65%;
+            }
+
+            &.small .head{
+                max-width: 95%;
+            }
+        }
+    }
+
+
+
+    .description-box{
+        padding: 0 0 48px 0;
+
+    }
+
+    @import "intro";
+    @import "team";
+    @import "company";
+    @import "clients";
+    @import "cta";
+}
+
+
+@import "showreel";
+@import "history";
+@import "planets";
+@import "switcher";

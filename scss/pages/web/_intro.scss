@@ -1,0 +1,36 @@
+.service-web-page {
+    .intro {
+        img {
+            display: none;
+        }
+        @media only screen and (max-width: 840px) {
+            height: auto;
+            .columns {
+                width: 100%;
+                float: none;
+                background: $charcoal;
+                .text-holder {
+                    position: relative;
+                    top: 0;
+                    padding: 60px 24px 10px;
+                    transform: translate(0px);
+                    .button {
+                        display: none;
+                    }
+                }
+                #panda-lines, .gradien-fix {
+                    display: none !important;
+                }
+                img {
+                    display: block;
+                }
+            }
+            .scroll-icon {
+                top: 160px !important;
+                @media only screen and (max-width: 460px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

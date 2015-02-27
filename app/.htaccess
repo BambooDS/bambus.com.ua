@@ -1,0 +1,18 @@
+RewriteEngine on  
+RewriteCond %{DOCUMENT_ROOT} !-f  
+RewriteRule !\.(js|ico|gif|jpg|png|css|html|swf|flv|xml|svg|php|webm|mp4|ogv)$ index.html [QSA,L]
+
+<filesMatch "\.(html|htm|js|css)$">
+FileETag None
+<ifModule mod_headers.c>
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</ifModule>
+</filesMatch>
+
+
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm

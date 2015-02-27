@@ -1,0 +1,320 @@
+/*
+    Author: Roman Vytak
+*/
+
+// global style
+$bg-color: #29344a;
+.underlviv-color {
+    background: $bg-color;
+}
+
+    .presentation-underlviv {
+        
+        // bg-line
+        .top-line {
+            display: none;
+            z-index: -1;
+            position: relative;
+            height: 1770px;
+            margin-top: -1816px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            max-width: inherit;
+            @media #{$screen} and(min-width:1370px) {
+                display: block;
+            }
+        }
+        .bg-line {
+            z-index: 2;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            pointer-events: none;
+            width: 1240px;
+            transform: translateX(-50%);
+            span {
+                position: absolute;
+                //outline: 1px solid #fff333;
+            }
+            .line-1 {
+                //display: none;
+                width: 783px;
+                height: 1606px;
+                top: 0px;
+                left: -956px;
+                background: image-url('../img/portfolio/underlviv/bg-line/line-1.png') no-repeat left top;
+                background-size: 100%;
+            }
+            .line-2 {
+                //display: none;
+                width: 1644px;
+                height: 1138px;
+                top: 626px;
+                left: 440px;
+                background: image-url('../img/portfolio/underlviv/bg-line/line-2.png') no-repeat left top;
+                background-size: 100%;
+                @media #{$screen} and(max-width:1369px) {
+                   top: -95px;
+                }
+            }
+            .line-3 {
+                //display: none;
+                width: 2308px;
+                height: 1566px;
+                top: -30px;
+                left: -120px;
+                background: image-url('../img/portfolio/underlviv/bg-line/line-3.png') no-repeat left top;
+                background-size: 100%;
+            }
+        }
+        
+        // step-1
+        .step-1 {
+            z-index: 1;
+            position: relative;
+                color: #fff;
+            .row {
+                position: relative;
+                margin: auto;
+                min-width: inherit;
+                width: em(16px,1260px);
+            }
+            .text {
+                position: absolute;
+                left: em(16px,20px);
+                top: em(16px,110px);
+                width: em(16px,570px);
+
+                @media #{$screen} and(max-width:1369px) {
+                    top: em(16px,50px);
+                }
+
+                h3 {
+                    padding-bottom: em(40px,50px);
+                        font-size: 40px;
+                }
+                h2 {
+                    margin-bottom: em(20px,26px);
+                        font-size: 20px;
+                        line-height: 32px;
+                }
+                p {
+                    margin-bottom: em(14px,26px);
+                        font-size: 14px;
+                        line-height: 26px;
+                        color: #fff;
+                }
+            }
+            .basic-animation {
+                width: 100%;
+                position: relative;
+                height: em(16px,930px);
+                margin-bottom: em(16px,-325px);
+                margin-top: em(16px,515px);
+                
+                @media #{$screen} and(max-width:1369px) {
+                    margin-top: em(14px,530px);
+                        font-size: 13px;
+                }
+            
+                > div {
+                    //outline: 1px solid;
+                    position: absolute;
+                    top: em(16px,40px);
+                    left: 50%;
+                    width: em(16px,1449px);
+                    height: em(16px,930px);
+                    margin-left: em(16px,-10px);
+                    transform: translateX(-50%);
+                }
+
+                $pop: 1s;
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: em(16px,1449px);
+                    max-width: inherit;
+                    opacity: 0;
+                    -webkit-backface-visibility: hidden;
+                    &.anim-1 {
+                        z-index: 1;
+                        transition: transform $pop 0.5s, opacity $pop 0.5s;
+                        transform: translateX(-50%) translateY(em(16px,5px));
+                    }
+                    &.anim-2 {
+                        z-index: 2;
+                        transition: transform $pop 1s, opacity $pop 1s;
+                        transform: translateX(-50%) translateY(em(16px,-20px));
+                    }
+                    &.anim-3 {
+                        z-index: 3;
+                        transition: transform $pop 1.5s, opacity $pop 1.5s;
+                        transform: translateX(-50%) translateY(em(16px,-55px));
+                    }
+                    &.anim-4 {
+                        z-index: 4;
+                        transition: transform $pop 2s, opacity $pop 2s;
+                        transform: translateX(-50%) translateY(em(16px,-97px));
+                    }
+                }
+                &.animated {
+                    img {
+                        opacity: 1;
+                        &.anim-1 {
+                            transform: translateX(-50%) translateY(em(16px,0px));
+                        }
+                        &.anim-2 {
+                            transform: translateX(-50%) translateY(em(16px,-55px));
+                        }
+                        &.anim-3 {
+                            transform: translateX(-50%) translateY(em(16px,-97px));
+                        }
+                        &.anim-4 {
+                            transform: translateX(-50%) translateY(em(16px,-145px));
+                        }
+                    }
+                }
+            }
+            .part {
+                position: absolute;
+                top: em(16px,200px);
+                right: em(16px,140px);
+                width: em(16px,255px);
+                //outline: 1px solid #555;
+                    text-align: center;
+
+                @media #{$screen} and(max-width:1369px) {
+                    top: em(16px,170px);
+                }
+
+                table {
+                    margin-top: em(14px,45px);
+                    width: 100%;
+                        text-align: left;
+                        font-size: em(16px,14px);
+                }
+                td {
+                    line-height: em(14px,24px);
+                }
+                td:nth-child(1) {
+                    color: rgba(255,255,255,0.6);
+                }
+            }
+        }
+
+        // step-2
+        .step-2 {
+            position: relative;
+            padding-top: em(16px,330px);
+            padding-bottom: em(16px,120px);
+            overflow: hidden;
+            background: #fff image-url('../img/portfolio/underlviv/img-bottom.jpg') repeat-x bottom center;
+            background-size: em(16px,1920px);
+
+            @media #{$screen} and(max-width:1369px) {
+                font-size: 13px;
+            }
+
+            > div {
+                position: relative;
+                margin: 0 auto;
+                width: 100%;
+                width: em(16px,1260px);
+                //outline: 1px solid #E5D1D1;
+            }
+            .text {
+                position: absolute;
+                left: em(16px,310px);
+                top: em(16px,395px);
+                width: em(16px,600px);
+                    color: #585858;
+                    line-height: 32px;
+
+                @media #{$screen} and(max-width:1369px) {
+                    left: em(13px,210px);
+                    width: em(13px,740px);
+                }
+
+                h2 {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: opacity 0.3s 0.5s, transform 0.3s 0.5s;
+                    margin-bottom: em(32px,44px);
+                        font-size: 32px;
+                        line-height: 38px;
+                }
+                p {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: opacity 0.3s 0.6s, transform 0.3s 0.6s;
+                        font-size: 18px;
+                        line-height: 32px;
+                }
+
+                &.animated {
+                    h2 {
+                        transform: translateY(0px);
+                        opacity: 1;
+                    }
+                    p {
+                        transform: translateY(0px);
+                        opacity: 0.75;
+                    }
+                }
+            }
+            .home-animation {
+                position: relative;
+                width: 100%;
+                height: em(16px,780px);
+                z-index: 2;
+                pointer-events: none;
+                margin-top: 300px;
+                visibility: visible !important;
+
+                @media #{$screen} and(max-width:1369px) {
+                    //font-size: 13px;
+                }
+
+                img {
+                    max-width: inherit;
+                    position: absolute;
+                    left: em(16px,270px);
+                    width: em(16px,649px);
+                    opacity: 0;
+                    &.anim-1 {
+                        width: em(16px,1449px);
+                        position: absolute;
+                        top: em(16px,-520px);
+                        transform: translateX(em(16px,460px));
+                        transition: transform 0.6s 0.4s, opacity 0.6s 0.4s;
+                    }
+                    &.anim-2 {
+                        width: em(16px,803px);
+                        transform: translateX(em(16px,-915px));
+                        top: em(16px,-230px);
+                        transition: transform 0.6s 0.2s, opacity 0.6s 0.2s;
+                    }
+                    &.anim-3 {
+                        width: em(16px,803px);
+                        transform: translateX(em(16px,-770px));
+                        top: em(16px,-523px);
+                        transition: transform 0.6s 0s, opacity 0.6s 0s;
+                    }
+                }
+                &.animated img {
+                    opacity: 1;
+                    &.anim-1 {
+                        transform: translateX(em(16px,410px));
+                    }
+                    &.anim-2 {
+                        transform: translateX(em(16px,-865px));
+                    }
+                    &.anim-3 {
+                        transform: translateX(em(16px,-720px));
+                    }
+                }
+            }
+        }
+    }
+ 

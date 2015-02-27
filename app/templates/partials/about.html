@@ -1,0 +1,197 @@
+<div id="about" class="about-page">
+    
+    <section class="intro">
+        <div class="copy column">
+<!--                <div class="logo wow fadeInRightBig" data-wow-duration=".8s" data-wow-delay="0"></div>-->
+            <h1 class="title wow fadeInRightBig" data-wow-duration=".8s" data-wow-delay="0">{{about.intro.title}}</h1>
+            <p class="copy-text wow fadeInRightBig" data-wow-duration=".8s" data-wow-delay=".1s">{{about.intro.copy}}</p>
+            <a href="#" class="button wow fadeInRightBig hide-for-small" data-wow-duration=".8s" data-wow-delay=".3s">{{about.intro.cta}}</a>
+        </div>
+        <div class="panda">
+            <img src="/pictures/about/panda/1.jpg" alt="">
+        </div>
+        <div class="scroll-icon"><div>{{service_web.scroll_text}}</div></div>
+    </section> 
+
+    <section class="about-company">
+        <div class="about-history wow">
+            {{> about/history}}
+        </div>
+
+        <div class="row collapse workflow">
+
+            <div class="columns large-5 xlarge-4 pipeline box wow slideInLeft" data-wow-duration=".8s" data-wow-delay=".3s">
+                <div class="copy row">
+                    <div class="head column">
+                        <div class="icon"></div>
+                        <div class="title">{{about.company.workflow.pipeline.title}}</div>
+                    </div>
+                    <div class="column">{{{about.company.workflow.pipeline.copy}}}</div>
+                </div>
+            </div>
+            
+            <div class="columns show-for-large-up large-5 xlarge-6 services wow" >
+                {{> about/planets}}
+            </div>
+        </div>
+        
+        <div class="row collapse slider-holder">
+            <div class="columns medium-3 xlarge-2 large-offset-1 xlarge-offset-2 wow fadeInUpBig" data-wow-duration=".8s" data-wow-delay=".3s">
+                <div class="ebrr box small">
+                    <div class="front-wrapper">
+                        <img src="/pictures/about/logo/ebrr.svg" alt="{{about.company.ebrr.title}}">
+                    </div>
+                    <div class="back">
+                        <div class="head">
+                            <div class="icon"></div>
+                            <div class="title">{{about.company.ebrr.title}}</div>
+                        </div>
+                        <div class="copy">
+                            {{{about.company.ebrr.copy}}} 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns medium-7 slider wow fadeInUpBig" data-wow-duration=".8s" data-wow-delay=".4s">
+                {{#about.slider}}
+                    <img src="{{url}}" alt="{{title}}">
+                {{/about.slider}}
+            </div>
+        </div>
+        
+        <div class="row collapse team-switch show-for-medium-up">
+            <div class="columns medium-7 large-6 wow fadeInUpBig" data-wow-duration=".8s" data-wow-delay=".3s">
+                {{> about/team_switch}}    
+            </div>
+            <div class="columns medium-3 large-4 wow fadeInUpBig left" data-wow-duration=".8s" data-wow-delay=".4s">
+                <div class="thesis box small green">
+                    <div class="row">
+                        <div class="column head">
+                            <div class="icon"></div>
+                            <div class="title">{{about.company.thesis.title}}</div>
+                        </div>
+                        <div class="column copy">
+                            {{{about.company.thesis.copy}}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+     
+    
+    <section class="team">
+        <div class="row collapse">
+        {{#about.team.groups}}
+            <div class="group  {{#description}}description{{/description}} {{#placeholder}}show-for-large-up{{/placeholder}}" >
+            {{#man}}
+                
+                <div class="man wow fadeInUp {{#placeholder}} placeholder {{/placeholder}}" data-wow-duration=".5s" data-wow-delay="0">
+                    {{^placeholder}}
+                    <div class="front-wrapper">
+                        <img src="/pictures/about/people/{{picture}}.png" alt="" class="icon">
+                    </div>
+                    <div class="back">
+                        <img src="/pictures/about/people/photo/{{picture}}.jpg" alt="" class="pic">
+                    </div>
+                    {{/placeholder}}
+                </div>
+                
+            {{/man}}
+            {{#description}}
+                <div class="description-box row">
+                    <div class="column">
+                        <h1 class="title">{{title}}</h1>
+                        <div class="copy">{{{copy}}}</div>
+                    </div>
+                </div>
+            {{/description}}   
+            </div>
+        {{/about.team.groups}}
+        </div>
+    </section>
+    
+    
+    <section class="job">
+        <div class="row collapse">
+            <div class="columns large-5">
+                <div class="description-box row">
+                    <div class="column">
+                        <h1 class="title">{{about.job.title}}</h1>
+                        <p>{{about.job.copy}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns large-offset-1 xlarge-2 show-for-large left ">
+                <div class="vacancy box small green wow fadeInRightBig" data-wow-duration=".8s" >
+                    {{>about/submit_form}}
+                </div>
+            </div>
+        </div>        
+    </section>
+    
+    
+    <section class="about-showreel">
+        <video id="about-showreel" poster="/pictures/services/web/poster.jpg">
+            {{#about.showreel.sources}}
+            <source src="{{url}}" type="{{type}}">
+            {{/about.showreel.sources}}
+        </video>
+        <div class="play"><h2 class="title">{{about.showreel.text}}</h2></div>
+    </section>
+    
+    
+    <section class="clients">
+        <div class="row collapse">
+                <div class="client-holder">
+                    <div class="description-box row">
+                        <div class="column">
+                            <h1 class="title">{{about.clients.title}}</h1>
+                            <div class="copy">{{{about.clients.copy}}}</div>
+                        </div>
+                    </div>
+                    {{#about.clients.list}}
+                    <div class="client {{#large}}large{{/large}} {{#placeholder}}show-for-large-up{{/placeholder}}"  style="background-color:{{color}}">
+                        <div class="front-wrapper">
+                            <div class="front wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
+                                <img src="{{logo}}" alt="{{title}}">
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="desc">
+<!--                                <h3 class="title">{{title}}</h3>-->
+                                <p class="copy">{{copy}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{/about.clients.list}}
+                    <div class="client cta large">
+                        <div class="copy">{{{about.cta.copy}}}</div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="cta-section">
+        <div class="row">
+            <div class="columns large-4 right large-pull-1">
+                <div class="copy">
+                    <h1 class="title">{{about.footer.title}}</h1>
+                    <p class="text">{{about.footer.text}}</p>
+                </div>
+                <nav>
+                    <ul>
+                        {{#about.footer.links}}
+                        <li><a href="{{href}}" class="button {{class}}">{{text}}</a></li>
+                        {{/about.footer.links}}
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+    </section>
+    
+</div>
