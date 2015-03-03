@@ -1,6 +1,5 @@
 {
     "mainmenu": {
-        "home": "Головна",
         "about": "Про студію",
         "contacts": "Контакти",
         "portfolio": "Портфоліо",
@@ -330,6 +329,38 @@
             },
             "groups": [
                 {
+                    "man": [
+                        {
+                            "placeholder": true
+                        },
+                        {
+                            "placeholder": true
+                        },
+                        {
+                            "placeholder": true
+                        },
+                        {
+                            "picture": "Zamriy"
+                        }
+                    ]
+                },
+                {
+                    "man": [
+                        {
+                            "picture": "Zavacky"
+                        },
+                        {
+                            "picture": "Taraban"
+                        },
+                        {
+                            "picture": "Andreeva"
+                        },
+                        {
+                            "picture": "Golubyatnikova"
+                        }
+                    ]
+                },
+                {
                     "description": {
                         "title": "Команда",
                         "copy": "<span>Bambuk<span> - перш за все, місце створення командного продукту, де колектив досягає набагато якіснішого результату разом, а ніж вміння та інтелект її учасників по-одинці. Об'єднання спеціалістів з різними компетенціями і є основною перевагою студії, що надає їй неймовірної гнучкості, творчості та результативності."
@@ -338,26 +369,10 @@
                 {
                     "man": [
                         {
-                            "picture": "Zavacky"
-                        },
-                        {
-                            "picture": "Zavacky"
-                        },
-                        {
-                            "picture": "Zamriy"
-                        },
-                        {
-                            "picture": "Golubyatnikova"
-                        }
-                    ]
-                },
-                {
-                    "man": [
-                        {
                             "picture": "Muzychuk"
                         },
                         {
-                            "picture": "Kobceva"
+                            "picture": "Kobernyk"
                         },
                         {
                             "picture": "Kobceva"
