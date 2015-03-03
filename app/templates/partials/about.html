@@ -143,13 +143,11 @@
     
     
     <section class="clients">
-        <div class="row collapse">
+        <div class="row">
                 <div class="client-holder">
-                    <div class="description-box row">
-                        <div class="column">
-                            <h1 class="title">{{about.clients.title}}</h1>
-                            <div class="copy">{{{about.clients.copy}}}</div>
-                        </div>
+                    <div class="description-box">
+                        <h1 class="title">{{about.clients.title}}</h1>
+                        <div class="copy">{{{about.clients.copy}}}</div>
                     </div>
                     {{#about.clients.list}}
                     <div class="client {{#large}}large{{/large}} {{#placeholder}}show-for-large-up{{/placeholder}}"  style="background-color:{{color}}">
@@ -176,7 +174,7 @@
     
     <section class="cta-section">
         <div class="row">
-            <div class="columns large-4 right large-pull-1">
+            <div class="columns large-5 right">
                 <div class="copy">
                     <h1 class="title">{{about.footer.title}}</h1>
                     <p class="text">{{about.footer.text}}</p>

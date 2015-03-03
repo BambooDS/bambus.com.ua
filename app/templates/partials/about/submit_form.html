@@ -1,45 +1,39 @@
 <form id="submit-profile" enctype="multipart/form-data" onsubmit="return false;">
-    <div class="step-3 row">
-        <div class="column">
-            <div class="success">
-                <div class="head">
-                    <div class="title">{{about.job.vacancy.success}}</div>
-                </div>
-                <div class="copy">
-                    <p>{{about.job.vacancy.success_message}}</p>
-                </div>
+    <div class="step-3">
+        <div class="success">
+            <div class="head">
+                <div class="title">{{about.job.vacancy.success}}</div>
             </div>
-            <div class="error">
-                <div class="head">
-                    <div class="title">{{about.job.vacancy.error}}</div>
-                </div>
-                <div class="copy">
-                    <p>{{about.job.vacancy.error_message}}</p>
-                </div>
+            <div class="copy">
+                <p>{{about.job.vacancy.success_message}}</p>
+            </div>
+        </div>
+        <div class="error">
+            <div class="head">
+                <div class="title">{{about.job.vacancy.error}}</div>
+            </div>
+            <div class="copy">
+                <p>{{about.job.vacancy.error_message}}</p>
             </div>
         </div>
     </div>
-    <div class="step-2 row">
-        <div class="column">
-            <div class="head">
-                <label for="submit-profile-input" >{{about.job.vacancy.input}}</label>
-                <progress value="0"></progress>
-                <input type="file" name="attachment" id="submit-profile-input" placeholder="{{about.job.vacancy.placeholder}}" required>
-            </div>
-            <div class="copy">
-                <p>{{about.job.vacancy.help}}</p>
-            </div>
+    <div class="step-2">
+        <div class="head">
+            <label for="submit-profile-input" >{{about.job.vacancy.input}}</label>
+            <progress value="0"></progress>
+            <input type="file" name="attachment" id="submit-profile-input" placeholder="{{about.job.vacancy.placeholder}}" required>
+        </div>
+        <div class="copy">
+            <p>{{about.job.vacancy.help}}</p>
         </div>
     </div>
-    <div class="step-1 row">
-        <div class="column">
-            <div class="head">
-                <button class="icon" title="{{about.job.vacancy.title}}"></button>
-                <div class="title">{{about.job.vacancy.title}}</div>
-            </div>
-            <div class="copy">
-                <p>{{about.job.vacancy.copy}}</p>
-            </div>
+    <div class="step-1">
+        <div class="head">
+            <button class="icon" title="{{about.job.vacancy.title}}"></button>
+            <div class="title">{{about.job.vacancy.title}}</div>
+        </div>
+        <div class="copy">
+            <p>{{about.job.vacancy.copy}}</p>
         </div>
     </div>
 </form>
