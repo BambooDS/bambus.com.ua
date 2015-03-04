@@ -57,7 +57,7 @@ a{
     }
 
     /* hide for touch devices */
-    .touch & {
+    @media only screen and (max-width: 1024px) {
         display: none;
     }
 }
@@ -310,7 +310,7 @@ a{
         }
     }
     &.playing{
-       &:before,.play{
+        &:before,.play{
             opacity: 0;
         }
     }
