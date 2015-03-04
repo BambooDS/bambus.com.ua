@@ -16,7 +16,7 @@ define(['backbone','preloader'], function (Backbone, preloader) {
             this.setElement(el);
             this.menuWrapper = this.el.querySelector('#menu-wrapper');
             this.menu = this.menuWrapper.querySelector('.main-menu');
-            preloader.dispatcher.on('loaded', this.hideDelayed, this);
+            preloader.dispatcher.on('loaded',this.hideDelayed,this)
         },
 
         hide: function () {
@@ -36,12 +36,7 @@ define(['backbone','preloader'], function (Backbone, preloader) {
         },
         hideSubMenu: function (event) {
             event && event.stopImmediatePropagation();
-            // if no submebu opened - close menu
-            if (!this.menu.classList.contains('show-child')) {
-                this.menuWrapper.classList.add('hide');
-            } else {
-                this.menu.classList.remove('show-child');
-            }
+            this.menu.classList.remove('show-child');
         }
     });
     return Menu;

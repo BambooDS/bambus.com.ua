@@ -343,26 +343,7 @@ define(['page', 'masonry', 'backbone', 'hamster', 'wow', 'helper', 'preloader', 
             this.hint = this.el.querySelector('.orbit[data-id="1"]');
             this.text = this.hint.querySelector('.text');
             this.images = this.hint.querySelector('.images');
-            // attach trigger to parent page
-            options.parent.events.scroll = (function (_self) {
-                    var icon = _self.el.querySelector('.scroll-icon');
-                    var planetLauncher = _.once(function (planets) {
-                        planets.render();
-                        setTimeout(planets.start.bind(planets), 10);
-                    });
-                    return _.throttle(function (event) {
-                        var planets = _self.modules.planets;
-                        if (planets.el.getBoundingClientRect().top < window.innerHeight / 1.2) {
-                            planetLauncher(planets);
-                        }
-                        if (event.currentTarget.scrollTop >= 100) {
-                            icon.classList.add('hidden');
-                        } else {
-                            icon.classList.remove('hidden');
-                        }
-                    });
-            }(options.parent));
-            options.parent.delegateEvents();
+            //this.render();
         },
         render: function () {
             this.el.classList.add('animating');
@@ -413,6 +394,9 @@ define(['page', 'masonry', 'backbone', 'hamster', 'wow', 'helper', 'preloader', 
     var About = Page.extend({
         name: 'about',
         events: {
+            "scroll": function (event) {
+                this.scrollHandler(event);
+            },
             "click .intro .button": function () {
                 var h = window.innerHeight;
                 var t = 0;
@@ -439,16 +423,12 @@ define(['page', 'masonry', 'backbone', 'hamster', 'wow', 'helper', 'preloader', 
         },
         showHook: function () {
             if (preloader.loaded) {
-                if (this.wow) {
-                    if (this.wow.element) {
-                        this.wow.scrollCallback();
-                    } else {
-                        this.wow.init();
-                    }
+                if (this.wow.element) {
+                    this.wow.scrollCallback();
+                } else {
+                    this.wow.init();
                 }
-                if (this.modules.clients) {
-                    this.modules.clients.grid.layout();
-                }
+                this.modules.clients.grid.layout();
             } else {
                 this.waiting = setTimeout(this.showHook.bind(this), 1000);
             }
@@ -468,36 +448,44 @@ define(['page', 'masonry', 'backbone', 'hamster', 'wow', 'helper', 'preloader', 
                 }
                 delete this.wow;
             });
+            this.scrollHandler = (function (_self) {
+                var icon = _self.el.querySelector('.scroll-icon');
+                var planetLauncher = _.once(function (planets) {
+                    planets.render();
+                    setTimeout(planets.start.bind(planets), 10);
+                });
+                return _.throttle(function (event) {
+                    var planets = _self.modules.planets;
+                    if (planets.el.getBoundingClientRect().top < window.innerHeight / 1.2) {
+                        planetLauncher(planets);
+                    }
+                    if (event.currentTarget.scrollTop >= 100) {
+                        icon.classList.add('hidden');
+                    } else {
+                        icon.classList.remove('hidden');
+                    }
+                });
+            }(this));
         },
         render: function () {
+            // reveal animation 
+            this.wow = new WOW({
+                boxClass: 'wow', // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                offset: 50, // distance to the element when triggering the animation (default is 0)
+                mobile: true, // trigger animations on mobile devices (true is default)
+                root: this.el
+            });
 
-            this.modules =  {};
-
-            this.modules.slider = new Slider({parent: this, container: '.slider', slide: 'img'});
-
-            this.modules.showreal = new Showreel({parent: this});
-
-            // load panda animation only on desctops
-            if (Modernizr.mq('(min-width:1280px)') && !Modernizr.touch) {
-                this.modules.panda = new Panda({parent: this});
-                this.modules.profile = new Profile({parent: this});
-                this.modules.planets = new Planets({parent: this});
-            }
-            // load only at larder screens
-            if (Modernizr.mq('(min-width:768px)')) {
-                this.modules.switcher = new Switcher({parent: this});
-                this.modules.clients = new Clients({parent: this});
-                // reveal animation
-                this.wow = new WOW({
-                    boxClass: 'wow', // animated element css class (default is wow)
-                    animateClass: 'animated', // animation css class (default is animated)
-                    offset: 50, // distance to the element when triggering the animation (default is 0)
-                    mobile: true, // trigger animations on mobile devices (true is default)
-                    root: this.el
-                });
-            }
-
-
+            this.modules = _.extend(this.widgets || {}, {
+                slider: new Slider({parent: this, container: '.slider', slide: 'img'}),
+                panda: new Panda({parent: this}),
+                clients: new Clients({parent: this}),
+                planets: new Planets({parent: this}),
+                profile: new Profile({parent: this}),
+                switcher: new Switcher({parent: this}),
+                showreal: new Showreel({parent: this})
+            });
 
             this.rendered = true;
             return this;
