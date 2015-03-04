@@ -1,45 +1,45 @@
 <div id="about" class="about-page">
     
     <section class="intro">
-        <div class="copy column">
-<!--                <div class="logo wow fadeInRightBig" data-wow-duration=".8s" data-wow-delay="0"></div>-->
-            <h1 class="title wow fadeInRightBig" data-wow-duration=".8s" data-wow-delay="0">{{about.intro.title}}</h1>
-            <p class="copy-text wow fadeInRightBig" data-wow-duration=".8s" data-wow-delay=".1s">{{about.intro.copy}}</p>
-            <a href="#" class="button wow fadeInRightBig hide-for-small" data-wow-duration=".8s" data-wow-delay=".3s">{{about.intro.cta}}</a>
-        </div>
         <div class="panda">
             <img src="/pictures/about/panda/1.jpg" alt="">
+        </div>
+        <div class="copy">
+<!--                <div class="logo wow fadeInRightBig" data-wow-duration=".8s" data-wow-delay="0"></div>-->
+            <div class="title wow fadeInRightBig" data-wow-duration=".8s" data-wow-delay="0">{{about.intro.title}}</div>
+            <p class="wow fadeInRightBig" data-wow-duration=".8s" data-wow-delay=".1s">{{about.intro.copy}}</p>
+            <a href="#" class="button wow fadeInRightBig" data-wow-duration=".8s" data-wow-delay=".3s">{{about.intro.cta}}</a>
         </div>
         <div class="scroll-icon"><div>{{service_web.scroll_text}}</div></div>
     </section> 
 
     <section class="about-company">
-        <div class="about-history wow">
+        <div class="about-history row show-for-medium-up wow" >
             {{> about/history}}
         </div>
 
-        <div class="row collapse workflow">
-
-            <div class="columns large-5 xlarge-4 pipeline box wow slideInLeft" data-wow-duration=".8s" data-wow-delay=".3s">
-                <div class="copy row">
-                    <div class="head column">
-                        <div class="icon"></div>
-                        <div class="title">{{about.company.workflow.pipeline.title}}</div>
-                    </div>
-                    <div class="column">{{{about.company.workflow.pipeline.copy}}}</div>
+        <div class="workflow row ">
+            <div class="columns xlarge-4 large-5 medium-6 pipeline box wow slideInLeft" data-wow-duration=".8s" data-wow-delay=".3s">
+                <div class="head">
+                    <div class="icon"></div> 
+                    <div class="title">{{about.company.workflow.pipeline.title}}</div>
+                </div>
+                <div class="copy">
+                    {{{about.company.workflow.pipeline.copy}}}
                 </div>
             </div>
             
-            <div class="columns show-for-large-up large-5 xlarge-6 services wow" >
+            <div class="columns xlarge-6 large-5 medium-4 services show-for-medium-up wow" >
                 {{> about/planets}}
             </div>
         </div>
         
-        <div class="row collapse slider-holder">
-            <div class="columns medium-3 xlarge-2 large-offset-1 xlarge-offset-2 wow fadeInUpBig" data-wow-duration=".8s" data-wow-delay=".3s">
+        <div class="slider-holder row">
+            <div class="columns medium-4 large-3 xlarge-2 large-offset-1 xlarge-offset-2 wow fadeInUpBig" data-wow-duration=".8s" data-wow-delay=".3s">
                 <div class="ebrr box small">
                     <div class="front-wrapper">
-                        <img src="/pictures/about/logo/ebrr.svg" alt="{{about.company.ebrr.title}}">
+                        <img src="/pictures/about/logo/ebrr.svg" alt="{{about.company.ebrr.title}}"> 
+<!--                        <div class="title">{{about.company.ebrr.title}}</div>-->
                     </div>
                     <div class="back">
                         <div class="head">
@@ -52,27 +52,25 @@
                     </div>
                 </div>
             </div>
-            <div class="columns medium-7 slider wow fadeInUpBig" data-wow-duration=".8s" data-wow-delay=".4s">
+            <div class="columns medium-6 slider show-for-medium-up wow fadeInUpBig" data-wow-duration=".8s" data-wow-delay=".4s">
                 {{#about.slider}}
                     <img src="{{url}}" alt="{{title}}">
                 {{/about.slider}}
             </div>
         </div>
         
-        <div class="row collapse team-switch show-for-medium-up">
-            <div class="columns medium-7 large-6 wow fadeInUpBig" data-wow-duration=".8s" data-wow-delay=".3s">
+        <div class="row team-switch">
+            <div class="columns medium-6 large-6 show-for-medium-up wow fadeInUpBig" data-wow-duration=".8s" data-wow-delay=".3s"> 
                 {{> about/team_switch}}    
             </div>
-            <div class="columns medium-3 large-4 wow fadeInUpBig left" data-wow-duration=".8s" data-wow-delay=".4s">
+            <div class="columns medium-4 large-3 xlarge-2 left wow fadeInUpBig" data-wow-duration=".8s" data-wow-delay=".4s">
                 <div class="thesis box small green">
-                    <div class="row">
-                        <div class="column head">
-                            <div class="icon"></div>
-                            <div class="title">{{about.company.thesis.title}}</div>
-                        </div>
-                        <div class="column copy">
-                            {{{about.company.thesis.copy}}}
-                        </div>
+                    <div class="head">
+                        <div class="icon"></div>
+                        <div class="title">{{about.company.thesis.title}}</div>
+                    </div>
+                    <div class="copy">
+                        {{{about.company.thesis.copy}}}
                     </div>
                 </div>
             </div>
@@ -82,9 +80,9 @@
      
     
     <section class="team">
-        <div class="row collapse">
+        <div class="row ">
         {{#about.team.groups}}
-            <div class="group  {{#description}}description{{/description}} {{#placeholder}}show-for-large-up{{/placeholder}}" >
+            <div class="group {{^description}}show-for-medium-up{{/description}} {{#description}}description{{/description}} {{#placeholder}}show-for-large-up{{/placeholder}}" >
             {{#man}}
                 
                 <div class="man wow fadeInUp {{#placeholder}} placeholder {{/placeholder}}" data-wow-duration=".5s" data-wow-delay="0">
@@ -100,11 +98,9 @@
                 
             {{/man}}
             {{#description}}
-                <div class="description-box row">
-                    <div class="column">
-                        <h1 class="title">{{title}}</h1>
-                        <div class="copy">{{{copy}}}</div>
-                    </div>
+                <div class="description-box">
+                    <h1 class="title">{{title}}</h1>
+                    <div class="copy">{{{copy}}}</div>
                 </div>
             {{/description}}   
             </div>
@@ -114,16 +110,14 @@
     
     
     <section class="job">
-        <div class="row collapse">
-            <div class="columns large-5">
-                <div class="description-box row">
-                    <div class="column">
-                        <h1 class="title">{{about.job.title}}</h1>
-                        <p>{{about.job.copy}}</p>
-                    </div>
+        <div class="row">
+            <div class="columns medium-5 large-5">
+                <div class="description-box">
+                    <h1 class="title">{{about.job.title}}</h1>
+                    <p>{{about.job.copy}}</p>
                 </div>
             </div>
-            <div class="columns large-offset-1 xlarge-2 show-for-large left ">
+            <div class="columns medium-offset-1 medium-4 large-offset-1 large-3 large-offset-1 xlarge-2 left ">
                 <div class="vacancy box small green wow fadeInRightBig" data-wow-duration=".8s" >
                     {{>about/submit_form}}
                 </div>
