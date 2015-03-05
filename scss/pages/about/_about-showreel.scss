@@ -13,7 +13,7 @@
     }
     .title{
         text-align: center;
-        padding-top: 24px;
+        padding-top: 340px;
         font-weight: lighter;
         font-size: 36px;
     }
@@ -21,21 +21,19 @@
         display: block;
         content: '';
         position: absolute;
-        width: 320px;
-        height: 320px;
+        width: 308px;
+        height: 308px;
         top: 50%;
         transition: opacity .3s;
         left: 50%;
-        margin: -160px 0 0 -160px;
+        margin: -154px 0 0 -154px;
         opacity: .75;
         cursor: pointer;
         color: white;
         text-align: center;
-        padding-top: 350px;
         font-weight: lighter;
         font-size: 36px;
         background: image-url('about/icons/play-button.svg') no-repeat center;
-        background-size: 100% 100%;
         &:hover{
             opacity: 1;
         }

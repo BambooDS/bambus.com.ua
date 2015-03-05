@@ -4908,9 +4908,9 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
         clear: both; }
       .about-page .job #submit-profile progress {
         position: absolute;
-        top: 49px;
+        top: 42px;
         width: 252px;
-        height: 54px;
+        height: 56px;
         outline: none;
         border: 0;
         opacity: 0.5;
@@ -5004,28 +5004,26 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       transition: opacity 0.3s; }
     .about-page .about-showreel .title {
       text-align: center;
-      padding-top: 24px;
+      padding-top: 340px;
       font-weight: lighter;
       font-size: 36px; }
     .about-page .about-showreel .play {
       display: block;
       content: '';
       position: absolute;
-      width: 320px;
-      height: 320px;
+      width: 308px;
+      height: 308px;
       top: 50%;
       transition: opacity 0.3s;
       left: 50%;
-      margin: -160px 0 0 -160px;
+      margin: -154px 0 0 -154px;
       opacity: 0.75;
       cursor: pointer;
       color: white;
       text-align: center;
-      padding-top: 350px;
       font-weight: lighter;
       font-size: 36px;
-      background: url(../img/about/icons/play-button.svg) no-repeat center;
-      background-size: 100% 100%; }
+      background: url(../img/about/icons/play-button.svg) no-repeat center; }
       .about-page .about-showreel .play:hover {
         opacity: 1; }
       @media only screen and (max-width: 960px) {
@@ -5174,7 +5172,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
         background-color: #96b03c; } }
 
 .about-history {
-  padding-top: 60px; }
+  padding-top: 30px; }
   .about-history .people-text {
     font-weight: 100;
     font-size: 18px; }
@@ -5345,6 +5343,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       .graph-history .projects .project:hover:after {
         border-color: #666;
         transition: border-color 0.3s; }
+      @media only screen and (max-width: 960px) { }
     .graph-history .projects .icon {
       pointer-events: all;
       transition: -webkit-transform 0.3s 0.3s, opacity 0.3s;
@@ -5381,13 +5380,17 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       .graph-history .projects .description .title {
         font-family: 'Roboto Condensed', Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
         font-size: 24px;
-        font-weight: 100; }
+        font-weight: 100;
+        text-align: left; }
       .graph-history .projects .description p {
         line-height: 20px;
         margin: 12px 0; }
       .graph-history .projects .description.left {
-        right: 48px;
-        left: auto; }
+        left: auto;
+        right: 114px;
+        text-align: right; }
+        .graph-history .projects .description.left .title {
+          text-align: right; }
   .graph-history .projects .project {
     opacity: 0;
     transition: -webkit-transform 0.5s, opacity 0.5s;

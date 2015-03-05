@@ -140,6 +140,7 @@
                         "title": "VENCEREMOS",
                         "text": "Програма хорошого настрою для АЗК ОККО",
                         "date": "55",
+                        "class": "left",
                         "img": [
                             "/pictures/about/history/venceremos-1.png",
                             "/pictures/about/history/venceremos-2.png",
@@ -150,6 +151,7 @@
                         "title": "OKKO-inform",
                         "text": "Анімаційний інфографічний ролик",
                         "date": "60",
+                        "class": "left",
                         "img": [
                             "/pictures/about/history/okko-in-1.png",
                             "/pictures/about/history/okko-in-2.png",
@@ -160,7 +162,7 @@
                         "title": "LWO.AERO",
                         "text": "Сайт львівського аеропорту ім. Короля Данила",
                         "date": "75",
-                        
+                        "class": "left",
                         "img": [
                             "/pictures/about/history/lwo-1.png",
                             "/pictures/about/history/lwo-2.png",
@@ -498,7 +500,7 @@
             "sources": [
                 {
                     "type": "video/mp4",
-                    "url": "/pictures/showreel.mp4"
+                    "url": "/pictures/showreal.mp4"
                 }
             ]
         },
