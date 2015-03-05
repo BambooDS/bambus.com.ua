@@ -1,67 +1,83 @@
 .cta-section{
-    /* mobile */
     background: #aaa;
     display: block;
-    background-color: $green !important;
-    padding-top:48px;
+    background:
+        image-url('about/footer/tree-2.png') 45% bottom no-repeat,
+        image-url('about/footer/tree.jpg') left bottom no-repeat,
+        image-url('about/footer/tree-3.png') right bottom no-repeat;
+    background-color: $green;
+    .columns{
+        padding: 0;
+    }
+    .title, &{
+        color:white
+    }
     ul{
         list-style: none;
         padding:0;
-    }
-    .title, &{
-        color: white;
-    }
-    .title{
-        font-weight: 100;
-    }
-    .copy{
-        max-width: 510px;
-        margin: 0 auto;
+        margin:0 0 0 140px;
     }
     .text{
-        line-height: 1.5em;
+        font-size: 22px;
+        line-height: 24px;
         font-family: 'Roboto';
         font-weight: 100;
-        margin-bottom: 3em;
+        margin-bottom: 68px;
         text-shadow: 1px 1px 1px grey;
+        padding-right: 16px;
+        @media only screen and (max-width:640px){
+            margin-left: -34px;
+        }
+    }
+    .copy{
+        padding-left: 72px;
+        max-width: 600px;
+        @media only screen and (max-width:1600px){
+            margin-top: 200px;
+        }
+        @media only screen and (max-width:480px){
+            padding-left: 60px;
+        }
     }
     .button{
+        width: 320px;
         text-align: center;
         margin-bottom: 16px;
-        width: 100%;
+        @media only screen and (max-width:380px){
+            width: 272px;
+        }
+    }
+    .title{
+        line-height: 48px;
+        margin: 120px 0 28px 0;
+        font-weight: 100;
     }
 
-
-    /* tablet and larger */
-    @media #{$medium-only} {
-        .copy{
-            max-width: none;
-            margin: 0 auto;
-        }
-        li{
-            width: 50%;
-            float: left;
-            &:nth-child(2n-1) {
-                padding-right: 12px;
-            }
-            &:nth-child(2n) {
-                padding-left: 12px;
-            }
-        }
-
-    }
-    @media #{$large-up} {
-        min-height: 100vh;
+    @media only screen and (max-width:1600px){
         background:
             image-url('about/footer/tree-2.png') 45% bottom no-repeat,
-            image-url('about/footer/tree.jpg') left bottom no-repeat,
+            image-url('about/footer/tree-small.jpg') -18px 18px no-repeat,
             image-url('about/footer/tree-3.png') right bottom no-repeat;
+        background-color: $green;
+        padding-bottom: 80px;
+        .large-5{
+            width: 100%;
+        }
         ul{
-            max-width: 320px;
-            margin: 0 auto;
-        }
-        .copy{
-            font-size: 22px;
-        }
+            margin: 0 50px;
+            li{
+                float: left;
+                margin: 0 18px;
+            } 
+            @media only screen and (max-width:480px){
+                margin: 0 10px;
+            }
+        } 
+    }
+    @media only screen and (max-width:1180px){
+        background:
+            image-url('about/footer/tree-small.jpg') -18px 18px no-repeat,
+            image-url('about/footer/tree-3.png') right bottom no-repeat;
+        background-color: $green;
     }
 }

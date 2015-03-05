@@ -220,11 +220,18 @@ a{
         text-align: center;
         img {
             max-width: 75%;
-            max-height: 75%;
         }
     }
     .back {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        transform: translate3d(0,100%,0);
+        .desc {
+            padding: 0 40px;
+            width: 100%;
+        }
     }
     .back .desc, .front img {
         position: absolute;
@@ -232,28 +239,14 @@ a{
         left: 50%;
         transform: translate(-50%,-50%);
     }
-    @media #{$large-up}{
-        .back {
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: white;
-            transform: translate3d(0,100%,0);
-            .desc {
-                padding: 0 40px;
-                width: 100%;
-            }
+    &:hover {
+        .back{
+            transform: translate3d(0,0%,0);
         }
-        &:hover {
-            .back{
-                transform: translate3d(0,0%,0);
-            }
-            .front-wrapper {
-                transform: translate3d(0,-50%,0);
-            }
+        .front-wrapper {
+            transform: translate3d(0,-50%,0);
         }
     }
-
 }
 
 

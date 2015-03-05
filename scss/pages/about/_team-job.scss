@@ -1,55 +1,23 @@
-.slider-holder {
-    position: relative;
-    min-height: 352px;
-    .slider{
-        /*display: block !important; - ToDo fis sliter to fit all screen sizes*/
-        right: 0;
-        height: 100%;
-        overflow: hidden;
-        height: 100%;
-        position: absolute;
-        img{
-            max-width: none;
-        }
-    }
-}
-
-.thesis{
-    max-width: 400px;
-    padding-top: 24px;
-    min-height: 374px;
-    .icon{
-        background-image: image-url('about/icons/40x40-bambukicon.svg');
-    }
-    @media only screen and (max-width:960px){
-        min-height: 0;
-    }
-}
-
 .team{
+    margin-bottom: 72px; 
     position: relative;
-    margin-bottom: 24px;
     .group{
-        width: 50%;
+        height: 176px * 2;  
         float: left;
-        &.description{
-            width: 100%;
-            padding-bottom: 48px;
-        }
-        /* transform last block to row */
-        @media #{$medium-only}  {
-            &:last-child {
-                width: 40%;
-                .man {
-                    width: 25%;
-                    &:nth-child(3){
-                        background: white;
-                    }
-                    &:nth-child(4){
-                        background: #ececec;
-                    }
-                }
+
+        @media #{$medium}{
+            width: 25%;
+            &.description{
+                width: 50%;
             }
+        }
+        @media #{$large}{
+            width: 20%;
+            &.description{
+                width: 60%;
+            }
+        }
+        @media #{$medium-only}{
             .description-box{
                 padding: 16px 16px 0 16px;
                 .copy{
@@ -57,22 +25,50 @@
                 }
             }
         }
-        @media #{$medium-up}{
-            width: 20%;
+
+        @media only screen and (max-width:1600px){
+            &:nth-child(4){
+                clear: left;
+            }
+            &:nth-child(1), &:nth-child(2), &.description{
+                height: auto;
+            }
+            height: auto; 
+        }
+        @media only screen and (max-width:960px){
+
+            &:nth-child(1), &:nth-child(2){
+                width: 50%;
+                .man{
+                    width: 25%;
+                    &:nth-child(odd){
+                        background: #ececec;
+                    }
+                    &:nth-child(even){
+                        background: #fff;
+                    }
+                }
+            }
             &.description{
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
             }
         }
-
-        @media #{$large}{
-            width: 20%;
+        @media only screen and (max-width:640px){
+            &.description{
+                position: relative;
+                margin-bottom: 24px;
+            }
 
         }
+
         .man{
             float: left;
             width: 50%;
             position: relative;
-//            height: 176px;
+            height: 176px;
             overflow: hidden;
             &:nth-child(2n),&:nth-child(3n){
                 background: #ececec;
@@ -80,24 +76,38 @@
             &:nth-child(4n), &.placeholder{
                 background: transparent;
             }
-            @extend %block-slide-hover-animation;
+            @extend %block-slide-hover-animation; 
             .front-wrapper img{
                 max-width: 100%;
+                max-height: 100%;
             }
-//            @media only screen and (max-width:1700px){
-//                height: auto;
-//            }
+            @media only screen and (max-width:1700px){
+                height: auto;
+            }
+        }
+        &:last-child{
+            float: left !important;
+            @media only screen and (max-width:640px){
+                width: 50%;
+                .man{
+                    width: 25%;
+                }
+            }
         }
     }
-    @media #{$medium-up} {
-        margin-bottom: 72px;
+    @media only screen and (max-width:1440px){
+        margin-bottom: 0;
     }
-
+    @media only screen and (max-width:960px){
+        padding-top: 200px;
+    }
+    @media only screen and (max-width:640px){
+        padding-top: 0;
+    }
 }
 
-
 .job{
-
+    margin-bottom: 72px;
     .icon{
         background-image: image-url('about/icons/upload-icon.svg');
         &:hover{
@@ -105,12 +115,15 @@
             animation-duration: 1;
         }
     }
+    .description-box{
+        @media only screen and (max-width:640px){
+            padding: 0 0 0 16px;
+            width: 100%; 
+        }
+    }
     .vacancy {
         overflow: hidden;
     }
-}
-
-/* CV submit */
     #submit-profile{
         @include clearfix();
         width: 300%;
@@ -171,7 +184,7 @@
         }
         &>div{
             float: left;
-            width: 100 / 3 * 1%;
+            width: 100 / 3 * 1%; 
         }
         &.state-2{
             transform: translateX(-33.3333%);
@@ -184,7 +197,7 @@
         }
         .success,.error{display: none;}
 
-        &.success{
+        &.success{ 
             .success{display: block;}
         }
         &.error{
@@ -204,4 +217,23 @@
             padding-left: 40px;
         }
     }
-
+    .medium-5{
+        @media only screen and (max-width:960px){
+            width: 60%;
+            padding-right: 16px;
+        }
+        @media only screen and (max-width:640px){
+            width: 100%;
+            margin-bottom: 24px;
+        }
+    }
+    .medium-offset-1{
+        @media only screen and (max-width:960px){
+            float: right !important;
+            margin-left: 0 !important;
+        }
+    }
+    @media only screen and (max-width:1440px){
+        margin-bottom: 0;
+    }
+}

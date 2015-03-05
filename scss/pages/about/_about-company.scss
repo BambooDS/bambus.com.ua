@@ -1,0 +1,153 @@
+.about-company{
+    overflow: hidden;
+
+    .workflow{
+        position: relative;
+        @media #{$medium}{
+            margin-top: 128px;    
+        }
+        @media only screen and (max-width:1280px){
+            margin-top: 60px;
+        }
+        @media only screen and (max-width:640px){
+            margin-top: 0;
+        }
+        .pipeline{
+            .icon{
+                background-image: image-url('about/icons/56x56-gear.svg');
+                background-color: #ede0ac;
+            }
+            .head{
+                @media #{$medium}{
+                    font-size: 32px;
+                    max-width: 75%;
+                }
+                @media only screen and (max-width:1280px){
+                    max-width: 100%;
+                    padding-bottom: 24px;
+                    padding-right: 16px;
+                }
+                @media only screen and (max-width:640px){
+                    max-width: 100%;
+                    padding-right: 16px;
+                    padding-bottom: 12px;
+                }
+            }
+        }
+        .box{
+            @media only screen and (max-width:800px){
+                width: 100%;
+            }  
+        }
+        .services{
+            @media only screen and (max-width:800px){
+                display: none !important;
+            } 
+        }
+    }
+    .slider-holder {
+        position: relative;
+        min-height: 352px; 
+        .columns{
+            padding: 0;
+        }
+        .slider{
+            /*display: block !important; - ToDo fis sliter to fit all screen sizes*/
+            position: absolute;
+            right: 0;
+            height: 100%;
+            overflow: hidden;            
+            height: 100%;
+            img{
+                max-width: none;
+            }
+        }
+        .large-offset-1{
+            @media only screen and (max-width:1280px){
+                margin-left: 0 !important;
+            }
+        }
+        .medium-4{
+            @media only screen and (max-width:1024px){
+                width: 30% !important;
+            }
+            @media only screen and (max-width:960px){
+                display: none;
+            }
+        }
+        @media only screen and (max-width:640px){ 
+            display: none;
+        }
+    }
+    .team-switch .columns{
+        padding: 0;
+    }
+    .team-switch.row, .slider-holder.row{
+        .large-6, .medium-6{
+            @media only screen and (max-width:1280px){
+                width: 70%;
+            }
+            @media only screen and (max-width:960px){
+                width: 100%;
+            }
+        }
+    }
+    .team-switch .medium-4{
+        width: 30%;
+        @media only screen and (max-width:960px){
+            width: 100%;
+        }
+    }
+
+    .thesis {
+        min-height: 374px;
+        .icon{
+            background-image: image-url('about/icons/40x40-bambukicon.svg');
+        }
+        @media only screen and (max-width:960px){
+            min-height: 0;
+        }
+    }
+}
+
+
+.ebrr{
+    background: #296497;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0);
+    height: 352px;
+    .icon{
+        background-image: image-url('about/icons/logo-ebrr-small.svg');
+
+    }
+    .back {
+        background: inherit;
+    }
+    .front-wrapper{         
+        position: relative;
+        height: 352px;
+        min-height: 0;
+        img{
+            max-width: none;
+            @extend %center-block;
+        }
+        .title{
+            font-size: 18px;
+            text-align: center;
+            line-height: 80px;
+            font-weight: 100;
+            &:before, &:after {
+                opacity: .4;
+                height: 1px;
+                content: '';
+                background: white;
+                width: 30%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+    @extend %block-slide-hover-animation;
+} 

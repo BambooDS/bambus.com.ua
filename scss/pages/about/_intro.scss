@@ -1,93 +1,124 @@
 .intro{
-    // phone styles
     color: #FFF;
     height: 100vh;
     background: $green;
     position: relative;
     overflow: hidden;
     backface-visibility: hidden;
-    .copy-text {
-        line-height: 1.3em;
+    p,.button,.title{
+        transform: translateX(1000px);
+    }
+    p {
+        font-size: 22px;
+        line-height: 24px;
         font-family: 'Roboto';
         font-weight: 100;
-        margin-bottom: 2em;
+        margin-bottom: 68px;
         padding-right: 24px;
         text-shadow: 1px 1px 1px grey;
+        @media only screen and (max-width:1024px){
+            margin-bottom: 32px;
+            line-height: 32px;
+        }
+        @media only screen and (max-width:640px){
+            margin-left: -46px;
+        }
     }
     .panda{
-        position: absolute;
-        width: 100%;
-        bottom: 0;
+        position: relative;
+        height: 100%;
+        width: 50%;
+        float: left;
         img {
             position: absolute;
             display: block;
             bottom: 0;
             left: 50%;
-            z-index: 0;
-            max-width: 72%;
             transform: translateX(-50%);
-        }
-    }
-    .copy{
-        margin-top: 28px;
-        position: relative;
-        z-index: 1;
-    }
-    .title{
-        margin-left: 48px;
-        color: inherit;
-        padding: 0;
-    }
-    .button {
-        float: left;
-    }
-
-    // phone horizontal
-    @media #{$small-only} and (orientation:landscape) {
-        .panda {
-            opacity: .15;
-        }
-        .title {
-            font-size: 36px;
-        }
-        .copy-text {
-            font-size: 22px;
-        }
-    }
-
-    // tablets and larger
-    @media #{$medium-up} {
-        height: auto;
-        min-height: 600px;
-        .wow{
-            transform: translateX(1000px);
-        }
-        .copy-text {
-            font-size: 22px;
-        }
-        .panda {
-            width: 50%;
-            left: 0;
-            height: 100%;
-            img {
+            @media only screen and (max-width:1280px){
+                transform: none;
+                max-width: 120%;
+                left: 0;
+            }
+            @media only screen and (max-width:1024px){
                 max-width: 100%;
             }
+
         }
-        .copy {
-            width: 50%;
+        @media only screen and (max-width:1024px){
+            float: right;
+            width: 60%;
+        }
+        @media only screen and (max-width:767px){
+            width: 70%;
+        }
+        @media only screen and (max-width:600px){
+            float: none;
+            margin: 0 auto;
+        }
+        //ToDo make quierie to match ipad portrait(need to bee tested on ipad)
+        @media only screen 
+        and (min-width : 768px) 
+            and (max-width : 1024px) 
+            and (orientation : portrait) { 
+            float: none;
+            width: 100%; 
+        } 
+    }
+    .copy{
+        width: 50%;
+        max-width: 560px;
+        float: left;
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+        @media only screen and (max-width:1280px){
+            top: 25%;
+        }
+        @media only screen and (min-width:1280px){
+            margin-left: 60px;
+        }
+        @media only screen and (max-width:1024px){
+            width: 100%;
+            padding: 0 0 0 100px;
+            transform: translateY(0%);
             position: absolute;
-            left: 52%;
-            top: 50%;
-            transform: translateY(-50%);
-            max-width: 560px;
+            top: 27px;
+            max-width: none;
         }
-        .title {
-            font-size: 44px;
-            margin-left: 0;
-            padding: 0;
+        @media only screen and (max-width:640px){
+            padding: 0 0 0 70px;
+            .title{
+                font-size: 36px;
+                margin-bottom: 0;
+            }
+            .button{
+                display: none;
+            }
         }
     }
-    @media #{$large-up} {
-        height: 100vh;
+    .logo{
+        background: image-url('logo-large.svg') no-repeat;
+        background-size: 100% auto;
+        height: 184px;
+        width: 640px;
+        margin-bottom: 80px;
+    }
+    .title{
+        font-size: 44px;
+        line-height: 48px;
+        margin-bottom: 28px;
+        font-weight: 100;
+    }
+    .subtitle{
+        line-height: 24px;
+        font-size: 26px;
+        font-weight: 100;
+        margin-bottom: 40px;
+    }
+    .scroll-icon{
+        @media only screen and (max-width:800px){ 
+            display: none;
+        }
     }
 }
