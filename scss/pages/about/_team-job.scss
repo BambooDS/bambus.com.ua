@@ -108,6 +108,9 @@
 
 .job{
     margin-bottom: 72px;
+    .columns{
+        padding: 0;
+    }
     .icon{
         background-image: image-url('about/icons/upload-icon.svg');
         &:hover{

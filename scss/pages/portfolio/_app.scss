@@ -11,7 +11,7 @@
 }
 
 .projects-list{
-    margin: 48px auto;
+    margin: 48px auto; 
     padding: 0 40px;
     max-width: 1600px !important;
 
@@ -73,7 +73,7 @@
     position:relative;
     z-index:1;
     padding: 0 64px;
-    opacity:0;
+    opacity:1;
     transition:opacity $p-t-t, transform $p-t-t;
     transition-delay: 1s;
     button{

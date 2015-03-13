@@ -4427,7 +4427,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
   position: relative;
   z-index: 1;
   padding: 0 64px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.8s, -webkit-transform 0.8s;
   transition: opacity 0.8s, transform 0.8s;
   transition-delay: 1s; }
@@ -4881,6 +4881,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
         padding-top: 0; } }
   .about-page .job {
     margin-bottom: 72px; }
+    .about-page .job .columns {
+      padding: 0; }
     .about-page .job .icon {
       background-image: url(../img/about/icons/upload-icon.svg); }
       .about-page .job .icon:hover {
