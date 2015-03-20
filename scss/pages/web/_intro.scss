@@ -1,5 +1,8 @@
 .service-web-page {
     .intro {
+        .image-small {
+            padding: 0;
+        }
         img {
             display: none;
         }
@@ -31,6 +34,17 @@
                     display: none;
                 }
             }
+        }
+    }
+    .intro-top {
+        .image-small, .text {
+            width: 100%;
+            @media only screen and (min-width: 841px) {
+                width: 50%;
+            }
+        }
+        .text {
+            transform: translateZ(0);
         }
     }
 }

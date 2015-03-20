@@ -236,13 +236,15 @@
              transition: opacity .3s 1s;
          }
          .hint {
-             border: 2px solid white;
-             width: 37.2%;
-             height: 37.2%;
+            border: 2px solid white;
+            width: 37.2%;
+            height: 37.2%;
+            box-shadow: 0px 0px 200px #fff;
              //color: white;
          }
          .planet:not(:hover){
              background: #ddd !important;
+             opacity: 0.3;
          }
          .effect {
              background: image-url('../pictures/about/planets/noise.png') left center no-repeat;

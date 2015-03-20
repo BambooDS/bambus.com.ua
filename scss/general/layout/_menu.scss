@@ -74,14 +74,13 @@
         transition: background-color $p-t-h*1.5, transform .35s;
     }
     .logo {
-
         margin: 10px 0;
-        padding-right: 56px;
+        //padding-right: 56px;
         height: 58px;
         background: image-url('logo.svg') top center no-repeat;
         background-size: auto 100%;
         color: rgba(255, 255, 255, .8);
-        text-align: right;
+        text-indent: 54px;
         letter-spacing: .8px;
         font-size: 10px;
         line-height: 104px;

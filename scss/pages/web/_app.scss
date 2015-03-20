@@ -33,8 +33,14 @@ $delay: 0.35s;
     $vector: $vector - 45deg;
 }
 
+.service-web-page {
+    > div, > section {
+        transform: translateZ(0);
+    }
+}
 
 .service-web-page {
+    transform: none;
     // common settings
     /* page appear section */
     @include page(service-web);
@@ -119,7 +125,7 @@ $delay: 0.35s;
         position: relative;
         .columns {
             height: 100%;
-            width: 50%;
+//            width: 50%;
             .text-holder {
                 @media only screen and (max-width: 1024px) {
                     top: 45%;
@@ -144,6 +150,9 @@ $delay: 0.35s;
         }
         .scroll-icon {
             margin: -140px 0 0 -44px;
+            @media only screen and (max-height: 740px) {
+                display: none;
+            }
         }
     }
 

@@ -80,4 +80,9 @@
             image-url('about/footer/tree-3.png') right bottom no-repeat;
         background-color: $green;
     }
+    
+    @media only screen and (min-width: 1260px){
+        height: 100vh;
+        min-height: 900px;
+    }
 }

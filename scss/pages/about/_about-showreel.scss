@@ -34,6 +34,7 @@
         font-weight: lighter;
         font-size: 36px;
         background: image-url('about/icons/play-button.svg') no-repeat center;
+        background-size: 100%;
         &:hover{
             opacity: 1;
         }

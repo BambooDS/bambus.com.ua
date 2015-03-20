@@ -2,6 +2,7 @@ h1,h2,h3,h4,h5,h6{
     margin:0; 
 }
 a{
+    outline: none !important;
     color:$green;
     &:hover{
         text-decoration:none;
@@ -278,17 +279,23 @@ a{
         padding-top: 24px;
         font-weight: lighter;
         font-size: 36px;
+        display: none;
+        
+        @media only screen and (min-width: 960px) {
+            display: block;
+        }
+        
     }
     .play {
         display: block;
         content: '';
         position: absolute;
-        width: 320px;
-        height: 320px;
-        top: 50%;
+        width: 160px;
+        height: 160px;
         transition: opacity .3s;
+        top: 50%;
         left: 50%;
-        margin: -160px 0 0 -160px;
+        transform: translate(-50%, -50%);
         opacity: .75;
         cursor: pointer;
         color: white;
@@ -298,6 +305,13 @@ a{
         font-size: 36px;
         z-index: 2;
         background: image-url('about/icons/play-button.svg') no-repeat center;
+        background-size: 100%;
+        
+        @media only screen and (min-width: 768px) {
+            width: 320px;
+            height: 320px;
+        }
+        
         &:hover {
             opacity: 1;
         }

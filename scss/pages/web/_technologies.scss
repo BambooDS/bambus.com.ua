@@ -5,7 +5,14 @@
             border: 0;
             border-bottom: rgb(34, 34, 34) solid 1px;
             border-left: rgb(34, 34, 34) solid 1px;
+            min-height: 240px;
             @extend %block-slide-hover-animation;
+            .front-wrapper {
+                min-height: 240px;
+                .front {
+                    min-height: 240px;
+                }
+            }
             .back {
                 top: 1px;
                 overflow: hidden;
