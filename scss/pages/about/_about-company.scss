@@ -56,6 +56,38 @@
                 display: none !important;
             } 
         }
+        @media only screen and (min-width:801px) and (max-width:1365px){
+            .pipeline{
+                width: 100%;
+                float: none;
+            }
+            .services{
+                width: 100%;
+                float: none;
+                position: relative;
+                width: 100%;
+                max-height: 710px;
+                .solar-system {
+                    position: relative;
+                }
+            }
+        }
+        @media only screen and (min-width:1366px){
+            .pipeline{
+                width: 40%;
+            }
+            .services{
+                width: 60%;
+            }
+        }
+        @media only screen and (min-width:1600px){
+            .pipeline{
+                //width: 50%;
+            }
+            .services{
+               //width: 50%;
+            }
+        }
     }
     .slider-holder {
         position: relative;

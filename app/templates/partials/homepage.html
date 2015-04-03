@@ -1,15 +1,17 @@
 {{#home}}
    <article id="home" class="home-page">
-   <a class="cta hide-for-small" href="/about"><span class="text">{{cta}}</span></a>
+   <a class="cta" href="/about"><span class="text">{{cta}}</span></a>
     <div id="slider" class="slider">
         {{#slider}}
         <section> 
             <picture>
-                <source srcset="{{{img_src_mobile}}}" media="(orientation:portrait)">
-                <img srcset="{{{img_src}}}" src="{{{img_src}}}" alt="{{img_alt}}">
+<!--            <source srcset="{{{img_src_mobile}}}" media="(orientation:portrait)">     -->
+<!--            <img srcset="{{{img_src}}}" src="{{{img_src}}}" alt="{{img_alt}}">        -->
+                <div class="slider-img-mobile" style="background:url({{{img_src_mobile}}});"></div>
+                <div class="slider-img" style="background:url({{{img_src}}});"></div>
             </picture>
             <div class="description-holder">
-                <div class="description hide-for-small">
+                <div class="description">
                     <h1 class="heading">{{heading}}</h1>
                     <p class="text">{{text}}</p>
                 </div>

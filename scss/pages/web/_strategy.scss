@@ -334,5 +334,43 @@
                 }
             }
         }
+        @media only screen and (max-width: 460px) {
+            .comment-holder {
+                width: 100%;
+                right: 0;
+                left: inherit;
+                transform: none !important;
+            }
+            .comment-holder-inner {
+                text-align: center;
+                width: 100%;
+                right: 10px;
+            }
+            .proof {
+                position: relative;
+                top: 0;
+                font-size: 60px;
+                line-height: 100px;
+            }
+            .comment {
+                padding: 0 24px;
+                top: 138px;
+                left: 0;
+                width: 100%;
+            }
+            .number {
+                width: 25%;
+            }
+            .idea {
+                left: 25%;
+                width: 70%;
+            }
+        }
     }
 }
+
+
+
+
+
+

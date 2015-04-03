@@ -67,14 +67,18 @@
         letter-spacing: 1px; 
         font-weight: 100;
         font-family: $title-font-family;
-        line-height: rem-calc(64px);
+        line-height: 48px;
         text-decoration: none !important; // for performance to not force redraw
+        
+        @media only screen and (min-height: 534px) {
+            line-height: rem-calc(64px);
+        }
     }
     li, a {
         transition: background-color $p-t-h*1.5, transform .35s;
     }
     .logo {
-        margin: 10px 0;
+        margin: 20px 0;
         //padding-right: 56px;
         height: 58px;
         background: image-url('logo.svg') top center no-repeat;
@@ -85,20 +89,27 @@
         font-size: 10px;
         line-height: 104px;
 
-		@media only screen and (min-height: 680px) {
+        @media only screen and (min-height: 534px) {
+            margin: 60px 0;
+        }
+		@media only screen and (min-height: 681px) {
             margin: 136px 0;
 		}
     }
     .menu-list li, .contact-link{
         &:before {
             position: relative;
-            top: 65px;
+            top: 45px;
             left: calc(50% - 50px);
             display: block;
             width: 100px;
             height: 1px;
             background: rgba(255, 255, 255, .15);
             content: '';
+            
+            @media only screen and (min-height: 534px) {
+                top: 65px;
+            }
         }
         &.active, &:hover {
             background: $green;
