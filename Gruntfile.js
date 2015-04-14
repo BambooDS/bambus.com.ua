@@ -108,10 +108,6 @@ module.exports = function (grunt) {
                     dest: 'app/pages/home.html'
                 },{
                     data: 'app/templates/data/index.json',
-                    template: 'app/templates/partials/portfolio.html',
-                    dest: 'app/pages/portfolio.html'
-                },{
-                    data: 'app/templates/data/index.json',
                     template: 'app/templates/partials/preloader.html',
                     dest: 'app/pages/preloader.html'
                 },{
@@ -124,10 +120,6 @@ module.exports = function (grunt) {
                     dest: 'app/pages/services-web.html'
                 },{
                     data: 'app/templates/data/index.json',
-                    template: 'app/templates/partials/portfolio/aeroport-lviv.html',
-                    dest: 'app/pages/aeroport-lviv.html'
-                },{
-                    data: 'app/templates/data/index.json',
                     template: 'app/templates/partials/page404.html',
                     dest: 'app/pages/page404.html'
                 },{
@@ -136,10 +128,18 @@ module.exports = function (grunt) {
                     dest: 'app/pages/nosupport.html'
                 },{
                     data: 'app/templates/data/index.json',
+                    template: 'app/templates/partials/portfolio.html',
+                    dest: 'app/pages/portfolio.html'
+                },{
+                    data: 'app/templates/data/index.json',
                     template: 'app/templates/partials/portfolio/underlviv.html',
                     dest: 'app/pages/underlviv.html'
+                },{
+                    data: 'app/templates/data/index.json',
+                    template: 'app/templates/partials/portfolio/lwo.aero.html',
+                    dest: 'app/pages/lwo.aero.html'
                 }]
-            }
+            } 
         },
         sass: {
             dist: {

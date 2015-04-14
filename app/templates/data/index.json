@@ -63,27 +63,32 @@
         {
             "name": "Web Design",
             "path": "portfolio/web-design",
-            "class": "web-design"
+            "class": "web-design",
+            "id": "102"
         }, {
             "name": "Branding",
             "path": "portfolio/branding",
-            "class": "branding"
+            "class": "branding",
+            "id": "109"
         }, {
             "name": "Illustration",
             "path": "portfolio/illustration",
-            "class": "illustration"
+            "class": "illustration",
+            "id": "48"
         }, {
-            "name": "Production",
-            "path": "portfolio/production",
-            "class": "production"
+            "name": "Graphic Design",
+            "class": "graphic-design",
+            "id": "44"
         }, {
             "name": "Publishing",
             "path": "portfolio/publishing",
-            "class": "publishing"
+            "class": "publishing",
+            "id": ""
         }, {
             "name": "Souveniers",
             "path": "portfolio/souveniers",
-            "class": "souveniers"
+            "class": "souveniers",
+            "id": ""
         }
     ],
     "about": {

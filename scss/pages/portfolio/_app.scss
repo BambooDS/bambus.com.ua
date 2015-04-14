@@ -11,18 +11,24 @@
 }
 
 .projects-list{
+    height: auto !important;
     margin: 48px auto; 
     padding: 0 40px;
     max-width: 1600px !important;
-
-    text-align: justify;
+    text-align: center;
     .item-block{
-        width: 33.33%;
+        display: inline-block;
+        width: auto;
         margin-bottom: 48px;
         padding: 0 24px 0 24px;
         overflow: hidden;
         position: relative;
-        float: left;
+        
+        &:hover{
+            .title{
+                display: block !important;
+            }
+        }
 
         @for $i from 1 through 9 {
             &:nth-child( #{$i} ) a {
@@ -41,14 +47,17 @@
             transform: translate3d(0,0,0) !important;
             img{
                 max-width: none !important;
-                width: 100%;
+
             }
         }
         .back{
             // when we add translaZ to parent - it magicaly fix sizing to exact what we need
             //width: calc( 100% - 48px ) !important;
-//            margin-left: 24px;
+            //            margin-left: 24px;
             background: rgba(0,0,0,.75);
+            .title{
+                display: none;
+            }
         }
         .title {
             text-align: center;

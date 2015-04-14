@@ -17,7 +17,7 @@ define(['backbone','helper'], function (Backbone, Helper) {
     };
     
     Preloader.prototype.log = function (str) { 
-        console.log('preloader: ' + str);
+//        console.log('preloader: ' + str);
     };
     Preloader.prototype.playVideo = function () {
         var logo = this.el.querySelector('.logo');
@@ -30,7 +30,7 @@ define(['backbone','helper'], function (Backbone, Helper) {
 //        video.play();
     }
     Preloader.prototype.init = function () {
-        console.log('init?');
+//        console.log('init?');
         this.dispatcher.on('loaded',function(){this.loaded = true;}.bind(this));
         if (document.readyState === "complete") {
             this.documentLoaded = true;
@@ -63,15 +63,15 @@ define(['backbone','helper'], function (Backbone, Helper) {
         this.log('added ' + name);
     };
     Preloader.prototype.done = function (name) {
-        console.log(this.toLoad)
+//        console.log(this.toLoad)
         this.toLoad.forEach(function (el, index, arr) {
             if (el.name === name) {
                 _.each(arr, function(el){
-                    console.log(el)
+//                    console.log(el)
                 })
                 arr.splice(index, 1);
                 this.log('done ' + name);
-                console.log(arr)
+//                console.log(arr)
             }
         },this);
         this.test();

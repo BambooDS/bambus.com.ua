@@ -26,18 +26,10 @@ define(['helper', 'portfolio_collection','page', 'app', 'backbone', 'mustache', 
                 setTimeout(this.showHook.bind(this),1000);
             }
         },
+        
         initialize: function (options) {
             this.model = options.model;
             app.on('route', this.checkHide.bind(this));
-
-            // listen for data and render it acordently to source of project
-            this.model.on('change', function () {
-                if(this.model.get('page')){
-                    this.renderCustom();
-                }else{
-                    this.renderRegular();
-                }
-            }, this);
         },
         render: function(firstRun){
             // first run - set elem
@@ -67,15 +59,25 @@ define(['helper', 'portfolio_collection','page', 'app', 'backbone', 'mustache', 
             this.show();
             return this;
         },
-        renderCustom: function () {
-            requirejs(["text!/pages/"+this.model.name+".html",'mustache'],function(html){
-                var data = this.model.get('project');
+        renderCustom: function () { 
+            console.log('renderCustom');
+            requirejs(["text!/pages/"+this.model.name+".html", 'mustache'],function(html){ 
+                var data = this.model.get('project'); 
+                
+                 // remove bambus studion from owners
+                data.owners.forEach(function (el, index) {
+                    if (el.id === 2975629) {
+                        data.owners.splice(index, 1);
+                    }
+                });
+                 
                 this.setElement(Mustache.render(html, data));
                 this.render(true);
             }.bind(this));
         },
         renderRegular: function () {
-            requirejs(["text!/templates/partials/portfolio/template.html",'mustache'],function(html, mustache){
+            console.log('renderRegular');
+            requirejs(["text!/templates/partials/portfolio/template.html",'mustache'],function(html){
                 var data = this.model.get('project');
 
                 var backImage = '/custom_backgrounds/'+data.name.toLowerCase().replace(/\s/g,"-").replace(/("|')/g,"")+'.jpg';
@@ -128,6 +130,28 @@ define(['helper', 'portfolio_collection','page', 'app', 'backbone', 'mustache', 
                 this.setElement(Mustache.render(html, data));
                 this.render(true);
             }.bind(this));
+        },
+        renderBackgroundImage: function () {
+            console.log('renderBackgroundImage');
+            requirejs(["text!/templates/partials/portfolio/template-background-image.html",'mustache'],function(html, mustache){
+                var data = this.model.get('project');
+                
+                // remove bambus studion from owners
+                data.owners.forEach(function (el, index) {
+                    if (el.id === 2975629) {
+                        data.owners.splice(index, 1);
+                    }
+                });
+                
+                
+                var backImage = '/custom_backgrounds/'+data.name.toLowerCase().replace(/\s/g,"-").replace(/("|')/g,"")+'.jpg';
+                data.backImage = backImage;
+ 
+                console.log(data);
+      
+                this.setElement(Mustache.render(html, data));
+                this.render(true);
+            }.bind(this));
         }
     });
     
@@ -141,6 +165,8 @@ define(['helper', 'portfolio_collection','page', 'app', 'backbone', 'mustache', 
             var apiKey = 'hiHNrEFZrHRZ6cZogKANRsMayAibW07s';
             var server = 'http://new.bambus.com.ua';
             var action = 'lib/getProjectsBehance.php?urlProjects';
+//            console.log('ProjectModel ID - ',this.id);
+                this.id = '18846529';
             return server+'/'+action+'='+encodeURIComponent(endPoint+'/'+(this.id||18389599)+'?api_key='+apiKey);
         },
         initialize: function (options) {
@@ -156,14 +182,26 @@ define(['helper', 'portfolio_collection','page', 'app', 'backbone', 'mustache', 
                 type: "HEAD",
                 statusCode:{
                     404: function () {
-                        this.fetch();
+                        var backImageExist = '/custom_backgrounds/'+this.name.toLowerCase().replace(/\s/g,"-").replace(/("|')/g,"")+'.jpg';
+                        var self = this;
+                        this.fetch().done(function() {
+                            if(backImageExist){
+                                self.view.renderBackgroundImage();
+                                return 
+                            } else{
+                                self.view.renderRegular();
+                            }
+                        });
+                    },
+                    200: function() {
+                        var self = this;
+                        this.fetch().done(function() {
+                            self.view.renderCustom();
+                        });
                     }
-                },
-                error: function () {},
-                success: function (data) {
-                    this.set({'page':1, page_html:data, project:{}});
                 }
             });
+            
         }
     });
     return ProjectModel;

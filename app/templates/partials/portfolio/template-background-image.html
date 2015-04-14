@@ -1,0 +1,77 @@
+<div class="portfolio-single-page portfolio-theme bg-image-theme {{whitepage}}">
+    <!-- Do not add headers to this file! Contact Roman Taraban for details -->
+    <div class="wrapper-holder">
+        <img src="{{backImage}}"/>
+        <!--    header-project-->
+        <div class="header-project">
+            <div class="row">
+                <div class="name-project">
+                    <span class="close-page"></span>
+                    <h1>{{name}}</h1>
+                </div>
+                <div class="wrapper">
+                    <div class="details">
+                        <div class="site clearfix">
+                            <div class="control">
+                                {{#prevLink}}<a class="left-button" href="/portfolio/{{prevLink}}" title="Попередній проект"></a>{{/prevLink}}
+                                {{#nextLink}}<a class="right-button" href="/portfolio/{{nextLink}}" title="Наступний проект"></a>{{/nextLink}}
+                            </div>
+                            {{#external_url}}<a href="{{external_url}}" class="link" target="_blank" title="Відвідати сайт">{{external_url_trimmed}}</a>{{/external_url}}
+                        </div>
+                        <div class="customer">
+                            <p class="title">Замовник:</p>
+                            <p>{{client}}</p>
+                        </div>
+                        <div class="problem">
+                            <p class="title">Задача:</p>
+                            <p>{{description}}</p>
+                        </div>
+                        <div class="tags">
+                            <p class="title">Теги:</p>
+                            <div class="block-tags">
+                                {{#fields}}
+                                <a href="#">{{.}}</a>
+                                {{/fields}}
+                            </div>
+                        </div>
+                        <div class="team">
+                            <p class="title">Команда:</p>
+                            <div class="block-team">
+                                {{#owners}}
+                                <span class="person">
+                                    <div class="img">
+                                        <img src="{{images.138}}" alt="{{display_name}}">
+                                    </div>
+                                    <div class="name">
+                                        <span>{{occupation}}</span>
+                                        <p>{{display_name}}</p>
+                                    </div>
+                                </span>
+                                {{/owners}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <span class="data">{{date}}</span>
+                        <div class="img-block">
+                            <div class="wrapper">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--    stop header-project-->
+
+ 
+
+        <!--    view more works-->
+        <div class="portfolio-theme-wrapper">
+            <h3>View more works</h3>
+            <div class="row projects-list">
+
+            </div>
+        </div>
+        <!--    stop view more works-->
+    </div>
+</div>

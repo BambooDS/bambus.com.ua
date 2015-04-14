@@ -2884,8 +2884,8 @@ html.services-inner #services-menu {
   /* page appear section */
   /* page appear end */
   /*
-Author: Roman Vytak
-*/ }
+    Author: Roman Vytak
+    */ }
   html.portfolio-theme.loaded .portfolio-single-page {
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s; }
@@ -3294,6 +3294,11 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
         right: 100px; } }
 .behance-theme .header-project .details {
   max-width: 30%; }
+
+.bg-image-theme .header-project {
+  position: absolute;
+  right: 0;
+  top: 0; }
 
 /*
     Author: Roman Vytak
@@ -4366,17 +4371,20 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     animation-duration: 0.5s; }
 
 .projects-list {
+  height: auto !important;
   margin: 48px auto;
   padding: 0 40px;
   max-width: 1600px !important;
-  text-align: justify; }
+  text-align: center; }
   .projects-list .item-block {
-    width: 33.33%;
+    display: inline-block;
+    width: auto;
     margin-bottom: 48px;
     padding: 0 24px 0 24px;
     overflow: hidden;
-    position: relative;
-    float: left; }
+    position: relative; }
+    .projects-list .item-block:hover .title {
+      display: block !important; }
     .projects-list .item-block:nth-child(1) a {
       transition-delay: 0.0888888889s; }
     .projects-list .item-block:nth-child(2) a {
@@ -4404,10 +4412,11 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       -webkit-transform: translate3d(0, 0, 0) !important;
       transform: translate3d(0, 0, 0) !important; }
       .projects-list .item-block .front-wrapper img {
-        max-width: none !important;
-        width: 100%; }
+        max-width: none !important; }
     .projects-list .item-block .back {
       background: rgba(0, 0, 0, 0.75); }
+      .projects-list .item-block .back .title {
+        display: none; }
     .projects-list .item-block .title {
       text-align: center;
       font-size: 28px;
