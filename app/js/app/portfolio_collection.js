@@ -61,6 +61,8 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
             var server = 'http://new.bambus.com.ua';
             var action = 'lib/getProjectsBehance.php?urlProjects';
             
+            alert(server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&per_page=' + this.state.get('itemsPerPage') + '&field=' + this.state.get('tag') + '&page=' + this.state.get('page')));
+            
             return server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&per_page=' + this.state.get('itemsPerPage') + '&field=' + this.state.get('tag') + '&page=' + this.state.get('page'));
         },
         initialize: function(models, opt) {
