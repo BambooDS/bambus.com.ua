@@ -7528,7 +7528,11 @@ html.page404 body #preloader {
   display: none; }
 
 .not-found-page {
-  overflow: hidden !important; }
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  height: 100%;
+  padding: 0 0 40px 0; }
   .not-found-page .container {
     width: 1024px;
     margin: 0 auto; }
@@ -7563,7 +7567,8 @@ html.page404 body #preloader {
   .not-found-page .text-messages {
     *zoom: 1;
     clear: both;
-    padding-top: 80px; }
+    padding-top: 90px;
+    margin-bottom: -90px; }
     .not-found-page .text-messages:before, .not-found-page .text-messages:after {
       content: " ";
       display: table; }
@@ -7604,7 +7609,7 @@ html.page404 body #preloader {
         @media only screen and (max-width: 767px) {
           .not-found-page .text-messages .info-text .second-text {
             height: auto;
-            margin-left: -74px; } }
+            margin-left: 0; } }
       .not-found-page .text-messages .info-text .third-text {
         font-family: 'Roboto Condensed', Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
         color: #96b03c;
@@ -7614,7 +7619,7 @@ html.page404 body #preloader {
         @media only screen and (max-width: 767px) {
           .not-found-page .text-messages .info-text .third-text {
             height: auto;
-            margin-left: -74px; } }
+            margin-left: 0; } }
       @media only screen and (max-width: 1024px) {
         .not-found-page .text-messages .info-text {
           margin-bottom: 120px; } }
@@ -7622,8 +7627,9 @@ html.page404 body #preloader {
         .not-found-page .text-messages .info-text {
           height: auto;
           margin-top: 32px;
-          padding-left: 74px;
-          width: 100%; } }
+          margin-left: 40px;
+          width: 100%;
+          float: none; } }
     @media only screen and (max-width: 1024px) {
       .not-found-page .text-messages .animation-text-404, .not-found-page .text-messages .info-text {
         width: auto;
@@ -7643,8 +7649,9 @@ html.page404 body #preloader {
         margin-bottom: 36px;
         width: 100%; } }
   .not-found-page .button {
-    float: right;
+    float: left;
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    margin: 100px 0 0 0; }
 
 /*# sourceMappingURL=map.css */

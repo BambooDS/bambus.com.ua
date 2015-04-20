@@ -931,8 +931,7 @@
         "text": {
              "alert-text": "Oh No!",
              "massage-text": "The angry panda drop <br/> kicked one of our services!",
-             "notfound-text": "Page was not found",
-             "bottom-text": "Lorem Ipsum - це текст-\"риба\", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною \"рибою\" аж з XVI сторіччя, коли невідомий друкар"
+             "notfound-text": "Page was not found"
          }
     },
     "nosupport":{
