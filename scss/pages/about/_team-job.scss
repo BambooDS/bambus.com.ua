@@ -61,7 +61,6 @@
                 position: relative;
                 margin-bottom: 24px;
             }
-
         }
 
         .man{
@@ -70,6 +69,17 @@
             position: relative;
             height: 176px;
             overflow: hidden;
+            visibility: inherit !important;
+            .front-wrapper {
+                img {
+                    
+                }
+            }
+            .back {
+                img {                    
+                    //opacity: 0.2
+                }
+            }
             &:nth-child(2n),&:nth-child(3n){
                 background: #ececec;
             }

@@ -5,13 +5,30 @@
             border: 0;
             border-bottom: rgb(34, 34, 34) solid 1px;
             border-left: rgb(34, 34, 34) solid 1px;
+            min-height: 240px;
             @extend %block-slide-hover-animation;
+            .front-wrapper {
+                min-height: 240px;
+                .front {
+                    min-height: 240px;
+                }
+            }
             .back {
                 top: 1px;
                 overflow: hidden;
                 text-align: center;
-                @media only screen and (max-width: 1024px) {
-                    font-size: 12px;
+                font-size: 16px;
+                @media only screen and (max-width: 419px) {
+                    font-size: 14px;
+                }
+                @media only screen and (min-width: 420px) and (max-width: 639px) {
+                    font-size: 13px;
+                }
+                @media only screen and (min-width: 640px) and (max-width: 1024px) {
+                    font-size: 16px;
+                }
+                @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+                    font-size: 13px;
                 }
                 .desc {
                     padding: 0 em(16px,40px);
@@ -41,11 +58,29 @@
             height: 0;
             padding-top: 100%;
         }
+        @media only screen and (max-width: 420px) {
+            .block {
+                width: 100%;
+            }
+        }
         @media only screen and (max-width: 1024px) {
             .row:last-child .table {
                 margin-bottom: 100px;
             }
         }
+//        @media only screen and (min-width: 1025px) and (max-width: 1600px) {
+//            .block {
+//                .back {
+//                    .desc {
+//                        padding: 0 em(16px,10px);
+//                    }
+//                    .text {
+//                        font-size: em(16px,14px);
+//                        line-height: em(16px,20px);
+//                    }
+//                }
+//            }
+//        }
         @media only screen and (max-width: 1600px) {
             .row .table {
                 margin: 56px 10px 72px;

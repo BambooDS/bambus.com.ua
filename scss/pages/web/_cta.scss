@@ -1,12 +1,56 @@
 .service-web-page {
     .cta {
+        background: #2d2d2d;
+        position: relative;
+        height: auto;
+        padding: 60px 0;
+        
+        @media only screen and (min-width: 1025px) {
+            padding: 60px 0 0;
+        }
+        
         .columns {
             @media only screen and (max-width: 840px) {
                 float: none;
                 width: 100%;
             }
         }
+        .canvas {
+            display: none;
+            @media only screen and (min-width: 1025px) {
+                display: block;
+            }
+        }
+        .cta-text {
+            @media only screen and (min-width: 1366px) {
+                padding-top: 150px;
+            }
+            .text-holder {
+                position: relative;
+            }
+        }
+        .text {
+            width: 100%;
+            @media only screen and (min-width: 640px) {
+                width: auto;
+            }
+        }
         .text-holder {
+            top: 0;
+            transform: translateY(0);
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            .button-wrapper {
+                max-width: 360px;
+            }
+            .button {
+                max-width: 320px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 16px;
+            }
             @media only screen and (max-width: 840px) {
                 padding: 0 24px;
                 position: relative;
@@ -19,7 +63,7 @@
             }
         }
         #bamboo-lines {
-            position: absolute;
+            //position: absolute;
             bottom: 0;
             @media only screen and (max-width: 840px) {
                 text-align: center;
@@ -33,13 +77,9 @@
         }
         .contacts {
             padding-left: 56px;
-            margin-top: 140px;
+            margin-top: 60px;
+            clear: both;
             background: image-url("marker-small.svg") left center no-repeat;
-            @media only screen and (max-width: 840px) {
-                float: right;
-                padding-top: 10px;
-                margin: 0;
-            }
         }
         .phone {
             color: white;
@@ -50,18 +90,21 @@
                 text-decoration: underline;
             }
         }
+
+        
+        
+        
+        
+        
         @media only screen and (max-width: 840px) {
-            height: auto;
-            padding-bottom: 140px;
+//            height: auto;
+//            padding-bottom: 140px;
             .columns:first-child {
                 display: none;
             }
         }
         @media only screen and (max-width: 580px) {
-            padding-bottom: 200px;
-            .button.green {
-                margin-bottom: 34px;
-            }
+//            padding-bottom: 200px;
             .contacts {
                 width: 100%;
             }

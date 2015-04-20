@@ -9,7 +9,7 @@ define(['backbone','helper'], function (Backbone, Helper) {
         this.loaded = false;
         this.toLoad = [];
         this.documentLoaded = false; 
-        this.duration = 1.5;
+        this.duration = 4;
         this.el.parentNode.classList.add('dom-loaded');
         this.timeStamp = new Date();
         this.dispatcher = _.clone(Backbone.Events);

@@ -1,12 +1,12 @@
 <div id="service-web" class="service-web-page">
     {{#service_web}}
-    <div class="intro">
+    <div class="intro intro-top">
         {{#intro}}
-        <div class="columns large-5">
+        <div class="columns large-5 image-small">
             <canvas id="panda-lines"></canvas>
             <img src="&#x2F;pictures&#x2F;about&#x2F;panda&#x2F;1.jpg" alt="Promo sites" class="icon">
         </div>
-        <div class="columns large-5">
+        <div class="columns large-5 text">
             <div class="text-holder">
                 <h1 class="title">
                     {{{title}}}
@@ -180,17 +180,24 @@
         </video>
         <div class="play"><h2 class="title">{{showreel.text}}</h2></div>
     </section>
-    <div class="cta">
+    <div class="cta clearfix">
         {{#cta}}
-        <div class="columns large-5">
+        <div class="columns large-5 medim-12 small-12 canvas">
             <canvas id="bamboo-lines"></canvas>
         </div>
-        <div class="columns large-5">
+        <div class="columns large-5 medim-12 small-12 cta-text">
             <div class="text-holder">
                 <h1 class="title">
                     {{{title}}}
                 </h1>
-                <a href="/files/brief-web.doc" class="button green">{{button}}</a>
+<!--                <a href="/files/brief-web.doc" class="button green">{{button}}</a>-->
+                <nav class="clearfix button-wrapper">
+                    <ul>
+                        {{#service_web.cta.links}}
+                        <li><a href="{{href}}" class="button {{class}}">{{text}}</a></li>
+                        {{/service_web.cta.links}}
+                    </ul>
+                </nav>
                 <div class="contacts">
                     <div class="phone">{{phone}}</div>
                     <a href="{{mail}}" class="mail">{{mail}}</a>

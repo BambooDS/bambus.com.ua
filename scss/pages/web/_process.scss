@@ -1,5 +1,6 @@
 .service-web-page {
     .process {
+        transform: translateZ(0);
         $stepSpeed: 600;
         $stepDelay: 300;
         $index: 1;
@@ -65,11 +66,6 @@
             }
 
             &:nth-child(1) {
-                &.active {
-                    .holder {
-                        transform: translate3d(0, -80%, 0);
-                    }
-                }
                 .holder {
                     width: 310px;
                     @media only screen and (max-width: 1200px) {
@@ -194,13 +190,14 @@
             line-height: 24px;
             transition: transform .3s, opacity .3s;
             transform: translate3d(-50px, 0, 0);
+            display: none;
         }
         .number-in-circle {
             background: none;
             background: $charcoal;
             position: absolute;
             cursor: pointer;
-            z-index: 1;
+            z-index: 10;
             transition: color .3s , background-color .3s , border-color .3s , box-shadow .3s;
             &:hover {
                 border-color: $green;

@@ -332,11 +332,13 @@ define(['page', 'masonry', 'backbone', 'hamster', 'wow', 'helper', 'preloader', 
             this.el.classList.add('running');
             this.hideHint();
             this.el.classList.remove('stoped');
+            document.getElementById('about').classList.remove('hidden');
         },
         stop: function (event) {
             this.el.classList.remove('running');
             this.showHint(event);
             this.el.classList.add('stoped');
+            document.getElementById('about').classList.add('hidden');
         },
         initialize: function (options) {
             this.setElement(options.parent.el.querySelector('.solar-system'));

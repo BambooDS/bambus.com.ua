@@ -113,6 +113,9 @@
         .man, .women {
             text-align: justify;
             font-size: 0;
+            > div {
+                opacity: 0;
+            }
             &>div {
                 padding-top: 10px ;
                 font-family: $title-font-family;
