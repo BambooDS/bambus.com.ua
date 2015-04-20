@@ -50,8 +50,6 @@ html.page404 body{
         margin-bottom: -90px;
         .animation-text-404 {
             float: left;
-            width: 620px;
-            height: 520px;
 			canvas {
 				position: absolute;
 				left: 0;
@@ -112,10 +110,10 @@ html.page404 body{
                 float: none;
 			}
         }
-		.animation-text-404, .info-text{
+		.animation-text-404, .info-text {
 			@media only screen and (max-width:1024px){
-				width:	auto;
-				height: auto;
+//				width:	auto;
+//				height: auto;
 			}
 		}
     }
@@ -140,4 +138,12 @@ html.page404 body{
 		z-index: 2;
         margin: 100px 0 0 0;
     }
+}
+
+#animation404 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
