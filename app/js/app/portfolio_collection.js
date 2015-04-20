@@ -2,7 +2,7 @@
 /*global define, Backbone, document, _ */
 //'text!/bower_components/isotope/jquery.isotope.min.js'
 define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], function(app, Backbone, _, helper, preloader, isotope) {
- 
+
     'use strict';
 
 
@@ -43,7 +43,7 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
         viewModel: ProjectView,
         initialize: function(attributes, opt) {
             this.set('slug', this.get('name').toLowerCase().replace(/\s/g, "-").replace(/("|')/g, ""));
-    
+
             // add path to rewrite
             app.rewrites.projects[this.get('slug')] = this.get('id');
             this.view = new this.viewModel(_.extend(opt, {model: this}));
@@ -60,10 +60,9 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
             var apiKey = 'hiHNrEFZrHRZ6cZogKANRsMayAibW07s';
             var server = 'http://new.bambus.com.ua';
             var action = 'lib/getProjectsBehance.php?urlProjects';
-            
-            alert(server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&per_page=' + this.state.get('itemsPerPage') + '&field=' + this.state.get('tag') + '&page=' + this.state.get('page')));
-            
-            return server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&per_page=' + this.state.get('itemsPerPage') + '&field=' + this.state.get('tag') + '&page=' + this.state.get('page'));
+
+//        return server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&per_page=' + this.state.get('itemsPerPage') + '&field=' + this.state.get('tag') + '&page=' + this.state.get('page'))
+            return server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&field=' + this.state.get('tag') + '&page=1');
         },
         initialize: function(models, opt) {
             this.state = new Backbone.Model({
@@ -71,7 +70,7 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
                 tag: '',
                 itemsPerPage: 24
             });
-            
+
             this.view = opt && opt.view;
             this.state.on('change:page', this.load, this);
             this.state.on('change:tag', this.resetState, this);
@@ -87,7 +86,7 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
             });
         },
         load: function() {
-            
+
             if (!preloader.loaded) {
                 preloader.push('portfolio', false);
             }
