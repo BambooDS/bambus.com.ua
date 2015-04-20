@@ -46,7 +46,7 @@ html.page404 body{
     .text-messages {
         @include clearfix;
         clear: both;
-        padding-top: 90px;
+        padding: 90px 0 40px 0;
         margin-bottom: -90px;
         .animation-text-404 {
             float: left;
@@ -78,7 +78,7 @@ html.page404 body{
             }
             .second-text {
                 font-family: $title-font-family;
-                color: #ffffff;
+                color: #fff;
                 font-size: 28px;
                 font-weight: 400;
                 height: 110px;
@@ -110,16 +110,10 @@ html.page404 body{
                 float: none;
 			}
         }
-		.animation-text-404, .info-text {
-			@media only screen and (max-width:1024px){
-//				width:	auto;
-//				height: auto;
-			}
-		}
     }
     p{
         font-family: $title-font-family;
-        color: #ffffff;
+        color: #fff;
         float: left;
         font-size: 16px;
         font-weight: 300;

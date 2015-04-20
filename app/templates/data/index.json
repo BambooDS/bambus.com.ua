@@ -333,13 +333,13 @@
                 {
                     "man": [
                         {
-                            "placeholder": true
+                            "picture": "clear"
                         },
                         {
-                            "placeholder": true
+                            "picture": "clear2"
                         },
                         {
-                            "placeholder": true
+                            "picture": "clear2"
                         },
                         {
                             "picture": "Oleg"
@@ -438,7 +438,7 @@
                             "picture": "Spolsky"
                         },
                         {
-                            "picture": "Pelehata"
+                            "picture": "clear2"
                         },
                         {
                             "picture": "Shyrokova"
