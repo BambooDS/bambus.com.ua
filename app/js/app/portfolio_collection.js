@@ -60,9 +60,12 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
             var apiKey = 'hiHNrEFZrHRZ6cZogKANRsMayAibW07s';
             var server = 'http://new.bambus.com.ua';
             var action = 'lib/getProjectsBehance.php?urlProjects';
-
+            
+            console.log('this',this.state.attributes);
+            console.log(this.state.get('page'));
+            
 //        return server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&per_page=' + this.state.get('itemsPerPage') + '&field=' + this.state.get('tag') + '&page=' + this.state.get('page'))
-            return server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&field=' + this.state.get('tag') + '&page=1');
+          return server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&per_page=' + this.state.get('itemsPerPage') + '&field=' + this.state.get('tag')  );
         },
         initialize: function(models, opt) {
             this.state = new Backbone.Model({

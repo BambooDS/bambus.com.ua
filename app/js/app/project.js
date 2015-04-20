@@ -69,6 +69,8 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
                         data.owners.splice(index, 1);
                     }
                 });
+                
+//                this.el.find('h1').append(data.name);
 
                 this.setElement(Mustache.render(html, data));
                 this.render(true);
