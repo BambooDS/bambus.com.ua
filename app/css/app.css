@@ -2157,12 +2157,11 @@ html, body {
     height: 100%;
     top: 0;
     left: 0;
-    background: url(../img/logo2.gif) no-repeat center;
-    background-size: 300px; }
+    background: url(../img/logo3.gif) no-repeat center;
+    background-size: 682px; }
     @media only screen and (min-width: 641px) {
       #preloader .logo {
-        margin: -50px 0 0 72px;
-        background-size: auto; } }
+        margin: -50px 0 0 74px; } }
   #preloader .line-block-1 {
     position: absolute;
     top: 468px;
@@ -2270,6 +2269,8 @@ html, body {
     opacity: 1;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both; }
+    .sub-loading #preloader .logo {
+      opacity: 1; }
 
 @-webkit-keyframes subloading-out {
   from {
