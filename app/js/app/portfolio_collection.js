@@ -8,7 +8,7 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
 
     var ProjectView = Backbone.View.extend({
         template: _.template('<div class="visible item-block <% _.each(fields, function (tag){ tag = %><%= tag%> <%})%>" id="work_<%= id %>">' +
-                '<a href="/portfolio/<%= slug %>">' +
+                '<a href="/portfolio/<%= id %>">' +
                 '<span class="front-wrapper">' +
                 '<img src="" data-echo="<%= covers["404"] %>">' +
                 '</span>' +
@@ -23,6 +23,7 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
             this.model.on('remove', this.remove, this);
             this.parentView = opt.parentView;
             var temp = document.createElement('div');
+            console.log(this.model.attributes)
             temp.innerHTML = this.template(this.model.attributes);
             this.setElement(temp.removeChild(temp.firstChild));
             temp = null;

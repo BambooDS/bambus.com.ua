@@ -91,7 +91,8 @@ define(['backbone', 'preloader', 'menu'], function (Backbone, preloader, Menu) {
         project: function (slug) {
             var self = this;
             requirejs(['project'], function (Project) {
-                self.projectPages[slug] = new Project({id: self.rewrites.projects[slug], name: slug});
+                console.log(self.rewrites.projects)
+                self.projectPages[slug] = new Project({id: slug, name: slug});
             });
         },
         contacts: function () {
