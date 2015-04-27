@@ -17,10 +17,10 @@
         width: 1920px;
         height: 1200px;
         margin: -600px auto auto -960px;
-     }
- 
+    }
+
     .logo {
-		//display: none;
+        //display: none;
         position: absolute;
         z-index: 0;
         width: 100%;
@@ -29,11 +29,22 @@
         top: 0;
         left: 0;
         background: image-url('logo2.gif') no-repeat center;
-        background-size: 300px;
-        
+        background-size: 682px;
+
         @media only screen and (min-width: 641px){
-            margin: -50px 0 0 72px;
-            background-size: auto;
+            margin: -50px 0 0 74px;
+        } 
+        @media only screen and (max-width:792px){
+            margin: -50px 0 0 62px;
+            background-size: 600px auto;
+        }
+        @media only screen and (max-width:580px){
+            background-size: 400px auto;
+            margin: -50px 0 0 24px;
+        }
+        @media only screen and (max-width:380px){
+            background-size: 260px auto;
+            margin: -50px 0 0 0px;
         }
     }
     .line-block-1 {
@@ -141,9 +152,10 @@
         animation: subloading .3s;
         opacity: 1;
         animation-fill-mode: both;
+        .logo{
+            opacity: 1;
+        }
     }
-    
-    
 }
 
 @keyframes subloading-out {

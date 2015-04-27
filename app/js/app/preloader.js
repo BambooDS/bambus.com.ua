@@ -86,7 +86,7 @@ define(['backbone','helper'], function (Backbone, Helper) {
         this.dispatcher.trigger('sub-loaded');
         this.subloadingState = false;
     }
-    Preloader.prototype.hide = function () {
+    Preloader.prototype.hide = function () {    
         // hide
         this.el.addEventListener(Helper.transEndEventName, function remover(event){
             if(event.propertyName.indexOf('transform')==-1){
@@ -107,7 +107,6 @@ define(['backbone','helper'], function (Backbone, Helper) {
                 this.dispatcher.trigger('loaded');
             }.bind(this), (this.duration * 1000 - (this.timeStamp  - new Date())));
         }
-
     };
     // test if all modules are loaded and hide if so
     Preloader.prototype.test = function () {
