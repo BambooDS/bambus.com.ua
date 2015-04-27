@@ -2516,7 +2516,7 @@ html, body {
       transform: translate3d(5%, 0, 0);
       transition: opacity 1s, -webkit-transform 1.5s cubic-bezier(0.13, 0.63, 0.13, 1);
       transition: opacity 1s, transform 1.5s cubic-bezier(0.13, 0.63, 0.13, 1); }
-    .home-page #slider .slider-img {
+    .home-page #slider .slider-img, .home-page #slider .slider-img-mobile {
       width: 112%;
       left: 50%;
       position: absolute;
@@ -2526,8 +2526,10 @@ html, body {
       height: 101%;
       background-size: cover !important;
       background-position: center !important; }
-    .home-page #slider .slider-img-mobile {
+    .home-page #slider .slider-img {
       display: none; }
+    .home-page #slider .slider-img-mobile {
+      display: block; }
     .home-page #slider .description-holder {
       font-family: 'Roboto Condensed', Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
       position: absolute;
@@ -2558,6 +2560,10 @@ html, body {
       line-height: 20px;
       font-weight: 100; }
     @media only screen and (min-width: 641px) {
+      .home-page #slider .slider-img {
+        display: block; }
+      .home-page #slider .slider-img-mobile {
+        display: none; }
       .home-page #slider .description-holder {
         right: 120px;
         bottom: 48px;
@@ -5841,6 +5847,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     width: 83%;
     height: 83%; }
   .services .hint {
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
     border: 4px solid #aaaaaa;
     width: 24%;
     height: 24%;
@@ -5878,18 +5885,17 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       width: 400%;
       height: 100%; }
     .services .hint .images {
+      -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
       position: absolute;
       height: 100%;
       top: 0;
       left: auto;
       width: 100%;
       overflow: hidden;
-      left: 1px;
+      left: 0;
       opacity: 0;
       border-radius: 100%;
-      transition: opacity 0.3s;
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0); }
+      transition: opacity 0.3s; }
       .services .hint .images img {
         height: 100%;
         -webkit-animation: roll-images-planets 10s 0s infinite steps(1);

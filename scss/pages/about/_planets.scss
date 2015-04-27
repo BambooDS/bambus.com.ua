@@ -167,7 +167,8 @@
              height: 83%;
          }
      }
-     .hint{
+     .hint {
+        -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
          border: 4px solid #aaaaaa;
          width: 24%;
          height: 24%;
@@ -197,33 +198,27 @@
              transition: opacity .3s;
              transform: translateZ(0); 
          }
-         .effect{
+         .effect {
              position: absolute;
              z-index: 1;
              top: 0;
              left: 0;
              width: 400%;
              height: 100%;
-             
          }
-         .effects {
-             
-         }
-         
-         .images{
+         .images {
+             -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
              position: absolute;
              height: 100%;
              top: 0;
              left: auto;
              width: 100%;
              overflow: hidden;
-             left: 1px;
+             left: 0;
              opacity: 0;
              border-radius: 100%;
              transition: opacity .3s;
-             transform: translateZ(0);
-//             background: image-url('../pictures/about/planets/noise-full.png') left center no-repeat;
-             img{
+             img {
                  height: 100%;
                  animation: roll-images-planets 10s 0s infinite steps(1);
                  max-width: none;

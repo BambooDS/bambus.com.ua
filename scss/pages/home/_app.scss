@@ -3,7 +3,7 @@
     @include page(home);
     /* page appear end */
     
-    .cta{
+    .cta {
         font-size: 20px;
         width: 90px;
         height: 90px;
@@ -28,14 +28,14 @@
             line-height: 120px;
         }
         
-        .text{
+        .text {
             position: absolute;
             top: 0;
             left: 0;
             opacity: 0;
             width: 100%;
         }
-        &:before{
+        &:before {
             position: absolute;
             content: '';
             display: block;
@@ -48,12 +48,12 @@
         &:before, .text, & {
             transition: background-color .3s, opacity .3s;
         }
-        &:hover{
+        &:hover {
             background: rgba(150, 176, 60, 0);
             .text {
                 opacity: 1;
             }
-            &:before{
+            &:before {
                 opacity: 0;
             }
         }
@@ -61,11 +61,11 @@
     
     @import "slider";
 }
-html.home{
-    #menu{
+html.home {
+    #menu {
         transition:transform $p-t-t ; 
-        @media #{$large}{
-            .blur{
+        @media #{$large} {
+            .blur {
                 opacity:1;
                 visibility:visible;
             }
