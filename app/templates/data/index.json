@@ -861,19 +861,19 @@
                 {
                     "number": 1,
                     "title": "Аналітика бізнес-процесів",
-                    "text": "This is Photoshop's version  of Lorem Ipsum. Proin",
+                    "text": "Комплексний та професійний підхід",
                     "lines":[1,1,1,1,1]
                 },
                 {
                     "number": 2,
                     "title": "Проектування UX та UI",
-                    "text": "This is Photoshop's version  of Lorem Ipsum. Proin",
+                    "text": "Необмежені погляди на дизайн та проектування web послуг",
                     "lines":[1,1,1,1]
                 },
                 {
                     "number": 3,
                     "title": "Frontend прогармування",
-                    "text": "",
+                    "text": "Нові та цікаві рішення в представленні web товару",
                     "lines":[1,1,1]
                 },
                 {
@@ -885,13 +885,13 @@
                 {
                     "number": 5,
                     "title": "Тестування",
-                    "text": "This is Photoshop's version  of Lorem Ipsum. Proin",
+                    "text": "Забезпеччення коректного відображення на актуальних пристроях",
                     "lines":[1]
                 },
                 {
                     "number": 6,
                     "title": "Підтримка",
-                    "text": "This is Photoshop's version  of Lorem Ipsum. Proin",
+                    "text": "Професійної підтримки товару після завершення розробки",
                     "lines":[1]
                 }
             ]
@@ -944,7 +944,7 @@
              "main-text": "Sorry your browser does not support our functionality"
          }
     },
-    
+     
     "aeroport-lviv": {
         "step-1": {
             "step-1-title": "Будова головної сторінки",

@@ -1927,6 +1927,11 @@ a {
   .showreel.playing:before, .showreel.playing .play {
     opacity: 0; }
 
+input, textarea {
+  border-radius: 0;
+  text-shadow: none;
+  -webkit-appearance: none; }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -2043,7 +2048,7 @@ html, body {
         margin: 136px 0; } }
   #menu .menu-list li:before, #menu .contact-link:before {
     position: relative;
-    top: 45px;
+    top: 48px;
     left: calc(50% - 50px);
     display: block;
     width: 100px;
@@ -5523,7 +5528,6 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       .graph-history .projects .project:hover:after {
         border-color: #666;
         transition: border-color 0.3s; }
-      @media only screen and (max-width: 960px) { }
     .graph-history .projects .icon {
       pointer-events: all;
       transition: -webkit-transform 0.3s 0.3s, opacity 0.3s;
@@ -5545,6 +5549,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
         width: 192px;
         left: -4px; }
       .graph-history .projects .icon img {
+        border-radius: 100%;
+        border: 4px solid #fff;
         float: left;
         width: 33.3333%; }
     .graph-history .projects .description {
@@ -6297,6 +6303,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
   /* page appear section */
   /* page appear end */
   background: white; }
+  .service-web-page > div, .service-web-page section {
+    overflow: hidden; }
   html.service-web.loaded .service-web-page {
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s; }
@@ -6613,6 +6621,9 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
           -webkit-transform: translate3d(12px, -60px, 0px);
           transform: translate3d(12px, -60px, 0px);
           width: 400px; } }
+      @media only screen and (min-width: 1025px) {
+        .service-web-page .process .step:nth-child(1) .holder {
+          top: calc(50% - 20px); } }
     @media only screen and (max-width: 1200px) {
       .service-web-page .process .step:nth-child(2) .holder {
         -webkit-transform: translate3d(-410px, -10px, 0px);
@@ -6632,6 +6643,9 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       .service-web-page .process .step:nth-child(4) .holder {
         top: 50px;
         width: 400px; } }
+    @media only screen and (min-width: 1025px) {
+      .service-web-page .process .step:nth-child(4) .holder {
+        top: calc(50% + 20px); } }
     @media only screen and (max-width: 1320px) {
       .service-web-page .process .step:nth-child(5) .holder {
         right: 40px;
@@ -6706,8 +6720,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     transition: -webkit-transform 0.3s, opacity 0.3s;
     transition: transform 0.3s, opacity 0.3s;
     -webkit-transform: translate3d(-50px, 0, 0);
-    transform: translate3d(-50px, 0, 0);
-    display: none; }
+    transform: translate3d(-50px, 0, 0); }
   .service-web-page .process .number-in-circle {
     background: none;
     background: #2d2d2d;

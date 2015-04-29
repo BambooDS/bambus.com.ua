@@ -161,11 +161,11 @@ define([
                     var steps = this.steps;
                     setTimeout(function () {
                         steps[0].classList.add('active', 'passed');
-                        steps[1].classList.add('active', 'passed');
-                        steps[2].classList.add('active', 'passed');
-                        steps[3].classList.add('active', 'passed');
-                        steps[4].classList.add('active', 'passed');
-                        steps[5].classList.add('active', 'passed');
+//                        steps[1].classList.add('active', 'passed');
+//                        steps[2].classList.add('active', 'passed');
+//                        steps[3].classList.add('active', 'passed');
+//                        steps[4].classList.add('active', 'passed');
+//                        steps[5].classList.add('active', 'passed');
                     }, 2500);
                 },
                 initialize: function (options) {
