@@ -250,8 +250,6 @@ a{
     }
 }
 
-
-
 .showreel {
     background: black;
     position: relative;
@@ -321,4 +319,11 @@ a{
             opacity: 0;
         }
     }
+}
+
+// inputs for IOS
+input, textarea {
+    border-radius: 0;
+    text-shadow: none;
+    -webkit-appearance: none;
 }

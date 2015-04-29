@@ -41,6 +41,9 @@ $delay: 0.35s;
 
 .service-web-page {
     transform: none;
+    > div, section {
+        overflow: hidden; 
+    }
     // common settings
     /* page appear section */
     @include page(service-web);
