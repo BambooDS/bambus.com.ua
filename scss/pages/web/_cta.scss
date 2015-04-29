@@ -21,6 +21,9 @@
                 display: block;
             }
         }
+        .icon{
+            display: none;
+        }
         .cta-text {
             @media only screen and (min-width: 1366px) {
                 padding-top: 150px;

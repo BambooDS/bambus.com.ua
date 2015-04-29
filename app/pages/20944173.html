@@ -1,0 +1,139 @@
+<div class="portfolio-single-page portfolio-theme underlviv-color">
+    <!-- header-project -->
+    <div class="header-project">
+            <div class="row">
+                <div class="name-project">
+                    <span class="close-page"></span>
+                    <h1>{{name}}</h1>
+                </div>
+                <div class="wrapper">
+                    <div class="details">
+                        <div class="site clearfix">
+                            <div class="control">
+                                {{#prevLink}}<a class="left-button" href="/portfolio/{{prevLink}}" title="Попередній проект"></a>{{/prevLink}}
+                                {{#nextLink}}<a class="right-button" href="/portfolio/{{nextLink}}" title="Наступний проект"></a>{{/nextLink}}
+                            </div>
+                            {{#external_url}}<a href="{{external_url}}" class="link" target="_blank" title="Відвідати сайт">{{external_url_trimmed}}</a>{{/external_url}}
+                        </div>
+                        <div class="customer">
+                            <p class="title">Замовник:</p>
+                            <p>{{client}}</p>
+                        </div>
+                        <div class="problem">
+                            <p class="title">Задача:</p>
+                            <p>{{description}}</p>
+                        </div>
+                        <div class="tags">
+                            <p class="title">Теги:</p>
+                            <div class="block-tags">
+                                {{#fields}}
+                                <a href="#">{{.}}</a>
+                                {{/fields}}
+                            </div>
+                        </div>
+                        <div class="team">
+                            <p class="title">Команда:</p>
+                            <div class="block-team">
+                                {{#owners}}
+                                <span class="person">
+                                    <div class="img">
+                                        <img src="{{images.138}}" alt="{{display_name}}">
+                                    </div>
+                                    <div class="name">
+                                        <span>{{occupation}}</span>
+                                        <p>{{display_name}}</p>
+                                    </div>
+                                </span>
+                                {{/owners}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <span class="data">{{date}}</span>
+                        <div class="img-block">
+                            <img src="../../../pictures/portfolio/underlviv/img-projekt.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- stop header-project -->
+    
+    <!-- presentation -->
+    <div class="presentation-underlviv">
+       
+        <div class="step-1">
+            <div class="row">
+                <div class="text">
+                    <h3>«Львів Підземний»</h3>
+                    <h2>Проект, покликаний зберігати та популяризувати культурну спадщину Львова.</h2>
+                    <p>Втілений у віртуальній реальності за допомогою найсучасніших технологій та креативних рішень, він поєднав цінності минулих сторіч із можливостями сучасності. Завдяки об’єднаним зусиллям усіх, хто працював над реалізацією проекту, львів’яни та гості міста отримали можливість ознайомитися з дивовижним підземним туристичним маршрутом.<br>Реалізацію проекту «Львів Підземний» було ініційовано Львівською міською радою за підтримки Європейського Союзу у рамках Програми транскордонного співробітництва Польща-Білорусьія-Україна на 2007-2013 роки. У рамках бюджету було знайдено краще рішення, і сьогодні кожен може пройти підземним маршрутом, завітавши на сайт «Підземного Львова»!</p>
+                </div>
+                <div class="basic-animation wow">
+                    <div>
+                        <img class="anim-1" src="../../../pictures/portfolio/underlviv/basic-animation/slide-1.png" alt="">
+                        <img class="anim-2" src="../../../pictures/portfolio/underlviv/basic-animation/slide-2.png" alt="">
+                        <img class="anim-3" src="../../../pictures/portfolio/underlviv/basic-animation/slide-3.png" alt="">
+                        <img class="anim-4" src="../../../pictures/portfolio/underlviv/basic-animation/slide-4.png" alt="">
+                    </div>
+                </div>
+                <div class="part">
+                    <img src="../../../pictures/portfolio/underlviv/step-1-page-2.png" alt="">
+                    <table>
+                        <tr>
+                            <td>Розмір 1-го сегменту:</td>
+                            <td>240 х 240 рх</td>
+                        </tr>
+                        <tr>
+                            <td>Оригінальний розмір:</td>
+                            <td>480 х 480 рх</td>
+                        </tr>
+                        <tr>
+                            <td>Роздільна здатність:</td>
+                            <td>72 пікс/дюйм</td>
+                        </tr>
+                        <tr>
+                            <td>Розмір:</td>
+                            <td>----</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row top-line">
+            <div class="bg-line">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+            </div>
+        </div>
+        
+        <div class="step-2">
+            <div class="row">
+                <div class="bg-line">
+                    <span class="line-3"></span>
+                </div>
+                <div class="home-animation wow">
+                    <img class="anim-1" src="../../../pictures/portfolio/underlviv/anim-1.png" alt="">
+                    <img class="anim-2" src="../../../pictures/portfolio/underlviv/anim-2.png" alt="">
+                    <img class="anim-3" src="../../../pictures/portfolio/underlviv/anim-3.png" alt="">
+                </div>
+                <div class="text wow">
+                    <h2>Новий та неочікуваний погляд на таємниче місто Лева!</h2>
+                    <p>У розробці ми використали векторну технологію, яка забезпечує кросбраузерність та однаково якісну роботу сайту на усіх пристроях, враховуючи також retina-дисплеї. Для переходів між локаціями сайту використано нестандартні та абсолютно інноваційні рішення позиціонування та трансформації, розроблене нашими спеціалістами спеціально для «Львова Підземного».<br>Проект втілено у життя, і він готовий допомагати подальшому розвитку культурного та туристичного потенціалу Львова. Кожен елемент сайту «Львів Підземний» зроблений з душею - для міста, його мешканців та гостей.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- end presentation -->
+
+    <!-- view more works -->
+    <div class="portfolio-theme-wrapper">
+        <h3>View more works</h3>
+        <div class="row projects-list">
+
+        </div>
+    </div>
+    <!-- stop view more works -->
+</div>

@@ -4522,7 +4522,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       text-transform: uppercase; }
       @media only screen and (max-width: 1366px) {
         .projects-list .item-block .title {
-          font-size: 14px; } }
+          font-size: 20px; } }
     .projects-list .item-block .echo-loaded {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
@@ -4551,7 +4551,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
   opacity: 1;
   transition: opacity 0.8s, -webkit-transform 0.8s;
   transition: opacity 0.8s, transform 0.8s;
-  transition-delay: 1s; }
+  transition-delay: 1s;
+  display: none; }
   .portfolio-filters button {
     background: rgba(0, 0, 0, 0.15);
     height: 32px;
@@ -7470,7 +7471,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
 .service-web-page .intro .image-small {
   padding: 0; }
 .service-web-page .intro img {
-  display: none; }
+  display: none;
+  margin-top: 32px; }
 @media only screen and (max-width: 840px) {
   .service-web-page .intro {
     height: auto; }
@@ -7521,6 +7523,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     @media only screen and (min-width: 1025px) {
       .service-web-page .cta .canvas {
         display: block; } }
+  .service-web-page .cta .icon {
+    display: none; }
   @media only screen and (min-width: 1366px) {
     .service-web-page .cta .cta-text {
       padding-top: 150px; } }

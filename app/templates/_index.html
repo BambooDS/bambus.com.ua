@@ -3,23 +3,45 @@
 <!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-    <title>Bambus</title>
-    <link rel="stylesheet" href="/css/app.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700|Roboto:400,300&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-</head>  
-<body>
-    <!--[if lt IE 9]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" rel=="external">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
-    {{> preloader}}
-    {{> menu}}
-    <script src='//localhost:3000/socket.io/socket.io.js'></script>
-    <script src='//localhost:3001/client/browser-sync-client.min.js'></script>
-    <script data-main="/js/app/main.js" src="/bower_components/requirejs/require.js"></script>
-</body>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Дизайн-студія - Бамбук</title>
+        <meta content="Студія графічного дизайну, розробка веб-сайтів, логотипів та фірмових стилів, ілюстрування , неймінг та брендинг, рекламна фотографія, розробка упаковки." name="description">
+        <meta content="Графічний, веб дизайн, розробка сайтів, ілюстрації, логотипи, фірмовий стиль, неймінг, брендинг, реклама, флеш ролики, інфографіка, 3D, Корпоративні сувеніри, мультимедіа" name="keywords">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <link rel="stylesheet" href="/css/app.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700|Roboto:400,300&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    </head>  
+    <body>
+        <!--[if lt IE 9]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" rel=="external">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        {{> preloader}}
+        {{> menu}}
+
+
+
+
+
+        <script src='//localhost:3000/socket.io/socket.io.js'></script>
+        <script src='//localhost:3001/client/browser-sync-client.min.js'></script>
+
+
+        <script data-main="/js/app/main.js" src="/bower_components/requirejs/require.js"></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-9792406-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
 </html>
