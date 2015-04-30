@@ -19,20 +19,36 @@
     padding: 0 40px;
     max-width: 1600px !important;
     text-align: center;
+    @media only screen and (max-width:1516px){
+        padding: 0;
+    }
     .item-block{
         display: inline-block;
         width: auto;
         margin-bottom: 48px;
-        padding: 0 24px 0 24px;
         overflow: hidden;
         position: relative;
+        margin: 0 24px 48px;
+        max-width: 404px;
+
+        @media only screen and (max-width:1516px){
+            margin: 0 1% 2%;
+            max-width: 30%;
+        }
+        @media only screen and (max-width:1024px){
+            max-width: 48%;
+        }
+        @media only screen and (max-width:720px){
+            max-width: 100%;
+            margin: 0 0 24px;
+        }
+
 
         &:hover{
             .title{
                 display: block !important;
             }
         }
-
         @for $i from 1 through 9 {
             &:nth-child( #{$i} ) a {
                 transition-delay: $i*$p-t-t/9;
@@ -81,17 +97,6 @@
                 opacity: 1;
             }
         }
-        @media only screen and (max-width:1516px){
-            margin-bottom: 24px;
-            padding: 0 12px;
-            width: 33%;
-        }
-        @media only screen and (max-width:720px){
-            width: 50%;
-        }
-        @media only screen and (max-width:480px){
-            width: 100%;
-        }
     }    
     @media only screen and (max-width:860px){
         padding: 0;
@@ -99,7 +104,7 @@
 }
 
 .portfolio-filters{
-    
+
     position:relative;
     z-index:1;
     padding: 0 64px;

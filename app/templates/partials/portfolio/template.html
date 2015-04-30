@@ -53,9 +53,9 @@
                     <div class="visual">
                         <span class="data">{{date}}</span>
                         <div class="img-block">
-                            <div class="wrapper">
-                                <img src="{{preview.sizes.original}}" alt="">
-                            </div>
+                            <!--                            <div class="wrapper">
+                                                            <img src="{{preview.sizes.original}}" alt="">
+                                                        </div>-->
                             <!--<img src="../../../img/portfolio/common-file/img-projekt.png" alt="">-->
                         </div>
                     </div>
@@ -67,10 +67,21 @@
         <!--    presentation-->
         <div class="presentation">
             <div class="row">
+                <div class="module-block">
+                    {{#preview.sizes.max_1920}}
+                    <img src="{{preview.sizes.max_1920}}">
+                    {{/preview.sizes.max_1920}}
+
+                    {{^preview.sizes.max_1920}}
+                    <img src="{{preview.sizes.original}}">
+                    {{/preview.sizes.max_1920}}
+                </div>
+
+
                 {{#modules}}
                 <div class="module-block">
                     {{#text}}{{{.}}}{{/text}}
-                    {{#sizes}}<img src="{{original}}" alt="">{{/sizes}}
+                    {{#sizes}}<img src="{{max_1920}}" alt="">{{/sizes}}
                 </div>
                 {{/modules}}
             </div>

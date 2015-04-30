@@ -80,6 +80,8 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
             console.log('renderRegular');
             requirejs(["text!/templates/partials/portfolio/template.html", 'mustache'], function(html) {
                 var data = this.model.get('project');
+                
+                console.log(data);
 
                 var backImage = '/custom_backgrounds/' + data.name.toLowerCase().replace(/\s/g, "-").replace(/("|')/g, "") + '.jpg';
                 var xmlhttp = new XMLHttpRequest();
