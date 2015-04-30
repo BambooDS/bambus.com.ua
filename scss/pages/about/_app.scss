@@ -10,10 +10,16 @@
     &.hidden {
         .about-company:after {
             opacity: 1;
-            transition: opacity 1.6s;
+            transition: opacity 0.5s;
         }
         .about-history, .slider-holder, .team-switch, .services .orbits {
             opacity: 0.3;
+        }
+        .services .orbits {
+            opacity: 0.3;
+            .orbit {
+                opacity: 0;
+            }
         }
         .workflow {
             > div:first-child {
