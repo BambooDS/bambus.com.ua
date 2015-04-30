@@ -3332,22 +3332,13 @@ html.services-inner #services-menu {
     .portfolio-single-page .presentation .row {
       max-width: inherit;
       /*width: 1240px;*/
-      margin: auto;
-      padding: 0 120px; }
-      @media only screen and (max-width: 1280px) {
-        .portfolio-single-page .presentation .row {
-          padding: 0 40px; } }
-      @media only screen and (max-width: 720px) {
-        .portfolio-single-page .presentation .row {
-          padding: 0; } }
+      margin: auto; }
     .portfolio-single-page .presentation .module-block {
-      /*max-width: 80%;*/
-      text-align: center;
-      margin-bottom: 50px; }
+      text-align: center; }
       .portfolio-single-page .presentation .module-block .title {
-        /*margin-bottom: 56px;*/
         font-size: 48px;
         line-height: 60px;
+        /*margin-bottom: 56px;*/
         /*color: #000;*/ }
       .portfolio-single-page .presentation .module-block p {
         margin: 4em auto;
@@ -3357,8 +3348,11 @@ html.services-inner #services-menu {
         font-size: 14px;
         line-height: 24px;
         color: #333; }
-      .portfolio-single-page .presentation .module-block img {
-        margin: 0 0 10px 0; }
+      .portfolio-single-page .presentation .module-block .sub-title, .portfolio-single-page .presentation .module-block .title {
+        padding-left: 120px; }
+        @media only screen and (max-width: 480px) {
+          .portfolio-single-page .presentation .module-block .sub-title, .portfolio-single-page .presentation .module-block .title {
+            padding-left: 20px; } }
     .portfolio-single-page .presentation .tech-presentation .tech-text p {
       position: relative;
       width: 940px;
@@ -5200,12 +5194,16 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       display: block;
       width: 100%;
       opacity: 0.5;
-      transition: opacity 0.3s; }
+      transition: opacity 0.3s;
+      cursor: pointer;
+      padding-left: 8px; }
     .about-page .about-showreel .title {
       text-align: center;
       padding-top: 340px;
       font-weight: lighter;
       font-size: 36px; }
+    .about-page .about-showreel.playing .play {
+      display: none; }
     .about-page .about-showreel .play {
       display: block;
       content: '';

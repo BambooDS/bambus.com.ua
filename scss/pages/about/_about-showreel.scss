@@ -10,12 +10,17 @@
         width: 100%;
         opacity: .5;
         transition: opacity .3s;
+        cursor: pointer;
+        padding-left: 8px;
     }
     .title{
         text-align: center;
         padding-top: 340px;
         font-weight: lighter;
         font-size: 36px;
+    }
+    &.playing .play{
+        display: none;
     }
     .play{
         display: block;

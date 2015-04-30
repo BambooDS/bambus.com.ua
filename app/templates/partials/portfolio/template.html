@@ -66,24 +66,42 @@
 
         <!--    presentation-->
         <div class="presentation">
+            <style>
+                {{#modules}}
+                .module-block .title{
+                    color: {{styles.text.title.color}} 
+                }
+                .module-block .sub-title{
+                    color: {{styles.text.subtitle.color}} 
+                }
+                {{/modules}}
+            </style>
             <div class="row">
+                
                 <div class="module-block">
                     {{#preview.sizes.max_1920}}
-                    <img src="{{preview.sizes.max_1920}}">
+                        <img src="{{preview.sizes.max_1920}}">
                     {{/preview.sizes.max_1920}}
 
                     {{^preview.sizes.max_1920}}
-                    <img src="{{preview.sizes.original}}">
+                        <img src="{{preview.sizes.original}}">
                     {{/preview.sizes.max_1920}}
                 </div>
-
-
+                
                 {{#modules}}
-                <div class="module-block">
-                    {{#text}}{{{.}}}{{/text}}
-                    {{#sizes}}<img src="{{max_1920}}" alt="">{{/sizes}}
-                </div>
+                    <div class="module-block" style="text-align: {{alignment}};">
+                        {{#text}} {{{.}}}  {{/text}}
+                        
+                    {{#sizes.max_1920}}
+                        <img src="{{sizes.max_1920}}" alt="">
+                    {{/sizes.max_1920}}
+
+                    {{^sizes.max_1920}}
+                        <img src="{{sizes.original}}" alt="">
+                    {{/sizes.max_1920}}
+                    </div>
                 {{/modules}}
+                
             </div>
         </div>
         <!--    stop presentation--> 

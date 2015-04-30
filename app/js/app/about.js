@@ -174,6 +174,15 @@ define(['page', 'masonry', 'backbone', 'hamster', 'wow', 'helper', 'preloader', 
                     this.el.classList.remove('playing');
                 }
             },
+            "click #about-showreel": function () {
+                if (this.video.paused) {
+                    this.video.play();
+                    this.el.classList.add('playing');
+                } else {
+                    this.video.pause();
+                    this.el.classList.remove('playing');
+                }
+            },
             "ended video": function () {
                 this.el.classList.remove('playing');
             },

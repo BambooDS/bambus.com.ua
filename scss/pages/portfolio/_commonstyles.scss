@@ -31,7 +31,7 @@ $text-tytle: #4c4c4c;
         }
         h3 {
             display: none;
-            
+
             margin-bottom: 70px;
             font-family: $body-font-family;
             font-size: 24px;
@@ -470,23 +470,14 @@ $text-tytle: #4c4c4c;
             max-width: inherit;
             /*width: 1240px;*/
             margin: auto;
-            padding: 0 120px;
-            @media only screen and (max-width: 1280px) {
-                 padding: 0 40px;
-            }
-            @media only screen and (max-width: 720px) {
-                 padding: 0;
-            }
         }
         counter-reset: test;
         .module-block {
-            /*max-width: 80%;*/
             text-align: center;
-            margin-bottom: 50px;
             .title{
-                /*margin-bottom: 56px;*/
                 font-size: 48px;
                 line-height: 60px;
+                /*margin-bottom: 56px;*/
                 /*color: #000;*/
             }
             p {
@@ -498,8 +489,11 @@ $text-tytle: #4c4c4c;
                 line-height: 24px;
                 color: #333;
             }
-            img {
-                margin: 0 0 10px 0;
+            .sub-title, .title{
+                padding-left: 120px;
+                @media only screen and (max-width: 480px) {
+                    padding-left: 20px;
+                }
             }
         }
         // technological
