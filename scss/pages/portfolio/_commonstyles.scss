@@ -9,7 +9,8 @@ $text-tytle: #4c4c4c;
     /* page appear section */
     @include page(portfolio-theme);
     /* page appear end */
-
+    transform: translateZ(0);
+    
     .wrapper-holder {
         background-position: top center;
     }

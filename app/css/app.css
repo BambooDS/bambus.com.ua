@@ -2986,6 +2986,10 @@ html.services-inner #services-menu {
 .portfolio-single-page {
   /* page appear section */
   /* page appear end */
+  -webkit-transform: translateZ(0);
+  /* page appear section */
+  /* page appear end */
+  transform: translateZ(0);
   /*
     Author: Roman Vytak
     */ }
@@ -4612,9 +4616,13 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     animation-duration: 0.5s; }
   .about-page.hidden .about-company:after {
     opacity: 1;
-    transition: opacity 1.6s; }
+    transition: opacity 0.5s; }
   .about-page.hidden .about-history, .about-page.hidden .slider-holder, .about-page.hidden .team-switch, .about-page.hidden .services .orbits {
     opacity: 0.3; }
+  .about-page.hidden .services .orbits {
+    opacity: 0.3; }
+    .about-page.hidden .services .orbits .orbit {
+      opacity: 0; }
   .about-page.hidden .workflow > div:first-child {
     background: rgba(255, 251, 230, 0.3); }
     .about-page.hidden .workflow > div:first-child .head, .about-page.hidden .workflow > div:first-child .copy {
@@ -5894,6 +5902,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     border-radius: 100%;
     left: 50%;
     top: 50%;
+    transition: opacity 0.3s;
     -webkit-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0); }
   .services .orbits [data-id="2"] {
@@ -5967,7 +5976,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     opacity: 1;
     transition: opacity 0.3s 1s; }
   .services .show-hint .hint {
-    border: 2px solid white;
+    border: none;
     width: 37.2%;
     height: 37.2%;
     box-shadow: 0px 0px 200px #fff; }
