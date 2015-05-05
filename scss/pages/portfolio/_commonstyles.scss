@@ -9,8 +9,7 @@ $text-tytle: #4c4c4c;
     /* page appear section */
     @include page(portfolio-theme);
     /* page appear end */
-    transform: translateZ(0);
-    
+
     .wrapper-holder {
         background-position: top center;
     }
@@ -77,14 +76,16 @@ $text-tytle: #4c4c4c;
             }
             .close-page {
                 transition: background 0.3s;
-                position: relative;
-                float: left;
+                position: fixed;
+                top: 40px;
+                left: 0;
                 height: 50px;
                 width: 50px;
                 border: 1px solid rgba(255,255,255,0.1);
                 cursor: pointer;
                 border-left: none;
                 margin-left: 8px;
+
                 &:after {
                     transition: opacity 0.3s;
                     content: '';
@@ -103,6 +104,11 @@ $text-tytle: #4c4c4c;
                     &:after {
                         opacity: 1;
                     }
+                }
+                @media #{$screen} and(max-width:640px) {
+                    top: 0px;
+                    left: 0px;
+                    margin: 0;
                 }
             }
         }
@@ -458,7 +464,7 @@ $text-tytle: #4c4c4c;
     .presentation {
         padding-top: 0px;
         /*padding-top: 134px;*/
-        padding-bottom: 130px;
+        /*padding-bottom: 130px;*/
         //background: #f8fbf7;
         h1 {
             font-family: $title-font-family;

@@ -1778,8 +1778,7 @@ a {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0); }
+  /*transform: translateZ(0);*/ }
 
 .home-page.visible, .contacts-page.visible, .portfolio-single-page.visible, .portfolio-page.visible, .about-page.visible, .showreel-page.visible, .service-web-page.visible {
   display: block;
@@ -2986,10 +2985,6 @@ html.services-inner #services-menu {
 .portfolio-single-page {
   /* page appear section */
   /* page appear end */
-  -webkit-transform: translateZ(0);
-  /* page appear section */
-  /* page appear end */
-  transform: translateZ(0);
   /*
     Author: Roman Vytak
     */ }
@@ -3047,8 +3042,9 @@ html.services-inner #services-menu {
             width: 1110px; } }
       .portfolio-single-page .header-project .name-project .close-page {
         transition: background 0.3s;
-        position: relative;
-        float: left;
+        position: fixed;
+        top: 40px;
+        left: 0;
         height: 50px;
         width: 50px;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -3071,6 +3067,11 @@ html.services-inner #services-menu {
           background-size: 32px; }
           .portfolio-single-page .header-project .name-project .close-page:hover:after {
             opacity: 1; }
+        @media only screen and (max-width: 640px) {
+          .portfolio-single-page .header-project .name-project .close-page {
+            top: 0px;
+            left: 0px;
+            margin: 0; } }
     .portfolio-single-page .header-project .wrapper {
       width: 1800px;
       margin: auto;
@@ -3326,7 +3327,7 @@ html.services-inner #services-menu {
   .portfolio-single-page .presentation {
     padding-top: 0px;
     /*padding-top: 134px;*/
-    padding-bottom: 130px;
+    /*padding-bottom: 130px;*/
     counter-reset: test; }
     .portfolio-single-page .presentation h1 {
       font-family: 'Roboto Condensed', Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
