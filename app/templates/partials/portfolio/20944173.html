@@ -1,71 +1,27 @@
-<div class="portfolio-single-page portfolio-theme underlviv-color">
+<div class="portfolio-single-page underlviv-color">
     <!-- header-project -->
     <div class="header-project">
-            <div class="row">
-                <div class="name-project">
-                    <span class="close-page"></span> 
-                    <h1>{{name}}</h1> 
-                </div>
-                <div class="wrapper">
-                    <div class="details">
-                        <div class="site clearfix">
-                            <div class="control">
-                                {{#prevLink}}<a class="left-button" href="/portfolio/{{prevLink}}" title="Попередній проект"></a>{{/prevLink}}
-                                {{#nextLink}}<a class="right-button" href="/portfolio/{{nextLink}}" title="Наступний проект"></a>{{/nextLink}}
-                            </div>
-                            {{#external_url}}<a href="{{external_url}}" class="link" target="_blank" title="Відвідати сайт">{{external_url_trimmed}}</a>{{/external_url}}
-                        </div>
-                        <div class="customer">
-                            <p class="title">Замовник:</p>
-                            <p>{{client}}</p>
-                        </div>
-                        <div class="problem">
-                            <p class="title">Задача:</p>
-                            <p>{{description}}</p>
-                        </div>
-                        <div class="tags">
-                            <p class="title">Теги:</p>
-                            <div class="block-tags">
-                                {{#fields}}
-                                <a href="#">{{.}}</a>
-                                {{/fields}}
-                            </div>
-                        </div>
-                        <div class="team">
-                            <p class="title">Команда:</p>
-                            <div class="block-team">
-                                {{#owners}}
-                                <span class="person">
-                                    <div class="img">
-                                        <img src="{{images.138}}" alt="{{display_name}}">
-                                    </div>
-                                    <div class="name">
-                                        <span>{{occupation}}</span>
-                                        <p>{{display_name}}</p>
-                                    </div>
-                                </span>
-                                {{/owners}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="visual">
-                        <span class="data">{{date}}</span>
-                        <div class="img-block">
-                            <div class="wrapper">
-                                <img src="{{preview.sizes.original}}" alt="">
-                            </div>
-                            <!--<img src="../../../img/portfolio/common-file/img-projekt.png" alt="">-->
-                        </div>
-                    </div>
+        <div class="row">
+
+            <div class="name-project"> 
+                <span class="close-page"></span>
+                <h1>АНДЕР</h1> 
+                <span class="open-meta"></span>
+            </div>
+
+            <div class="wrapper">
+                <div class="img-block">
+                    <img src="../../../pictures/portfolio/underlviv/img-projekt.png" alt="">
                 </div>
             </div>
         </div>
+    </div>
     <!-- stop header-project -->
-    
+
     <!-- presentation -->
     {{#underlviv}}
     <div class="presentation-underlviv">
-       
+
         {{#step-1}}
         <div class="step-1">
             <div class="row">
@@ -96,14 +52,14 @@
             </div>
         </div>
         {{/step-1}}
-        
+
         <div class="row top-line">
             <div class="bg-line">
                 <span class="line-1"></span>
                 <span class="line-2"></span>
             </div>
         </div>
-        
+
         {{#step-2}}
         <div class="step-2">
             <div class="row">
@@ -122,7 +78,7 @@
             </div>
         </div>
         {{/step-2}}
-        
+
     </div>
     {{/underlviv}}
     <!-- end presentation -->

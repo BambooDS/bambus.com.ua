@@ -1,106 +1,18 @@
-<div class="portfolio-single-page portfolio-theme "> 
+<div class="portfolio-single-page"> 
     <div class="bg-aeroport">
         <!-- header-project -->
         <div class="header-project">
             <div class="row">
+
                 <div class="name-project"> 
                     <span class="close-page"></span>
-                    <h1>22САЙТ МІЖНАРОДНОГО АЕРОПОРТУ «ЛЬВІВ» ІМЕНІ ДАН ИЛА ГАЛИЦЬКОГО {{name}}</h1> 
+                    <h1>САЙТ МІЖНАРОДНОГО АЕРОПОРТУ «ЛЬВІВ» ІМЕНІ ДАН ИЛА ГАЛИЦЬКОГО {{name}}</h1> 
+                    <span class="open-meta"></span>
                 </div>
+
                 <div class="wrapper">
-                    <div class="details">
-                        <div class="site clearfix">
-                            <div class="control">
-                                {{#prevLink}}<a class="left-button" href="/portfolio/{{prevLink}}" title="Попередній проект"></a>{{/prevLink}}
-                                {{#nextLink}}<a class="right-button" href="/portfolio/{{nextLink}}" title="Наступний проект"></a>{{/nextLink}}
-                            </div>
-                            <a href="" class="link" target="_blank">underlviv.com.ua</a>
-                        </div>
-                        <div class="customer">
-                            <p class="title">Замовник:</p>
-                            <p>"Риба" не тільки успішно пережила п'ять століть</p>
-                        </div>
-                        <div class="problem">
-                            <p class="title">Задача:</p>
-                            <p>Розробка сайту міжнародного аеропорту – це масштабний проект, який потребує особливої уваги до деталей та має найвищі вимоги до відображення кожного елементу. Проект необхідно втілити відповідно до фірмової хай-тек стилістики будівлі терміналу – з урахуванням синьої палітри кольорів та фактури скла. Команда отримала завдання та сформувала чітку ціль – виконати замовлення на найвищому рівні і створити сайт, який допоможе подорожуючим безпомилково зорієнтуватися на об’єкті за лічені хвилини. Результат – готовий, інформативний та незамінний для кожного мандрівника продукт.</p>
-                        </div>
-                        <div class="tags">
-                            <p class="title">Теги:</p>
-                            <div class="block-tags">
-                                <a href="">pizza hut</a>
-                                <a href="">food</a>
-                                <a href="">italian</a>
-                                <a href="">delovery</a>
-                                <a href="">packaging</a>
-                                <a href="">express</a>
-                                <a href="">speed</a>
-                            </div>
-                        </div>
-                        <div class="team">
-                            <p class="title">Команда:</p>
-                            <div class="block-team">
-                                <span class="person">
-                                    <div class="img">
-                                        <img src="/pictures/about/people/Kucherenko.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <span>Art director</span>
-                                        <p>Олесь Кучеренко</p>
-                                    </div>
-                                </span>
-                                <span class="person">
-                                    <div class="img">
-                                        <img src="/pictures/about/people/Andreeva.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <span>Web designer</span>
-                                        <p>Єлена Андреева</p>
-                                    </div>
-                                </span>
-                                <span class="person">
-                                    <div class="img">
-                                        <img src="/pictures/about/people/Kobernyk.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <span>Web designer</span>
-                                        <p>Юра Коберник</p>
-                                    </div>
-                                </span>
-                                <span class="person">
-                                    <div class="img">
-                                        <img src="/pictures/about/people/Taraban.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <span>Front End Development</span>
-                                        <p>Роман Тарабань</p>
-                                    </div>
-                                </span>
-                                <span class="person">
-                                    <div class="img">
-                                        <img src="/pictures/about/people/Golubyatnikova.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <span>Illustrator</span>
-                                        <p>Олена Голубятникова</p>
-                                    </div>
-                                </span>
-                                <span class="person">
-                                    <div class="img">
-                                        <img src="/pictures/about/people/Fedyna.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <span>Back-end web developer</span>
-                                        <p>Ярослав Федина</p>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="visual">
-                        <span class="data">01.01.2014</span>
-                        <div class="img-block">
-                            <img src="../../../pictures/portfolio/aeroport/img-projekt.png" alt="">
-                        </div>
+                    <div class="img-block">
+                        <img src="../../../pictures/portfolio/aeroport/img-projekt.png" alt="">
                     </div>
                 </div>
             </div>
@@ -109,7 +21,7 @@
 
         <!-- presentation -->
         {{#aeroport-lviv}}
-        <div class="presentation-aeroport"> 
+        <div class="presentation-aeroport">
 
             {{#step-1}}
             <div class="step-1 wow">
@@ -146,22 +58,23 @@
                     <h3>{{{step-3-title}}}</h3>
                     <p>{{{step-3-text}}}</p>
                     <img src="../../../pictures/portfolio/aeroport/presentation-3-2.png" alt="">
+                    <div class="details">
+                        <ul class="columns">
+                            {{#left-details}}
+                            <li class="{{class}}"><span>{{{text}}}</span></li>
+                            {{/left-details}}
+                        </ul>
+                        <ul>
+                            {{#right-details}}
+                            <li class="{{class}}"><span>{{{text}}}</span></li>
+                            {{/right-details}}
+                        </ul>
+                    </div>
                 </div>
                 <div class="map">
                     <img src="../../../pictures/portfolio/aeroport/presentation-3-1.png" alt="">
                 </div>
-                <div class="details">
-                    <ul class="columns">
-                        {{#left-details}}
-                        <li class="{{class}}"><span>{{{text}}}</span></li>
-                        {{/left-details}}
-                    </ul>
-                    <ul>
-                        {{#right-details}}
-                        <li class="{{class}}"><span>{{{text}}}</span></li>
-                        {{/right-details}}
-                    </ul>
-                </div>
+
             </div>
             {{/step-3}}
 
@@ -175,7 +88,7 @@
             </div>
             {{/step-4}}
 
-            <div class="technological">
+            <div class="technological"> 
                 <div class="tech-wrapper">
                     <div class="text">
                         <h3>Technological features of the site</h3>
@@ -196,150 +109,6 @@
             </div>
 
             <script src="../../../js/app/jquery.sequence-min.js"></script>
-            {{#step-5}}
-            <div class="step-5 clearfix">
-                <div class="slider-wrapper">
-                    <div id="sequence">
-                        <span class="sequence-prev"></span>
-                        <span class="sequence-next"></span>
-                        <ul class="sequence-canvas">
-                            <li style="" class="">
-                                <div class="site-wrapper">
-                                    <div class="window-site">
-                                        <img class="image" src="../../../img/portfolio/aeroport/comparison/site1.jpg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="properties">
-                                    <div class="browser">
-                                        <p>Крос-браузерність</p>
-                                        <div class="wrapper">
-                                            <span class="chrome"></span>
-                                            <span class="firefox"></span>
-                                            <span class="opera"></span>
-                                            <span class="safari"></span>
-                                            <span class="explorer"></span>
-                                            <span class="explorer-8"></span>
-                                        </div>
-                                    </div>
-                                    <div class="adaptive">
-                                        <p>Адаптивність сайту</p>
-                                        <div class="wrapper">
-                                            <span class="desktop"></span>
-                                            <span class="notebook"></span>
-                                            <span class="tablet"></span>
-                                            <span class="mobile"></span>
-                                        </div>
-                                    </div>
-                                    <div class="speed">
-                                        <p>Швидкість загрузки сайту</p>
-                                        <span></span>
-                                        <p class="value">5 сек</p>
-                                    </div>
-                                    <div class="size">
-                                        <p>Розмір сайту</p>
-                                        <span></span>
-                                        <p class="value">2 Mb</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li style="" class="">
-                                <div class="site-wrapper">
-                                    <div class="window-site">
-                                        <img class="image" src="../../../img/portfolio/aeroport/comparison/site2.jpg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="properties">
-                                    <div class="browser">
-                                        <p>Крос-браузерність</p>
-                                        <div class="wrapper">
-                                            <span class="chrome"></span>
-                                            <span class="firefox"></span>
-                                            <span class="opera"></span>
-                                        </div>
-                                    </div>
-                                    <div class="adaptive">
-                                        <p>Адаптивність сайту</p>
-                                        <div class="wrapper">
-                                            <span class="desktop"></span>
-                                            <span class="notebook"></span>
-                                        </div>
-                                    </div>
-                                    <div class="speed">
-                                        <p>Швидкість загрузки сайту</p>
-                                        <span></span>
-                                        <p class="value">10 сек</p>
-                                    </div>
-                                    <div class="size">
-                                        <p>Розмір сайту</p>
-                                        <span></span>
-                                        <p class="value">4 Mb</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="static-wrapper">
-                    <div id="sequence">
-                        <ul class="sequence-canvas">
-                            <li style="" class="animate-in">
-                                <div class="site-wrapper">
-                                    <div class="window-site">
-                                        <img class="image" src="../../../img/portfolio/aeroport/comparison/site1.jpg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="properties">
-                                    <div class="browser">
-                                        <p>Крос-браузерність</p>
-                                        <div class="wrapper">
-                                            <span class="chrome"></span>
-                                            <span class="firefox"></span>
-                                            <span class="opera"></span>
-                                            <span class="safari"></span>
-                                            <span class="explorer"></span>
-                                            <span class="explorer-8"></span>
-                                        </div>
-                                    </div>
-                                    <div class="adaptive">
-                                        <p>Адаптивність сайту</p>
-                                        <div class="wrapper">
-                                            <span class="desktop"></span>
-                                            <span class="notebook"></span>
-                                            <span class="tablet"></span>
-                                            <span class="mobile"></span>
-                                        </div>
-                                    </div>
-                                    <div class="speed">
-                                        <p>Швидкість загрузки сайту</p>
-                                        <span></span>
-                                        <p class="value">5 сек</p>
-                                    </div>
-                                    <div class="size">
-                                        <p>Розмір сайту</p>
-                                        <span></span>
-                                        <p class="value">2 Mb</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <script>
-        $(document).ready(function() {
-            var options = {
-                nextButton: true,
-                prevButton: true,
-                pagination: false,
-                animateStartingFrameIn: true,
-                autoPlay: true,
-                autoPlayDelay: 2000,
-                pauseOnHover: false
-            };
-            var mySequence = $("#sequence").sequence(options).data("sequence");
-        });
-                </script>
-            </div>
-            {{/step-5}}
 
             {{#step-6}}
             <div class="step-6">

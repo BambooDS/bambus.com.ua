@@ -23,6 +23,7 @@ $text-tytle: #4c4c4c;
     .row {
         max-width: 1920px;
     }
+
     .portfolio-theme-wrapper {
         padding: 66px 0;
         background: #222;
@@ -31,7 +32,6 @@ $text-tytle: #4c4c4c;
         }
         h3 {
             display: none;
-
             margin-bottom: 70px;
             font-family: $body-font-family;
             font-size: 24px;
@@ -39,7 +39,6 @@ $text-tytle: #4c4c4c;
             color: #fff;
         }
         .portfolio-page {
-            //visibility: visible;
             padding: 60px 0 0 80px;
             .work {
                 padding: 0 40px 40px 0;
@@ -50,41 +49,36 @@ $text-tytle: #4c4c4c;
     // header-project
     .header-project {
         padding-top: 36px;
-        padding-bottom: 70px;
+        padding-bottom: 36px;
         color: #fff;
         .name-project {
             height: 50px;
-            //outline: 1px solid #525252;
             text-align: left;
-            line-height: 50px;
             h1 {
-                width: 540px;
-                padding-top: 13px;
-                padding-left: 120px;
                 font-size: 24px;
-                line-height: 24px;
+                line-height: 50px;
+                overflow: hidden;
+                padding-left: 120px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
                 font-family: $title-font-family;
-                @media #{$screen} and(min-width:1340px) {
-                    width: 540px;
-                }
-                @media #{$screen} and(min-width:1600px) {
-                    width: 800px;
-                }
-                @media #{$screen} and(min-width:1920px) {
-                    width: 1110px;
+                @media #{$screen} and(max-width:720px) {
+                    padding-left: 80px;
+                    padding-right: 60px;
                 }
             }
-            .close-page {
+            .close-page, .open-meta {
                 transition: background 0.3s;
                 position: fixed;
-                top: 40px;
+                top: 36px;
                 left: 0;
                 height: 50px;
                 width: 50px;
                 border: 1px solid rgba(255,255,255,0.1);
                 cursor: pointer;
-                border-left: none;
                 margin-left: 8px;
+                z-index: 100;
 
                 &:after {
                     transition: opacity 0.3s;
@@ -94,7 +88,7 @@ $text-tytle: #4c4c4c;
                     left: 0px;
                     width: 100%;
                     height: 100%;
-                    opacity: 0.3;
+                    opacity: 0.8;
                     background: $close-page no-repeat center center;
                     background-size: 32px;
                 }
@@ -105,86 +99,43 @@ $text-tytle: #4c4c4c;
                         opacity: 1;
                     }
                 }
-                @media #{$screen} and(max-width:640px) {
+                @media #{$screen} and(max-width:940px) {
                     top: 0px;
                     left: 0px;
                     margin: 0;
                 }
             }
-        }
-
-        .wrapper {
-            width: 1800px;
-            margin: auto;
-            //outline: 1px solid #fff333;
-            float: right;
-            margin-right: 20px;
-
-            @media #{$screen} and(min-width:1370px) {
-                margin-right: 110px;
-            }
-        }
-
-        .visual {
-            -webkit-backface-visibility: hidden;
-            position: relative;
-            float: right;
-            width: 1440px;
-            //outline: 1px solid #fff;
-            .img-block {
-                width: 1280px;
-                float: right;
-                @media #{$screen} and(min-width:1370px) {
-                    width: 1420px;
+            .open-meta{
+                right: 18px;
+                left: auto;
+                @media #{$screen} and(max-width:940px) {
+                    right: 0px;
+                    left: auto;
                 }
-                .wrapper {
-                    overflow: hidden;
-                    position: absolute;
-                    top: 81px;
-                    left: 105px;
-                    width: 1146px;
-                    padding: 308px 0;
-                    @media #{$screen} and(min-width:1370px) {
-                        top: 86px;
-                        left: 105px;
-                        width: 1090px;
-                        padding: 341px 0;
-                    }
-                    img {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        display: block;
-                        //margin-left: 50%;
-                        //transform: translateX(-50%);
-                        max-width: 100%;
-                        height: auto;
-                        width: auto;
-                        max-height: 100%;
-                    }
-                }
-                > img {
-                    margin-top: 40px;
-                    margin-left: -40px;
-                    @media #{$screen} and(min-width:1370px) {
-                        margin-left: -80px;
-                    }
-                }
-            }
-            .data {
-                position: absolute;
-                right: 150px;
-                top: -50px;
-                height: 50px;
-                line-height: 56px;
-                font-size: 14px;
-                font-family: $body-font-family;
-                color: rgba(255,255,255,0.2);
-                @media #{$screen} and(min-width:1340px) {
-                    right: 200px;
+                &:after {
+                    background: $search no-repeat center center;
                 }
             }
         }
+        .wrapper{
+            padding: 40px 0 0 0;
+            .img-block{
+                text-align: center;
+                img{
+                    max-height: 80vh;
+                    width: auto;
+                }
+            }
+        }
+
+        
+        
+        
+        
+        
+        
+        
+        
 
         .details {
             display: none;
@@ -422,6 +373,11 @@ $text-tytle: #4c4c4c;
         padding: 120px 0 110px 0;
         .text {
             padding-left: 70px;
+            padding-right: 50px;
+            @media #{$screen} and(max-width:500px) {
+                padding-left: 30px;
+                padding-right: 20px;
+            }
             h3 {
                 font-weight: 400;
                 font-size: 24px;
@@ -429,16 +385,24 @@ $text-tytle: #4c4c4c;
             p {
                 font-size: 18px;
                 font-weight: 300;
+                line-height: 26px;
             }
         }
         .wrapper-item {
             padding-left: 5px;
+            @media #{$screen} and(max-width:840px) {
+                text-align: center;
+            }
             .item {
                 //outline: 1px solid #3C475D;
                 float: left; 
                 width: 410px;
                 margin-top: 55px;
                 padding-top: 125px;
+                @media #{$screen} and(max-width:840px) {
+                    float: none;
+                    display: inline-block;
+                }
                 p {
                     text-align: center;
                     line-height: 24px;
@@ -460,7 +424,6 @@ $text-tytle: #4c4c4c;
     /*
     Author: Roman Vytak
     */
-
     .presentation {
         padding-top: 0px;
         /*padding-top: 134px;*/
@@ -581,6 +544,7 @@ html.portfolio-theme{
         }
     }
 }
+
 .bg-image-theme{
     .header-project {
         position: absolute;
