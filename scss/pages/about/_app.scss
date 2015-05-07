@@ -3,9 +3,14 @@
     @include page(about);
     /* page appear end */
 
+    transform: none;
     text-align: left;
     background: #fff;
-    line-height: 24px;    
+    line-height: 24px;
+    
+    > section {
+        transform: translateZ(0);
+    }
     
     &.hidden {
         .about-company:after {
