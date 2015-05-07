@@ -633,7 +633,7 @@
                 },
                 {
                     "text": "Портфоліо",
-                    "href": "https://www.behance.net/bambus_studio"
+                    "href": "/portfolio"
                 }
                 
             ]
@@ -908,7 +908,7 @@
                 },
                 {
                     "text": "Портфоліо",
-                    "href": "https://www.behance.net/bambus_studio",
+                    "href": "/portfolio",
                     "class":"green"
                 }
                 

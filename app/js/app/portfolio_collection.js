@@ -23,7 +23,6 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
             this.model.on('remove', this.remove, this);
             this.parentView = opt.parentView;
             var temp = document.createElement('div');
-            console.log(this.model.attributes)
             temp.innerHTML = this.template(this.model.attributes);
             this.setElement(temp.removeChild(temp.firstChild));
             temp = null;
@@ -62,10 +61,6 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
             var server = 'http://new.bambus.com.ua';
             var action = 'lib/getProjectsBehance.php?urlProjects';
             
-            console.log('this',this.state.attributes);
-            console.log(this.state.get('page'));
-            
-//        return server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&per_page=' + this.state.get('itemsPerPage') + '&field=' + this.state.get('tag') + '&page=' + this.state.get('page'))
           return server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&per_page=' + this.state.get('itemsPerPage') + '&field=' + this.state.get('tag')  );
         },
         initialize: function(models, opt) {

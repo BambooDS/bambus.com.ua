@@ -31,6 +31,8 @@ $text-tytle: #4c4c4c;
             padding: 66px 0;
         }
         h3 {
+            display: none;
+
             margin-bottom: 70px;
             font-family: $body-font-family;
             font-size: 24px;
@@ -59,7 +61,7 @@ $text-tytle: #4c4c4c;
             h1 {
                 width: 540px;
                 padding-top: 13px;
-                padding-left: 150px;
+                padding-left: 120px;
                 font-size: 24px;
                 line-height: 24px;
                 font-family: $title-font-family;
@@ -179,6 +181,7 @@ $text-tytle: #4c4c4c;
         }
 
         .details {
+            display: none;
             margin-top: -50px;
             position: relative;
             width: 360px;
@@ -355,9 +358,7 @@ $text-tytle: #4c4c4c;
                     }
                 }
             }
-
         }
-
         .customer {
             display: none
         }
@@ -450,14 +451,13 @@ $text-tytle: #4c4c4c;
         }
     }
 
-
-
     /*
     Author: Roman Vytak
     */
 
     .presentation {
-        padding-top: 134px;
+        padding-top: 0px;
+        /*padding-top: 134px;*/
         padding-bottom: 130px;
         //background: #f8fbf7;
         h1 {
@@ -469,16 +469,17 @@ $text-tytle: #4c4c4c;
         .row {
             //outline: 1px solid #E5E8E4;
             max-width: inherit;
-            width: 1240px;
+            /*width: 1240px;*/
             margin: auto;
         }
         counter-reset: test;
         .module-block {
+            text-align: center;
             .title{
-                margin-bottom: 56px;
                 font-size: 48px;
                 line-height: 60px;
-                color: #000;
+                /*margin-bottom: 56px;*/
+                /*color: #000;*/
             }
             p {
                 margin: 4em auto;
@@ -488,28 +489,14 @@ $text-tytle: #4c4c4c;
                 font-size: 14px;
                 line-height: 24px;
                 color: #333;
-                //            counter-increment: test;
-                //            &:after {
-                //                content: counter(test);
-                //                position: absolute;
-                //                left: 0;
-                //                top: 0px;
-                //                height: 100%;
-                //                width: 32px;
-                //                background: $green;
-                //                padding-top: 10px;
-                //                color: #fff;
-                //                font-size: 20px;
-                //                text-align: center;
-                //                font-weight: 300;
-                //                font-size: 16px;
-                //            }
             }
-            img {
-                margin: 0 0 10px 0;
+            .sub-title, .title{
+                padding-left: 120px;
+                @media only screen and (max-width: 480px) {
+                    padding-left: 20px;
+                }
             }
         }
-
         // technological
         .tech-presentation {
             .tech-text p {
@@ -531,11 +518,7 @@ $text-tytle: #4c4c4c;
             }
         }
     }
-
-
-
 }
-
 
 html.portfolio-theme{
     .menu-icon {
@@ -550,18 +533,17 @@ html.portfolio-theme{
 
 .behance-theme {
     .header-project {
-        & + div img {
-            max-width: inherit;
-            display: block;
-            transform: translateX(-50%);
-            left: 50%;
-            position: relative;
-        }
+        /*        & + div img {
+                    max-width: inherit;
+                    display: block;
+                    transform: translateX(-50%);
+                    left: 50%;
+                    position: relative;
+                }*/
         .wrapper {
             width: 100%;
         }
         .visual {
-            float: left;
             width: 70%;
             padding-left: 110px;
             .img-block {
@@ -593,7 +575,6 @@ html.portfolio-theme{
         }
     }
 }
-
 .bg-image-theme{
     .header-project {
         position: absolute;
