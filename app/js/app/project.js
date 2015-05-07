@@ -12,6 +12,12 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
         events: {
             'click .close-page': function() {
                 app.navigate("portfolio", {trigger: true});
+            },
+            'click .open-meta': function() {
+                 $('.meta-container').toggleClass('active');
+            },
+            'mouseleave  .meta-container': function() {
+                 $('.meta-container').removeClass('active');
             }
         },
         name: "portfolio-theme",
@@ -44,7 +50,7 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
                     boxClass: 'wow', // animated element css class (default is wow)
                     animateClass: 'animated', // animation css class (default is animated)
                     offset: 50, // distance to the element when triggering the animation (default is 0)
-                    mobile: true, // trigger animations on mobile devices (true is default)
+                    mobile: false, // trigger animations on mobile devices (true is default)
                     root: this.el
                 });
                 this.portfolio = new portfolio_collection([], {view: this});
@@ -62,17 +68,16 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
             console.log('renderCustom');
             requirejs(["text!/pages/" + this.model.name + ".html", 'mustache'], function(html) {
                 var data = this.model.get('project');
-
+                console.log(data);
                 // remove bambus studion from owners
                 data.owners.forEach(function(el, index) {
                     if (el.id === 2975629) {
                         data.owners.splice(index, 1);
                     }
                 });
-                
-//                this.el.find('h1').append(data.name);
 
                 this.setElement(Mustache.render(html, data));
+                console.log(this.e);
                 this.render(true);
             }.bind(this));
         },

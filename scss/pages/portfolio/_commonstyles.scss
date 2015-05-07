@@ -101,8 +101,11 @@ $text-tytle: #4c4c4c;
                 }
                 @media #{$screen} and(max-width:940px) {
                     top: 0px;
-                    left: 0px;
+                    left: 8px;
                     margin: 0;
+                }
+                @media #{$screen} and(max-width:640px) {
+                    left: 0px;
                 }
             }
             .open-meta{
@@ -113,9 +116,102 @@ $text-tytle: #4c4c4c;
                     left: auto;
                 }
                 &:after {
-                    background: $search no-repeat center center;
+                    transform: rotate(136deg);
                 }
             }
+        }
+
+
+
+        .meta-container{
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 50;
+            right: 0;
+            top: 0;
+            transform: translate(100%);
+            transition: transform 0.5s ease 0s;
+            @media #{$screen} and(max-width:780px) {
+                width: 100%;
+            }
+            .project-meta-block{
+                background: none repeat scroll 0 0 / auto 100% rgba(32, 32, 32, 0.8);
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                padding: 60px 80px 60px 40px;
+                overflow: auto;
+                @media #{$screen} and(max-width:640px) {
+                    padding: 60px 40px 20px 10px;
+                }
+                @media #{$screen} and(max-width:480px) {
+                    padding: 60px 20px 10px 10px;
+                }
+                div{
+                    margin-bottom: 30px;
+                    > span{
+                        margin-bottom: 30px;
+                        display: block;
+                    }
+                }
+                .description{
+                    p{
+                        line-height: 20px;
+                    }
+                }
+                .tags a{
+                    display: inline-block;
+                    padding: 8px 16px;
+                    margin: 0 8px 10px 0;
+                    background: $green;
+                    color:  rgba(32, 32, 32, 0.8);
+                    text-decoration: none;
+                    cursor: default;
+                }
+                .team{
+                    .team-member{
+                        display: inline-block;
+                        margin: 0 16px 16px 0;
+                        position: relative;
+                        img{
+                            z-index: 10;
+                            position: relative;
+                            transition: scale(1);
+                            transition: all .3s ease-in-out; 
+                            width: 100%;
+                        }
+                        span{
+                            display: inline;
+                            height: 100%;
+                            left: 0;
+                            margin: 0;
+                            padding-top: 36px;
+                            position: absolute;
+                            text-align: center;
+                            width: 100%;
+                            z-index: 1;
+                        }
+                        &:hover{
+                            img{
+                                transform: scale(0);
+                                transition: all .3s ease-in-out; 
+                            }
+                        }
+                        @media #{$screen} and(max-width:640px) {
+                            overflow: hidden;
+                            width: 76px;
+                        }
+                    }
+                }
+
+            }
+            &.active{
+                transform: translate(0);
+                transition: transform 0.5s ease 0s;
+            }
+
         }
         .wrapper{
             padding: 40px 0 0 0;
@@ -126,198 +222,6 @@ $text-tytle: #4c4c4c;
                     width: auto;
                 }
             }
-        }
-
-        
-        
-        
-        
-        
-        
-        
-        
-
-        .details {
-            display: none;
-            margin-top: -50px;
-            position: relative;
-            width: 360px;
-            //outline: 1px solid;
-            float: right;
-            font-family: $body-font-family;
-            > div {
-                margin-bottom: 30px;
-            }
-            .problem {
-                margin-top: 80px;
-            }
-            .site {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-            }
-            .title {
-                color: rgba(255,255,255,0.2);
-                font-size: 12px;
-                line-height: 24px;
-                text-transform: uppercase;
-            }
-            p {
-                margin: 0;
-                font-size: 14px;
-                line-height: 24px;
-            }
-
-            // control
-            .control {
-                float: left;
-                width: 50%;
-                a {
-                    transition: opacity 0.3s;
-                    position: relative;
-                    transition: all 0.3s;
-                    width: 50px;
-                    height: 50px;
-                    margin-right: 3px;
-                    border: 1px solid rgba(255,255,255,0.1);
-                    display: inline-block;
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
-                        width: 100%;
-                        height: 100%;
-                        background: $arrows no-repeat center center;
-                        background-size: 28px;
-                        transition: opacity 0.3s;
-                        opacity: 0.3;
-                    }
-                    &.left-button {
-
-                    }
-                    &.right-button {
-                        transform: rotate(-180deg);
-                    }
-                    &:hover {
-                        background: $green;
-                        &:after {
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-            .link {
-                float: right;
-                width: 50%;
-                overflow: hidden;
-                padding: 0 15px;
-                border: 1px solid rgba(255,255,255,0.1);
-                line-height: 48px;
-                text-align: center;
-                color: #fff;
-                font-size: 16px;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-
-            //tags
-            .tags {
-                .block-tags {
-                    a {
-                        transition: all 0.3s;
-                        background: rgba(0,0,0,0.2);
-                        margin: 4px 2px 4px 0;
-                        display: inline-block;
-                        padding: 0 18px;
-                        line-height: 40px;
-                        font-size: 14px;
-                        text-decoration: none;
-                        color: rgba(255,255,255,0.6);
-                        &:hover {
-                            background: $green;
-                            color: #fff;
-                        }
-                    }
-                }
-            }
-
-            // team
-            .team {
-                //outline: 1px solid #fff;
-                .block-team {
-                    padding-left: 8px;
-                    text-align: left;
-                    .person {
-                        position: relative;
-                        display: inline-block;
-                        vertical-align: top;
-                        width: 80px;
-                        height: 80px;
-                        margin: 8px 45px 8px 45px;
-                        .img {
-                            position: relative;
-                            transition: transform 0.1s;
-                            border-radius: 100%;
-                            background: rgba(255,255,255,0.05);
-                            width: 100%;
-                            height: 100%;
-                            border: 3px solid rgba(255,255,255,0.1);
-                            text-align: center;
-                            img {
-                                width: auto;
-                                height: auto;
-                                border-radius: 100%;
-                                max-width: 94%;
-                                max-height: inherit;
-                                min-height: inherit;
-                                min-width: inherit;
-                                position: absolute;
-                                top: 51%;
-                                left: 51%;
-                                transform: translateX(-51%) translateY(-51%);
-                            }
-                        }
-                        .name {
-                            transition: transform 0.1s;
-                            transform: scale(0);
-                            //display: none;
-                            position: absolute;
-                            top: 15px;
-                            //outline: 1px solid #fff333;
-                            width: 210px;
-                            margin-left: -105px;
-                            left: 50%;
-                            text-align: center;
-                            span {
-                                color: rgba(255,255,255,0.2);
-                                font-size: 10px;
-                                text-transform: uppercase;
-                                text-align: center;
-                            }
-                            p {
-                                font-size: 14px;
-                                line-height: 35px;
-                            }
-                        }
-
-                        &:hover {
-                            .img {
-                                transform: scale(0);
-                                //display: none;
-                            }
-                            .name {
-                                transform: scale(1);
-                                //display: block;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .customer {
-            display: none
         }
     }
 
@@ -334,34 +238,10 @@ $text-tytle: #4c4c4c;
         .name-project {
             color: #000;
         }
-        .details {
-            .link {
-                border: 1px solid rgba(0, 0, 0, 0.1);
-                color: #000;
-            }
-            .title {
-                color: rgba(0, 0, 0, 0.5);
-            }
-            > div {
-                color: #000;
-            }
-            .team .block-team .person {
-                .name span {
-                    color: rgba(0, 0, 0, 0.5);
-                }
-                .img {
-                    background: rgba(0, 0, 0, 0.05);
-                    border: 3px solid rgba(0, 0, 0, 0.1);
-                }
-            }
-            .tags .block-tags a {
-                background: rgba(45,45,45,0.8);
-            }
-        }
         .visual .data {
             color: rgba(0, 0, 0, 0.5);
         }
-        .name-project .close-page {
+        .name-project .close-page, .name-project .open-meta {
             background: rgba(45, 45, 45, 0.8);
         }
     }
@@ -394,7 +274,6 @@ $text-tytle: #4c4c4c;
                 text-align: center;
             }
             .item {
-                //outline: 1px solid #3C475D;
                 float: left; 
                 width: 410px;
                 margin-top: 55px;
@@ -426,9 +305,6 @@ $text-tytle: #4c4c4c;
     */
     .presentation {
         padding-top: 0px;
-        /*padding-top: 134px;*/
-        /*padding-bottom: 130px;*/
-        //background: #f8fbf7;
         h1 {
             font-family: $title-font-family;
             font-size: 48px;
@@ -436,9 +312,7 @@ $text-tytle: #4c4c4c;
             color: #000;
         }
         .row {
-            //outline: 1px solid #E5E8E4;
             max-width: inherit;
-            /*width: 1240px;*/
             margin: auto;
         }
         counter-reset: test;
@@ -447,8 +321,6 @@ $text-tytle: #4c4c4c;
             .title{
                 font-size: 48px;
                 line-height: 60px;
-                /*margin-bottom: 56px;*/
-                /*color: #000;*/
             }
             p {
                 margin: 4em auto;
@@ -502,13 +374,6 @@ html.portfolio-theme{
 
 .behance-theme {
     .header-project {
-        /*        & + div img {
-                    max-width: inherit;
-                    display: block;
-                    transform: translateX(-50%);
-                    left: 50%;
-                    position: relative;
-                }*/
         .wrapper {
             width: 100%;
         }
@@ -538,9 +403,6 @@ html.portfolio-theme{
                     right: 100px;
                 }
             }
-        }
-        .details {
-            max-width: 30%;
         }
     }
 }

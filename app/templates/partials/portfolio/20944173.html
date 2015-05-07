@@ -3,11 +3,37 @@
     <div class="header-project">
         <div class="row">
 
+            <!--Need to move this block to app/pages/NAME_of_this_page - after changes here-->
             <div class="name-project"> 
                 <span class="close-page"></span>
-                <h1>АНДЕР</h1> 
+                <h1>{{name}}</h1> 
                 <span class="open-meta"></span>
             </div>
+            <div class="meta-container">
+                <div class="project-meta-block">
+                    <div class="description">
+                        {{#description}}
+                        <span>Опис:</span>
+                        <p>{{description}}</p>
+                        {{/description}}
+                    </div>
+                    <div class="tags">
+                        {{#fields}}
+                        <a href="#">{{.}}</a>
+                        {{/fields}}
+                    </div>
+                    <div class="team">
+                        <span>Команда:</span>  
+                        {{#owners}}
+                        <div class="team-member">
+                            <img src="{{images.115}}" alt="{{display_name}}">
+                            <span>{{display_name}}</span>
+                        </div>
+                        {{/owners}}
+                    </div>
+                </div>
+            </div>
+            <!--end Need to move this block to app/pages/NAME_of_this_page - after changes here-->
 
             <div class="wrapper">
                 <div class="img-block">

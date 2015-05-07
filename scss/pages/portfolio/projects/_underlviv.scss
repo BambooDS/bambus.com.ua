@@ -9,7 +9,7 @@ $bg-color: #29344a;
 }
 
 .presentation-underlviv {
-    font-size: 18px;
+
     // bg-line
     .top-line {
         display: none;
@@ -123,6 +123,9 @@ $bg-color: #29344a;
                 height: auto;
                 min-height: 550px;
             }
+            @media #{$screen} and(max-width:380px) {
+                min-height: 700px;
+            }
 
             $pop: 1s;
             img {
@@ -219,7 +222,7 @@ $bg-color: #29344a;
 
         .text {
             position: absolute;
-            left: em(16px,310px);
+            left: em(16px,410px);
             top: em(16px,395px);
             width: em(16px,600px);
             color: #585858;
@@ -312,7 +315,7 @@ $bg-color: #29344a;
             &.animated img {
                 opacity: 1;
                 &.anim-1 {
-                    transform: translateX(em(16px,410px));
+                    transform: translateX(em(16px,810px));
                 }
                 &.anim-2 {
                     transform: translateX(em(16px,-865px));
