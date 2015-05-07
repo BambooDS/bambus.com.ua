@@ -2062,12 +2062,8 @@ html, body {
     background: #96b03c;
     transition: background-color 0.4s; }
   .hide #menu .logo {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    transition-delay: 0, 0.1s !important; }
+    transition-delay: 0, 0 !important; }
   .hide #menu .menu-list li, .hide #menu .contact-link {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
     transition-delay: 0, 0 !important; }
   #menu a:nth-child(1) {
     transition-delay: 0, 0.15s; }
@@ -4595,12 +4591,19 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
 .about-page {
   /* page appear section */
   /* page appear end */
+  -webkit-transform: none;
+  /* page appear section */
+  /* page appear end */
+  transform: none;
   text-align: left;
   background: #fff;
   line-height: 24px; }
   html.about.loaded .about-page {
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s; }
+  .about-page > section {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); }
   .about-page.hidden .about-company:after {
     opacity: 1;
     transition: opacity 0.5s; }
