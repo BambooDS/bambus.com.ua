@@ -2134,7 +2134,7 @@ html, body {
   font-size: 40px;
   font-weight: 100;
   position: absolute;
-  z-index: 60;
+  z-index: 101;
   overflow: hidden;
   width: 100%;
   height: 100vh;
@@ -2271,7 +2271,7 @@ html, body {
       transition: opacity 0.5s; }
   .sub-loading #preloader {
     transition: none;
-    z-index: 100;
+    z-index: 101;
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transform-origin: 50% 30%;
@@ -4940,7 +4940,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
         .about-page .about-company .team-switch .medium-4 {
           width: 100%; } }
     .about-page .about-company .thesis {
-      min-height: 374px; }
+      min-height: 352px; }
       .about-page .about-company .thesis .icon {
         background-image: url(../img/about/icons/40x40-bambukicon.svg); }
       @media only screen and (max-width: 960px) {
@@ -4978,7 +4978,6 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
           margin: 0 auto;
           display: block; }
   .about-page .team {
-    margin-bottom: 72px;
     position: relative; }
     .about-page .team .group {
       height: 352px;
@@ -6118,7 +6117,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
 
 #team-switch {
   background: #fafafa;
-  min-height: 374px;
+  min-height: 352px;
+  overflow: hidden;
   padding: 0 124px; }
   @media only screen and (max-width: 1560px) {
     #team-switch {

@@ -3,7 +3,7 @@
     font-size: 40px;
     font-weight: 100;
     position: absolute;
-    z-index: 60;
+    z-index: 101;
     overflow: hidden;
     width: 100%;
     height: 100vh;
@@ -146,7 +146,7 @@
     }
     .sub-loading  &{
         transition: none;
-        z-index: 100;
+        z-index: 101;
         transform: scale(1);
         transform-origin: 50% 30%;
         animation: subloading .3s;
