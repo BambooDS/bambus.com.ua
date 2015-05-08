@@ -131,15 +131,15 @@ module.exports = function (grunt) {
                     template: 'app/templates/partials/portfolio.html',
                     dest: 'app/pages/portfolio.html'
                 },
-//                {
-//                    data: 'app/templates/data/index.json',
-//                    template: 'app/templates/partials/portfolio/underlviv.html',
-//                    dest: 'app/pages/underlviv.html'
-//                },{
-//                    data: 'app/templates/data/index.json',
-//                    template: 'app/templates/partials/portfolio/lwo.aero.html',
-//                    dest: 'app/pages/lwo.aero.html'
-//                }
+                {
+                    data: 'app/templates/data/index.json',
+                    template: 'app/templates/partials/portfolio/20944173.html',
+                    dest: 'app/pages/20944173.html'
+                },{
+                    data: 'app/templates/data/index.json',
+                    template: 'app/templates/partials/portfolio/20379627.html',
+                    dest: 'app/pages/20379627.html'
+                }
             ]
             } 
         },
