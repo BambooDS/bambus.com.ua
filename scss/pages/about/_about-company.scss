@@ -2,7 +2,7 @@
     overflow: hidden;
     position: relative;
     &:after {
-        transition: opacity 0.6s;
+        transition: opacity 0.1s;
         opacity: 0;
         z-index: -1;
         content: '';
