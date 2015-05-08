@@ -15,22 +15,22 @@
     &.hidden {
         .about-company:after {
             opacity: 1;
-            transition: opacity 0.5s;
+            transition: opacity 0s; 
         }
         .about-history, .slider-holder, .team-switch, .services .orbits {
-            opacity: 0.3;
+            opacity: 0;
         }
         .services .orbits {
-            opacity: 0.3;
+            opacity: 0.1;
             .orbit {
                 opacity: 0;
             }
         }
         .workflow {
             > div:first-child {
-                background: rgba(255,251,230,0.3);
+                background: rgba(255,251,230,0);
                 .head, .copy {
-                    opacity: 0.3;
+                    opacity: 0;
                 }
             }
         }

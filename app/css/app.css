@@ -4594,17 +4594,17 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     transform: translateZ(0); }
   .about-page.hidden .about-company:after {
     opacity: 1;
-    transition: opacity 0.5s; }
+    transition: opacity 0s; }
   .about-page.hidden .about-history, .about-page.hidden .slider-holder, .about-page.hidden .team-switch, .about-page.hidden .services .orbits {
-    opacity: 0.3; }
+    opacity: 0; }
   .about-page.hidden .services .orbits {
-    opacity: 0.3; }
+    opacity: 0.1; }
     .about-page.hidden .services .orbits .orbit {
       opacity: 0; }
   .about-page.hidden .workflow > div:first-child {
-    background: rgba(255, 251, 230, 0.3); }
+    background: rgba(255, 251, 230, 0); }
     .about-page.hidden .workflow > div:first-child .head, .about-page.hidden .workflow > div:first-child .copy {
-      opacity: 0.3; }
+      opacity: 0; }
   .about-page h1 {
     font-size: 36px;
     font-weight: 100;
@@ -4838,7 +4838,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     overflow: hidden;
     position: relative; }
     .about-page .about-company:after {
-      transition: opacity 0.6s;
+      transition: opacity 0.1s;
       opacity: 0;
       z-index: -1;
       content: '';
@@ -5959,12 +5959,14 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     box-shadow: 0px 0px 200px #fff; }
   .services .show-hint .planet:not(:hover) {
     background: #ddd !important;
-    opacity: 0.3; }
+    opacity: 0.1;
+    transition: all 0s; }
   .services .show-hint .effect {
     background: url(../img/../pictures/about/planets/noise.png) left center no-repeat;
     -webkit-animation: roll-images-effect 0.25s infinite steps(1);
     animation: roll-images-effect 0.25s infinite steps(1); }
   .services.animated .planet {
+    transition: all 0.3s;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   .services.animated .planet-inner {

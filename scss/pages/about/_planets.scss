@@ -239,9 +239,10 @@
          }
          .planet:not(:hover){
              background: #ddd !important;
-             opacity: 0.3;
+             opacity: 0.1;
+             transition: all 0s;
          }
-         .effect {
+         .effect {  
              background: image-url('../pictures/about/planets/noise.png') left center no-repeat;
              animation: roll-images-effect .25s infinite steps(1); 
          }
@@ -249,6 +250,7 @@
      }
      &.animated {
          .planet{ 
+             transition: all 0.3s;
              transform: translate3d(0,0,0);
          }
          .planet-inner {
