@@ -4502,10 +4502,13 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
   margin: 48px auto;
   padding: 0 40px;
   max-width: 1600px !important;
-  text-align: center; }
+  text-align: left; }
   @media only screen and (max-width: 1516px) {
     .projects-list {
       padding: 0; } }
+  @media only screen and (max-width: 1366px) {
+    .projects-list {
+      text-align: center; } }
   .projects-list .item-block {
     display: inline-block;
     width: auto;

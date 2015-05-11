@@ -26,10 +26,11 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
             temp.innerHTML = this.template(this.model.attributes);
             this.setElement(temp.removeChild(temp.firstChild));
             temp = null;
-            $('#porfolio-list').isotope({
-                itemSelector: '.item-block',
-                layoutMode: 'fitRows'
-            });
+            //this plugin prevent to bugs with no scrollling on iphone and some browsers very specific 
+//            $('#porfolio-list').isotope({
+//                itemSelector: '.item-block',
+//                layoutMode: 'fitRows'
+//            });
             this.render();
         },
         render: function() {
