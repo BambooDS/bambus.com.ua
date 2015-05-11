@@ -116,22 +116,23 @@ $text-tytle: #4c4c4c;
                     left: auto;
                 }
                 &:after {
-                    transform: rotate(136deg);
+                    background: $meta-plus no-repeat center center;
+                    background-size: 40px;
                 }
             }
         }
-
-
-
         .meta-container{
             height: 100%;
-            width: 50%;
+            width: 33%;
             position: fixed;
             z-index: 50;
             right: 0;
             top: 0;
             transform: translate(100%);
             transition: transform 0.5s ease 0s;
+            @media #{$screen} and(max-width:1140px) {
+                width: 50%;
+            }
             @media #{$screen} and(max-width:780px) {
                 width: 100%;
             }
@@ -149,10 +150,16 @@ $text-tytle: #4c4c4c;
                 @media #{$screen} and(max-width:480px) {
                     padding: 60px 20px 10px 10px;
                 }
+                .project-name-header{
+                    display: block;
+                    font-size: 28px;
+                    font-weight: 300;
+                    margin-bottom: 24px;
+                }
                 div{
                     margin-bottom: 30px;
                     > span{
-                        margin-bottom: 30px;
+                        margin-bottom: 20px;
                         display: block;
                     }
                 }
@@ -166,21 +173,28 @@ $text-tytle: #4c4c4c;
                     padding: 8px 16px;
                     margin: 0 8px 10px 0;
                     background: $green;
-                    color:  rgba(32, 32, 32, 0.8);
+                    color:  #fff;
                     text-decoration: none;
                     cursor: default;
                 }
+                
+                
+                
                 .team{
                     .team-member{
                         display: inline-block;
                         margin: 0 16px 16px 0;
                         position: relative;
+                        border-radius: 200px;
+                        overflow: hidden;
                         img{
                             z-index: 10;
                             position: relative;
                             transition: scale(1);
                             transition: all .3s ease-in-out; 
-                            width: 100%;
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 200px;
                         }
                         span{
                             display: inline;
@@ -205,6 +219,8 @@ $text-tytle: #4c4c4c;
                         }
                     }
                 }
+                
+                
 
             }
             &.active{

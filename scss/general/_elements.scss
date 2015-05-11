@@ -206,6 +206,12 @@ a{
             border-color: #fff;
             color: $green;
         }
+        &.green:hover{
+            background: none repeat scroll 0 0 #96b03c;
+            border-color: #96b03c;
+            color: #ffffff;
+            transition: color 0.3s ease 0s, background 0.3s ease 0s;
+        }
     }
 }
 
@@ -278,11 +284,11 @@ a{
         font-weight: lighter;
         font-size: 36px;
         display: none;
-        
+
         @media only screen and (min-width: 960px) {
             display: block;
         }
-        
+
     }
     .play {
         display: block;
@@ -304,12 +310,12 @@ a{
         z-index: 2;
         background: image-url('about/icons/play-button.svg') no-repeat center;
         background-size: 100%;
-        
+
         @media only screen and (min-width: 768px) {
             width: 320px;
             height: 320px;
         }
-        
+
         &:hover {
             opacity: 1;
         }

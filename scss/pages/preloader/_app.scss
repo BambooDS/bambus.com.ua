@@ -69,9 +69,15 @@
             top: 31px;
             width: 1123px;
             animation-delay: .1s; 
+            @media only screen and (max-width:792px){
+                width: 1131px;
+            }
         }
         .line-3 {
             top: 169px; 
+        }
+        @media only screen and (max-width:792px){
+            top: 460px;
         }
     }
     .line-block-3 {
@@ -91,6 +97,9 @@
             background: rgba(255, 255, 255, .2);
             backface-visibility: hidden;
             transform: scale(1, 0); 
+            @media only screen and (max-width:792px){
+                top: -12px;
+            }
         }
     }    
     .line-block-2 {
@@ -110,6 +119,10 @@
         }
         .line-2 {
             right: 0; 
+        }
+        @media only screen and (max-width:792px){
+            margin-left: -85px;
+            width: 94px;
         }
     }
     .dom-loaded &{

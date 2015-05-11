@@ -382,7 +382,7 @@
                             "picture": "Tatomur"
                         },
                         {
-                            "picture": "Chomiakova"
+                            "picture": "clear"
                         },
                         {
                             "picture": "Koval"
@@ -904,7 +904,7 @@
                 {
                     "text": "Контакти",
                     "href": "/contacts",
-                    "class":"green"
+                    "class":"green special"
                 },
                 {
                     "text": "Портфоліо",

@@ -12,17 +12,21 @@
                 </div>
                 <div class="meta-container">
                     <div class="project-meta-block">
+                        
+                        <span class="project-name-header">{{name}}</span>
+                        
                         <div class="description">
                             {{#description}}
-                            <span>Опис:</span>
                                 <p>{{description}}</p>
                             {{/description}}
                         </div>
+                        
                         <div class="tags">
                             {{#fields}}
                             <a href="#">{{.}}</a>
                             {{/fields}}
                         </div>
+                        
                         <div class="team">
                             <span>Команда:</span>  
                             {{#owners}}

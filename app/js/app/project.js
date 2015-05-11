@@ -14,10 +14,17 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
                 app.navigate("portfolio", {trigger: true});
             },
             'click .open-meta': function() {
-                 $('.meta-container').toggleClass('active');
+                $('.meta-container').toggleClass('active');
+                setTimeout(function() {
+                    $('.meta-container').toggleClass('openup');
+                }, 500);
             },
-            'mouseleave  .meta-container': function() {
-                 $('.meta-container').removeClass('active');
+            'mouseleave .openup': function(e) {
+                if (e.relatedTarget.className === 'open-meta') {
+                }
+                else {
+                    $('.meta-container').removeClass('active openup');
+                }
             }
         },
         name: "portfolio-theme",
@@ -85,7 +92,7 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
             console.log('renderRegular');
             requirejs(["text!/templates/partials/portfolio/template.html", 'mustache'], function(html) {
                 var data = this.model.get('project');
-                
+
                 console.log(data);
 
                 var backImage = '/custom_backgrounds/' + data.name.toLowerCase().replace(/\s/g, "-").replace(/("|')/g, "") + '.jpg';
@@ -201,7 +208,7 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
                                 self.view.renderRegular();
                             });
                         });
-                    }, 
+                    },
                     200: function() {
                         var self = this;
                         this.fetch().done(function() {

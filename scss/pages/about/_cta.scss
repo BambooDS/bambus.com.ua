@@ -9,6 +9,12 @@
     .columns{
         padding: 0;
     }
+    .title{
+        white-space: nowrap;
+        @media only screen and (max-width:640px){
+            white-space: normal;
+        }
+    }
     .title, &{
         color:white
     }
@@ -25,9 +31,6 @@
         margin-bottom: 68px;
         text-shadow: 1px 1px 1px grey;
         padding-right: 16px;
-        @media only screen and (max-width:640px){
-            margin-left: -34px;
-        }
     }
     .copy{
         padding-left: 72px;
@@ -35,8 +38,14 @@
         @media only screen and (max-width:1600px){
             margin-top: 200px;
         }
+        @media only screen and (max-width:800px){
+            max-width: 420px;
+        }
+        @media only screen and (max-width:640px){
+            max-width: 100%;
+        }
         @media only screen and (max-width:480px){
-            padding-left: 60px;
+            padding-left: 30px;
         }
     }
     .button{
@@ -74,15 +83,22 @@
             }
         } 
     }
+
     @media only screen and (max-width:1180px){
         background:
             image-url('about/footer/tree-small.jpg') -18px 18px no-repeat,
             image-url('about/footer/tree-3.png') right bottom no-repeat;
         background-color: $green;
     }
-    
+
     @media only screen and (min-width: 1260px){
         height: 100vh;
         min-height: 900px;
+    }
+
+    @media only screen and (max-width:640px){
+        background:
+            image-url('about/footer/tree-small.jpg') -18px 18px no-repeat;
+        background-color: $green;
     }
 }
