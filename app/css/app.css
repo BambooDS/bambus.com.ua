@@ -3165,8 +3165,6 @@ html.services-inner #services-menu {
             position: relative;
             transition: scale(1);
             transition: all 0.3s ease-in-out;
-            width: 100px;
-            height: 100px;
             border-radius: 200px; }
           .portfolio-single-page .header-project .meta-container .project-meta-block .team .team-member span {
             display: inline;

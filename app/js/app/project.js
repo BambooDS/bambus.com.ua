@@ -84,7 +84,7 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
                 });
 
                 this.setElement(Mustache.render(html, data));
-                console.log(this.e);
+                console.log(this.el);
                 this.render(true);
             }.bind(this));
         },
@@ -199,6 +199,7 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
                 type: "HEAD",
                 statusCode: {
                     404: function() {
+                        console.log('404');
                         var backImageUrl = '/custom_backgrounds/' + this.name.toLowerCase().replace(/\s/g, "-").replace(/("|')/g, "") + '.jpg';
                         var self = this;
                         this.fetch().done(function() {
@@ -210,6 +211,7 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
                         });
                     },
                     200: function() {
+                        console.log('2001');
                         var self = this;
                         this.fetch().done(function() {
                             self.view.renderCustom();
@@ -217,8 +219,7 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
                     }
                 }
             });
-
         }
     });
-    return ProjectModel;
+    return ProjectModel; 
 });

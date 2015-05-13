@@ -1,13 +1,19 @@
-RewriteEngine On 
-RewriteBase / 
+RewriteEngine on  
+RewriteCond %{DOCUMENT_ROOT} !-f  
+RewriteRule !\.(js|ico|gif|jpg|png|css|html|swf|flv|xml|svg|php|webm|mp4|ogv)$ index.html [QSA,L]
 
-RewriteRule ^index\.html$ - [L] 
-RewriteCond %{REQUEST_FILENAME} !-f 
-RewriteCond %{REQUEST_FILENAME} !-d 
-RewriteRule . /index.html [L] 
+<filesMatch "\.(html|htm|js|css)$">
+FileETag None
+<ifModule mod_headers.c>
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</ifModule>
+</filesMatch>
+
 
 Redirect 301 /ua/portfolio.html http://bambus.com.ua/portfolio
-
 
 Redirect 301 /ua/studio/vakansiji.html http://old.bambus.com.ua/ua/studio/vakansiji.html
 
@@ -457,7 +463,7 @@ Redirect 301 /ua/catalog/kolekcijni_karti.html http://old.bambus.com.ua/ua/catal
 
 Redirect 301 /ua/catalog/.html http://old.bambus.com.ua/ua/catalog/.html
 
+
 AddType video/ogg .ogv
 AddType video/mp4 .mp4
 AddType video/webm .webm
-
