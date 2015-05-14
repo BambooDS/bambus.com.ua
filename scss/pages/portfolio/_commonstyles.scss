@@ -332,9 +332,13 @@ $text-tytle: #4c4c4c;
         counter-reset: test;
         .module-block {
             text-align: center;
+            line-height: 0;
             .title{
                 font-size: 48px;
                 line-height: 60px;
+            }
+            img{
+                vertical-align: top;
             }
             p {
                 margin: 4em auto;
@@ -344,6 +348,9 @@ $text-tytle: #4c4c4c;
                 font-size: 14px;
                 line-height: 24px;
                 color: #333;
+            }
+            span{
+                line-height: 24px;
             }
             .sub-title, .title{
                 padding-left: 120px;

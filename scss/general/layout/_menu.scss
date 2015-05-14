@@ -6,7 +6,7 @@
         z-index: 101;
     }
     @media #{$medium-up} {
-       .line {
+        .line {
             display: block;
             position: absolute;
             content: '';
@@ -72,7 +72,7 @@
         font-family: $title-font-family;
         line-height: 48px;
         text-decoration: none !important; // for performance to not force redraw
-        
+
         @media only screen and (min-height: 534px) {
             line-height: rem-calc(64px);
         }
@@ -95,9 +95,9 @@
         @media only screen and (min-height: 534px) {
             margin: 60px 0;
         }
-		@media only screen and (min-height: 681px) {
+        @media only screen and (min-height: 681px) {
             margin: 136px 0;
-		}
+        }
     }
     .menu-list li, .contact-link {
         &:before {
@@ -109,7 +109,7 @@
             height: 1px;
             background: rgba(255, 255, 255, .15);
             content: '';
-            
+
             @media only screen and (min-height: 534px) {
                 top: 65px;
             }
@@ -196,5 +196,9 @@
     }
     @media #{$medium-up} {
         right: -55px;
-	}
+    }
+    @media #{$screen} and(max-width:940px) {
+        top: 0;
+    }
+
 }

@@ -1616,6 +1616,11 @@ a {
   a:hover {
     text-decoration: none; }
 
+.mobilka .wow {
+  -webkit-transform: translate3d(0, 0, 0px) scale(1) !important;
+  transform: translate3d(0, 0, 0px) scale(1) !important;
+  opacity: 1 !important; }
+
 .swipe {
   overflow: hidden;
   visibility: hidden;
@@ -1869,8 +1874,8 @@ a {
   -webkit-transform: translate3d(0, 0%, 0);
   transform: translate3d(0, 0%, 0); }
 .projects-list .item-block a:hover .front-wrapper, .about-page .ebrr:hover .front-wrapper, .about-page .team .group .man:hover .front-wrapper, .about-page .client:hover .front-wrapper, .service-web-page .technologies .block:hover .front-wrapper {
-  -webkit-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0); }
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0); }
 
 .showreel {
   background: black;
@@ -2135,6 +2140,9 @@ html, body {
   @media only screen and (min-width:641px) {
     .menu-icon {
       right: -55px; } }
+  @media only screen and (max-width: 940px) {
+    .menu-icon {
+      top: 0; } }
 
 /* Pages */
 #preloader {
@@ -3260,10 +3268,13 @@ html.services-inner #services-menu {
       max-width: inherit;
       margin: auto; }
     .portfolio-single-page .presentation .module-block {
-      text-align: center; }
+      text-align: center;
+      line-height: 0; }
       .portfolio-single-page .presentation .module-block .title {
         font-size: 48px;
         line-height: 60px; }
+      .portfolio-single-page .presentation .module-block img {
+        vertical-align: top; }
       .portfolio-single-page .presentation .module-block p {
         margin: 4em auto;
         position: relative;
@@ -3272,6 +3283,8 @@ html.services-inner #services-menu {
         font-size: 14px;
         line-height: 24px;
         color: #333; }
+      .portfolio-single-page .presentation .module-block span {
+        line-height: 24px; }
       .portfolio-single-page .presentation .module-block .sub-title, .portfolio-single-page .presentation .module-block .title {
         padding-left: 120px; }
         @media only screen and (max-width: 480px) {
@@ -4670,7 +4683,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     .about-page .box .head {
       font-size: 25px;
       line-height: 1.125em;
-      padding: 2.25em 0;
+      padding: 1.3125em 0;
       *zoom: 1;
       font-weight: 100; }
       .about-page .box .head:before, .about-page .box .head:after {
@@ -4854,6 +4867,14 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
             margin-bottom: 0; }
           .about-page .intro .copy .button {
             display: none; } }
+      @media only screen and (max-width: 480px) {
+        .about-page .intro .copy .title {
+          font-size: 32px;
+          line-height: 38px;
+          margin-bottom: 0;
+          margin-left: -50px;
+          padding-top: 28px;
+          text-align: center; } }
     .about-page .intro .logo {
       background: url(../img/logo-large.svg) no-repeat;
       background-size: 100% auto;
@@ -4873,6 +4894,9 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     @media only screen and (max-width: 800px) {
       .about-page .intro .scroll-icon {
         display: none; } }
+  .about-page .mobilka .intro .copy {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
   .about-page .about-company {
     overflow: hidden;
     position: relative; }
@@ -5093,7 +5117,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
         padding-top: 200px; } }
     @media only screen and (max-width: 640px) {
       .about-page .team {
-        padding-top: 0; } }
+        padding-top: 24px; } }
   .about-page .job {
     margin-bottom: 72px; }
     .about-page .job .columns {
@@ -6384,7 +6408,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       margin: 64px 0; }
       @media only screen and (max-width: 1280px) {
         .service-web-page .title.heading {
-          margin: 40px 0; } }
+          margin: 40px 0;
+          font-size: 30px; } }
       @media only screen and (max-width: 840px) {
         .service-web-page .title.heading {
           padding: 0 24px; } }
@@ -6512,8 +6537,10 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     @media only screen and (max-width: 768px) {
       .service-web-page .services-section .single-service, .service-web-page .vectors .single-service {
         margin: 0;
-        width: 48%; } }
-    @media only screen and (max-width: 460px) {
+        width: 48%; }
+        .service-web-page .services-section .single-service:nth-child(2n), .service-web-page .vectors .single-service:nth-child(2n) {
+          float: right !important; } }
+    @media only screen and (max-width: 540px) {
       .service-web-page .services-section .single-service, .service-web-page .vectors .single-service {
         width: 96%; } }
 
@@ -6647,6 +6674,9 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       .service-web-page .process .graph {
         padding: 0;
         width: 800px; } }
+    @media only screen and (max-width: 420px) {
+      .service-web-page .process .graph {
+        padding: 0 10px; } }
   .service-web-page .process .step {
     position: absolute;
     height: 88px;
@@ -7168,6 +7198,9 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       @media only screen and (max-width: 1280px) {
         .service-web-page .production .slide img {
           width: 600px; } }
+  @media only screen and (max-width: 800px) {
+    .service-web-page .production {
+      display: none; } }
 
 .service-web-page .strategy > .row > .text {
   padding: 0 10px; }
@@ -7278,7 +7311,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
 .service-web-page .strategy .icon {
   width: 50%;
   left: 50%;
-  height: 100%;
+  height: 99%;
   position: absolute;
   z-index: 1;
   background: white;
@@ -7415,7 +7448,9 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     padding: 0; } }
 @media only screen and (max-width: 1024px) {
   .service-web-page .strategy .row .table {
-    border-bottom: 0 none; } }
+    border-bottom: 0 none; }
+  .service-web-page .strategy .row > p.text {
+    padding: 0 24px !important; } }
 @media only screen and (max-width: 840px) {
   .service-web-page .strategy .row > p.text {
     padding: 0 24px;
@@ -7476,9 +7511,11 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     width: 100%; }
   .service-web-page .strategy .number {
     width: 25%; }
-  .service-web-page .strategy .idea {
-    left: 25%;
-    width: 70%; } }
+  .service-web-page .strategy .idea .text {
+    display: none; }
+  .service-web-page .strategy .idea .title {
+    margin-left: -40px;
+    margin-top: -96px; } }
 
 .service-web-page .technologies .block {
   overflow: hidden;
@@ -7559,7 +7596,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       .service-web-page .intro .columns .text-holder {
         position: relative;
         top: 0;
-        padding: 60px 24px 10px;
+        padding: 60px 4px 10px;
         -webkit-transform: translate(0px);
         transform: translate(0px); }
         .service-web-page .intro .columns .text-holder .button {

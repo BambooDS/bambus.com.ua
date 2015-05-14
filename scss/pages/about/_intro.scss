@@ -96,6 +96,16 @@
                 display: none;
             }
         }
+        @media only screen and (max-width:480px){
+            .title{
+                font-size: 32px;
+                line-height: 38px;
+                margin-bottom: 0;
+                margin-left: -50px;
+                padding-top: 28px;
+                text-align: center;
+            }
+        }
     }
     .logo{
         background: image-url('logo-large.svg') no-repeat;
@@ -121,4 +131,7 @@
             display: none;
         }
     }
+}
+.mobilka .intro .copy{
+    transform: translateY(0);
 }

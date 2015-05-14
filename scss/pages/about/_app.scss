@@ -66,13 +66,14 @@
         .head{
             font-size: 25px;
             line-height: em-calc(36px,32px);
-            padding: em-calc(72px,32px) 0;
+            padding: em-calc(42px,32px) 0;
             @include clearfix;
             font-weight: 100;
             @media #{$medium}{
                 font-size: 32px;
                 max-width: 65%;
             }
+            
         }
         .icon{
             background: rgba(255,255,255,.2) no-repeat center;

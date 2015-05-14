@@ -12,6 +12,7 @@ define(['backbone', 'preloader', 'menu'], function (Backbone, preloader, Menu) {
         projectPages: {},
         initialize: function () {
             var _self = this;
+
             /* prevent defaults */
             document.documentElement.addEventListener('click', function (event) {
                 var target = event.target;

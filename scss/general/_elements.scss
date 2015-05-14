@@ -9,6 +9,12 @@ a{
     }
 }
 
+.mobilka .wow{
+    transform: translate3d(0, 0, 0px) scale(1) !important;
+    opacity: 1 !important;
+}
+
+
 .swipe {
     overflow: hidden;
     visibility: hidden;
@@ -251,7 +257,8 @@ a{
             transform: translate3d(0,0%,0);
         }
         .front-wrapper {
-            transform: translate3d(0,-50%,0);
+            transform: translate3d(0,-100%,0);
+
         }
     }
 }

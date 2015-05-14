@@ -1,8 +1,6 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
 /*global define, requirejs */
 
-
-
 requirejs.config({
     //By default load any module IDs from js/lib
     baseUrl: '/js/app',
@@ -34,12 +32,10 @@ requirejs.config({
     }
 });
 
-
-
 requirejs(['picturefill', 'modernizr-custom', 'text', 'async'], function(picturefill) {
 
     'use strict';
-
+ 
     //Browser support checking
     if (Modernizr.cssanimations &&
         Modernizr.csstransforms &&

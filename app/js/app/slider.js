@@ -4,9 +4,6 @@
 define(['modernizr-custom', 'helper', 'backbone','preloader', 'underscore'],
     function (Modernizr, helper, Backbone, preloader, underscore) {
         'use strict';
-        var model  = Backbone.Model.extend({
-            
-        })
         var slider = Backbone.View.extend({
             events: {
                 'click .bullets>div':function(event){
@@ -33,7 +30,6 @@ define(['modernizr-custom', 'helper', 'backbone','preloader', 'underscore'],
                     this.autoplay = true;
                 }
                 this.parent = options.parent;
-                console.log(this.parent.el)
                 this.container = this.parent.el.querySelector(options.container);
                 
                 this.slides = this.container.querySelectorAll(options.slide);

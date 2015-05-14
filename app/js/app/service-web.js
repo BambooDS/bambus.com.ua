@@ -85,6 +85,7 @@ define([
                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone|ZuneWP7|Nokia|Opera Mini/i.test(navigator.userAgent)) {
                     $('.intro-top .icon').show();
                     $('#panda-lines').remove();
+                    $('.process .graph').addClass('animated');
                 } else {
                     this.modules.panda.start();
                 }
@@ -164,14 +165,12 @@ define([
                 model: new Backbone.Model(),
                 start: function() {
                     var steps = this.steps;
-                    setTimeout(function() {
-                        steps[0].classList.add('active', 'passed');
-//                        steps[1].classList.add('active', 'passed');
-//                        steps[2].classList.add('active', 'passed');
-//                        steps[3].classList.add('active', 'passed');
-//                        steps[4].classList.add('active', 'passed');
-//                        steps[5].classList.add('active', 'passed');
-                    }, 2500);
+                    steps[0].classList.add('active', 'passed');
+                    steps[1].classList.add('active', 'passed');
+                    steps[2].classList.add('active', 'passed');
+                    steps[3].classList.add('active', 'passed');
+                    steps[4].classList.add('active', 'passed');
+                    steps[5].classList.add('active', 'passed');
                 },
                 initialize: function(options) {
                     this.setElement(options.parent.el.querySelector(options.selector));
@@ -218,8 +217,6 @@ define([
                     process.start();
                 })
                 var runLines = _.once(function() {
-                    
-                    console.log('AGAAAAAAAA');
                     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone|ZuneWP7|Nokia|Opera Mini/i.test(navigator.userAgent)) {
                         $('.icon').show();
                         $('#bamboo-lines').remove();

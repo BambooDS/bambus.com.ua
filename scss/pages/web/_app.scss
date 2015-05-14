@@ -70,6 +70,7 @@ $delay: 0.35s;
             margin: 64px 0;
             @media only screen and (max-width: 1280px) {
                 margin: 40px 0;
+                font-size: 30px;
             }
             @media only screen and (max-width: 840px) {
                 padding: 0 24px;
@@ -237,8 +238,11 @@ $delay: 0.35s;
             @media only screen and (max-width: 768px) {
                 margin: 0;
                 width: 48%;
+                &:nth-child(2n){
+                    float: right !important;
+                }
             }
-            @media only screen and (max-width: 460px) {
+            @media only screen and (max-width: 540px) {
                 width: 96%;
             }
         }
