@@ -76,6 +76,13 @@ define([
             }
         },
         showHook: function() {
+            
+            var pathArray = window.location.pathname.split('/');
+            var secondLevelLocation = pathArray[1];
+            if (secondLevelLocation === 'en') {
+                document.querySelector('[href="/contacts"]').setAttribute('href', '/en/contacts');
+            }
+            
             if (preloader.loaded) {
                 if (this.wow.element) {
                     this.wow.scrollCallback();

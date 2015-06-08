@@ -51,8 +51,18 @@ define(['backbone', 'preloader', 'menu'], function (Backbone, preloader, Menu) {
         routes: {
             "": "home",
             "/": "home",
+            //English language route
+            "en": "homeEng",
+            "en/": "homeEng",
+            
             "about": "about",
+            //English language route
+            "en/about": "aboutEng",
+            
             "contacts": "contacts",
+            //English language route
+            "en/contacts": "contactsEng",
+            
             "showreel": "showreel",
             
             "portfolio": "portfolio",
@@ -60,35 +70,74 @@ define(['backbone', 'preloader', 'menu'], function (Backbone, preloader, Menu) {
             
             "services": "services",
             "services/:service": "service",
+            //English language route
+            "en/services/:service": "serviceEng",
             
             "*notFound": "notFound"
-            
         },
         home: function () {
             requirejs(['homepage'], function (Home) {
                 new Home();
             });
         },
+        homeEng: function () {
+            var lang = 'en';
+            requirejs(['homepage'], function (Home) {
+                new Home({language: lang});
+            });
+        },
+        
         about: function () {
             requirejs(['about'], function (About) {
                 new About();
             });
         },
-        service: function (page) {
-			//check if page module file exist, prevent 404 error
-			if(page === 'web'){
-				requirejs(['service-' + page], function (Service) {
-					new Service();
-				})
-			} else {
-				this.navigate('notFound', { trigger: true });
-			}
-        },
-        portfolio: function () {
-            requirejs(['portfolio'], function (Portfolio) {
-                new Portfolio();
+        aboutEng: function () {
+            var lang = 'en';
+            requirejs(['about'], function (About) {
+                new About({language: lang});
             });
         },
+        
+        contacts: function () {
+            requirejs(['contacts'], function (Contacts) {
+                new Contacts();
+            });
+        },
+        contactsEng: function () {
+            var lang = 'en';
+            requirejs(['contacts'], function (Contacts) {
+                new Contacts({language: lang});
+            });
+        },
+        
+        showreel: function () {
+            requirejs(['showreel'], function (Reel) {
+                new Reel();
+            });
+        },
+        
+        service: function(page) {
+            //check if page module file exist, prevent 404 error
+            if (page === 'web') {
+                requirejs(['service-' + page], function(Service) {
+                    new Service();
+                });
+            } else {
+                this.navigate('notFound', {trigger: true});
+            }
+        },
+        serviceEng: function(page) {
+            var lang = 'en';
+            if (page === 'web') {
+                requirejs(['service-' + page], function(Service) {
+                    new Service({language: lang});
+                });
+            } else {
+                this.navigate('notFound', {trigger: true});
+            }
+        },
+
         project: function (slug) {
             var self = this;
             requirejs(['project'], function (Project) {
@@ -96,16 +145,7 @@ define(['backbone', 'preloader', 'menu'], function (Backbone, preloader, Menu) {
                 self.projectPages[slug] = new Project({id: slug, name: slug});
             });
         },
-        contacts: function () {
-            requirejs(['contacts'], function (Contacts) {
-                new Contacts();
-            });
-        },
-        showreel: function () {
-            requirejs(['showreel'], function (Reel) {
-                new Reel();
-            });
-        },
+
         notFound: function () {
             requirejs(['page404'], function (Notfoundpage) {
                 new Notfoundpage();
@@ -115,7 +155,6 @@ define(['backbone', 'preloader', 'menu'], function (Backbone, preloader, Menu) {
     });
     application = new App();
     return application;
-
 
 });
 

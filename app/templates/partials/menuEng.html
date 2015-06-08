@@ -1,0 +1,27 @@
+{{#mainmenuEng}} 
+<div class="menu-panel" id="eng">
+    <div id="menu-wrapper" class="hide"> 
+        <div id="menu">
+            <a href="/en/contacts" class="contact-link">{{contacts}}</a>
+            <a href="/en/" class="logo">design studio</a>
+            <nav>
+                <ul class="main-menu menu-list">
+                    <li><a href="/en/about">{{about}}</a></li>
+                    <li><a href="/portfolio">{{portfolio}}</a></li>
+                    <li class="parent-link">
+                        <a href="#">{{services}}</a>
+                        <ul class="submenu">
+                            {{#services_list}}
+                            <li><a href="{{path}}" id="link-{{slug}}">{{name}}</a></li>
+                            {{/services_list}}
+                        </ul>
+                    </li>
+                    <!--<li><a href="/showreel">{{showreel}}</a></li>-->
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="menu-icon"></div>
+</div>
+{{/mainmenuEng}}

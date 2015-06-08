@@ -8,9 +8,16 @@ define(['page', 'masonry', 'backbone', 'hamster', 'wow', 'helper', 'preloader', 
     var SwitcherModel = Backbone.Model.extend({
         initialize: function() {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone|ZuneWP7|Nokia|Opera Mini/i.test(navigator.userAgent)) {
-                 $('.about-history').addClass('animated');
-                 $('.workflow .services').addClass('animated');
+                $('.about-history').addClass('animated');
+                $('.workflow .services').addClass('animated');
             }
+
+            var pathArray = window.location.pathname.split('/');
+            var secondLevelLocation = pathArray[1];
+            if (secondLevelLocation === 'en') {
+                document.querySelector('[href="/contacts"]').setAttribute('href', '/en/contacts');
+            }
+
             this.on('change:type', this.countByType);
         },
         setType: function(type) {
@@ -46,9 +53,6 @@ define(['page', 'masonry', 'backbone', 'hamster', 'wow', 'helper', 'preloader', 
             }
         },
         initialize: function(options) {
-
-
-
             this.model = new SwitcherModel({
                 counted: [0, 0],
                 type: 'bicycle',
@@ -89,9 +93,6 @@ define(['page', 'masonry', 'backbone', 'hamster', 'wow', 'helper', 'preloader', 
             });
 
             this.on('remove', this.stop);
-            this.on('remove', function() {
-                console.log('ASDASDASD');
-            });
             this.listenTo(this.model, 'change:counted', this.processPeople);
             this.listenTo(this.model, 'change:type', function() {
                 _.each(this.el.querySelectorAll('.icons div'), function(el) {

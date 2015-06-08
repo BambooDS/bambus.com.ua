@@ -1,20 +1,18 @@
-{{#mainmenu}}
-<div class="menu-panel">
+{{#mainmenu}}  
+<div class="menu-panel" id="ukr">
     <div id="menu-wrapper" class="hide">
         <div id="menu">
-            <a href="/contacts" class="contact-link">{{contacts}}</a>
-            <a href="/" class="logo">design studio</a>
+            <a href="/contacts" class="menu-link contact-link">{{contacts}}</a>
+            <a href="/" class="menu-link logo">design studio</a>
             <nav>
                 <ul class="main-menu menu-list">
-<!--                    <li><a href="/home" class="show-for-small">{{home}}</a></li>-->
-                    <li><a href="/about">{{about}}</a></li>
-                    <!--<li><a href="https://www.behance.net/bambus_studio">{{portfolio}}</a></li>-->
-                    <li><a href="/portfolio">{{portfolio}}</a></li>
+                    <li><a class="menu-link" href="/about">{{about}}</a></li>
+                    <li><a class="menu-link" href="/portfolio">{{portfolio}}</a></li>
                     <li class="parent-link">
-                        <a href="#">{{services}}</a>
+                        <a class="menu-link" href="#">{{services}}</a>
                         <ul class="submenu">
                             {{#services_list}}
-                            <li><a href="{{path}}" id="link-{{slug}}">{{name}}</a></li>
+                            <li><a class="menu-link" href="{{path}}" id="link-{{slug}}">{{name}}</a></li>
                             {{/services_list}}
                         </ul>
                     </li>

@@ -5003,12 +5003,14 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
         .about-page .about-company .team-switch .medium-4 {
           width: 100%; } }
     .about-page .about-company .thesis {
-      min-height: 352px; }
+      min-height: 352px;
+      height: 352px !important; }
       .about-page .about-company .thesis .icon {
         background-image: url(../img/about/icons/40x40-bambukicon.svg); }
       @media only screen and (max-width: 960px) {
         .about-page .about-company .thesis {
-          min-height: 0; } }
+          min-height: 0;
+          height: auto !important; } }
   .about-page .ebrr {
     background: #296497;
     color: #fff;
@@ -5429,6 +5431,9 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       .about-page .cta-section {
         height: 100vh;
         min-height: 900px; } }
+    @media only screen and (max-height: 900px) {
+      .about-page .cta-section {
+        min-height: auto; } }
     @media only screen and (max-width: 640px) {
       .about-page .cta-section {
         background: url(../img/about/footer/tree-small.jpg) -18px 18px no-repeat;
@@ -6456,7 +6461,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       @media only screen and (max-width: 1024px) {
         .service-web-page .intro .columns .text-holder, .service-web-page .cta .columns .text-holder {
           top: 45%;
-          padding-right: 24px; } }
+          padding: 0 2px; } }
     .service-web-page .intro .title, .service-web-page .cta .title {
       color: white;
       font-size: 44px;
@@ -6542,7 +6547,9 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
           float: right !important; } }
     @media only screen and (max-width: 540px) {
       .service-web-page .services-section .single-service, .service-web-page .vectors .single-service {
-        width: 96%; } }
+        width: 96%; }
+        .service-web-page .services-section .single-service:nth-child(2n), .service-web-page .vectors .single-service:nth-child(2n) {
+          float: right !important; } }
 
 @-webkit-keyframes services-hover {
   0% {
@@ -7202,8 +7209,6 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     .service-web-page .production {
       display: none; } }
 
-.service-web-page .strategy > .row > .text {
-  padding: 0 10px; }
 .service-web-page .strategy .table-row:hover .block:first-child:not(:hover) {
   -webkit-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0); }
@@ -7487,7 +7492,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       top: 414px; }
     .service-web-page .strategy .table-row:last-child .block:last-child {
       top: 1036px;
-      border-bottom: #222222 solid 1px; } }
+      border-bottom: #222222 solid 25px; } }
 @media only screen and (max-width: 460px) {
   .service-web-page .strategy .comment-holder {
     width: 100%;
@@ -7515,7 +7520,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     display: none; }
   .service-web-page .strategy .idea .title {
     margin-left: -40px;
-    margin-top: -96px; } }
+    margin-top: -80px; } }
 
 .service-web-page .technologies .block {
   overflow: hidden;

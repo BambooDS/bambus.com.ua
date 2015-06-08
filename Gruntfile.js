@@ -99,13 +99,25 @@ module.exports = function (grunt) {
                     template: 'app/templates/partials/about.html',
                     dest: 'app/pages/about.html'
                 },{
+                    data: 'app/templates/data/en.json',
+                    template: 'app/templates/partials/about.html',
+                    dest: 'app/pages/en/about.html'
+                },{
                     data: 'app/templates/data/index.json',
                     template: 'app/templates/partials/contacts.html',
                     dest: 'app/pages/contacts.html'
                 },{
+                    data: 'app/templates/data/en.json',
+                    template: 'app/templates/partials/contacts.html',
+                    dest: 'app/pages/en/contacts.html'
+                },{
                     data: 'app/templates/data/index.json',
                     template: 'app/templates/partials/homepage.html',
                     dest: 'app/pages/home.html'
+                },{
+                    data: 'app/templates/data/en.json',
+                    template: 'app/templates/partials/homepage.html',
+                    dest: 'app/pages/en/home.html'
                 },{
                     data: 'app/templates/data/index.json',
                     template: 'app/templates/partials/preloader.html',
@@ -118,6 +130,10 @@ module.exports = function (grunt) {
                     data: 'app/templates/data/index.json',
                     template: 'app/templates/partials/services/web.html',
                     dest: 'app/pages/services-web.html'
+                },{
+                    data: 'app/templates/data/en.json',
+                    template: 'app/templates/partials/services/web.html',
+                    dest: 'app/pages/en/services-web.html'
                 },{
                     data: 'app/templates/data/index.json',
                     template: 'app/templates/partials/page404.html',

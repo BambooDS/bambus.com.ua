@@ -1,8 +1,5 @@
 .service-web-page {
     .strategy {
-        > .row > .text {
-            padding: 0 10px;
-        }
         .table-row:hover {
             .block:first-child:not(:hover) {
                 transform: translate3d(-50%, 0, 0);
@@ -333,7 +330,7 @@
                 }
                 .block:last-child {
                     top: 1036px;
-                    border-bottom: rgb(34, 34, 34) solid 1px;
+                    border-bottom: rgb(34, 34, 34) solid 25px;
                 }
             }
         }
@@ -369,7 +366,7 @@
             }
             .idea .title{
                 margin-left: -40px;
-                margin-top: -96px;
+                margin-top: -80px;
             }
         }
     }

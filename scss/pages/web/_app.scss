@@ -112,7 +112,7 @@ $delay: 0.35s;
         color: #898989;
         transition: color .3s, border-color .3s;
     }
-    
+
     // section rules
     .gradien-fix {
         position: absolute;
@@ -121,7 +121,7 @@ $delay: 0.35s;
         background-image: linear-gradient(rgba(45, 45, 45, 0) 20%, #2d2d2d);
         bottom: 0;
     }
-    
+
     // intro, cta
     .intro, .cta {
         height: 100vh;
@@ -129,11 +129,10 @@ $delay: 0.35s;
         position: relative;
         .columns {
             height: 100%;
-//            width: 50%;
             .text-holder {
                 @media only screen and (max-width: 1024px) {
                     top: 45%;
-                    padding-right: 24px;
+                    padding: 0 2px;
                 }
             }
         }
@@ -244,6 +243,9 @@ $delay: 0.35s;
             }
             @media only screen and (max-width: 540px) {
                 width: 96%;
+                &:nth-child(2n){
+                    float: right !important;
+                }
             }
         }
     }

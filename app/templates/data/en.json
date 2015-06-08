@@ -1,79 +1,13 @@
 {
-    "mainmenu": {
-        "about": "Про студію",
-        "contacts": "Контакти",
-        "portfolio": "Портфоліо",
-        "services": "Послуги",
-        "showreel": "Showreel",
-        "services_list": [
-            {
-                "name": "Web Production",
-                "path": "/services/web",
-                "slug": "web",
-                "img": "/pictures/services/web.svg"
-            },
-            {
-                "name": "Брендінг",
-                "path": "/services/branding",
-                "slug": "branding",
-                "img": "/pictures/services/branding.svg"
-            },
-            {
-                "name": "Іллюстрація",
-                "path": "/services/illustration",
-                "slug": "illustration",
-                "img": "/pictures/services/illustration.svg"
-            }, 
-            {
-                "name": "Сувеніри",
-                "path": "/services/souveniers",
-                "slug": "souveniers",
-                "img": "/pictures/services/souveniers.svg"
-            }
-        ]
-    },
-    "mainmenuEng": {
-        "about": "About studio",
-        "contacts": "Contacts",
-        "portfolio": "Portfolio",
-        "services": "Services",
-        "showreel": "Showreel",
-        "services_list": [
-            {
-                "name": "Web Production",
-                "path": "/en/services/web",
-                "slug": "web",
-                "img": "/pictures/services/web.svg"
-            },
-            {
-                "name": "Branding",
-                "path": "/en/services/branding",
-                "slug": "branding",
-                "img": "/pictures/services/branding.svg"
-            },
-            {
-                "name": "Illustration",
-                "path": "/en/services/illustration",
-                "slug": "illustration",
-                "img": "/pictures/services/illustration.svg"
-            }, 
-            {
-                "name": "Souveniers",
-                "path": "/en/services/souveniers",
-                "slug": "souveniers",
-                "img": "/pictures/services/souveniers.svg"
-            }
-        ]
-    },
     "home":{
-        "cta":"Відкрий",
+        "cta":"Open",
         "showreel": "Showreel",
         "slider": [
             {
                 "img_src": "/pictures/slider/2.jpg",
                 "img_src_mobile": "/pictures/slider/2_mob.jpg",
                 "img_alt": "",
-                "heading": "Енергія можливостей",
+                "heading": "Energy Go",
                 "text": "Вона завжди дає нам те - про що ми мріємо лише, якщо ми віримо всім серцем."
             },
             {
@@ -126,7 +60,7 @@
     ],
     "about": {
         "intro": {
-            "title": "Живий дизайн змінює",
+            "title": "Live design changes",
             "copy": "Допомогаємо брендам, компаніям та людям краще комунікувати між собою. Покращуємо зовнішній світ з надією на покращення внутрішнього в кожному з нас.",
             "cta": "Поринути"
         },
@@ -675,7 +609,7 @@
     "service_web":{
         "intro":{
             "title": "Our work represents the culmination<br> of <strong>creative vision</strong>, <strong>great ideas</strong> and<br> <strong>full dedication</strong>.",
-            "button": "Поринь у digital",
+            "button": "Dive in digital",
             "scroll_text": "скрольте вниз"
         },
         "services": {
@@ -979,7 +913,7 @@
     },
     "contaсts": {
         "text": {
-            "node1": "Маршрути",
+            "node1": "Routes",
             "node2": "Пішки",
             "node3": "Велосипедом",
             "node4": "Автомобілем",
@@ -994,6 +928,7 @@
             "node11": "Координати"
         }
     },
+
      
     "aeroport-lviv": {
         "step-1": {
