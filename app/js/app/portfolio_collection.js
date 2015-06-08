@@ -57,7 +57,7 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
         _sinle_module: ProjectModel,
         model: ProjectModel,
         url: function() {
-            var endPoint = 'http://www.behance.net/v2/users/bambus_studio/projects';
+            var endPoint = 'http://www.behance.net/v2/users/bambuk_studio/projects';
             var apiKey = 'hiHNrEFZrHRZ6cZogKANRsMayAibW07s';
             var server = 'http://bambus.com.ua';
             var action = 'lib/getProjectsBehance.php?urlProjects';

@@ -15,7 +15,7 @@
     &.hidden {
         .about-company:after {
             opacity: 1;
-            transition: opacity 0s; 
+            transition: opacity 0s;
         }
         .about-history, .slider-holder, .team-switch, .services .orbits {
             opacity: 0;
