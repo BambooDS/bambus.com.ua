@@ -117,6 +117,12 @@ define(['backbone', 'preloader', 'menu'], function (Backbone, preloader, Menu) {
             });
         },
         
+        portfolio: function () {
+            requirejs(['portfolio'], function (Portfolio) {
+                new Portfolio();
+            });
+        },
+        
         service: function(page) {
             //check if page module file exist, prevent 404 error
             if (page === 'web') {
