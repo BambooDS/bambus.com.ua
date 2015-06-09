@@ -59,7 +59,7 @@ define(['app', 'backbone', 'underscore', 'helper', 'preloader', 'isotope'], func
         url: function() {
             var endPoint = 'http://www.behance.net/v2/users/bambuk_studio/projects';
             var apiKey = 'hiHNrEFZrHRZ6cZogKANRsMayAibW07s';
-            var server = 'http://bambus.com.ua';
+            var server = 'http://bambukstudio.com';
             var action = 'lib/getProjectsBehance.php?urlProjects';
             
           return server + '/' + action + '=' + encodeURIComponent(endPoint + '?api_key=' + apiKey + '&per_page=' + this.state.get('itemsPerPage') + '&field=' + this.state.get('tag')  );

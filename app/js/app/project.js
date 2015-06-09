@@ -178,7 +178,7 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
         url: function() {
             var endPoint = 'http://www.behance.net/v2/projects';
             var apiKey = 'hiHNrEFZrHRZ6cZogKANRsMayAibW07s';
-            var server = 'http://bambus.com.ua';
+            var server = 'http://bambukstudio.com';
             var action = 'lib/getProjectsBehance.php?urlProjects';
 
             console.log('ProjectModel ID - ', this.id);

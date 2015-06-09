@@ -216,7 +216,7 @@ define(['page', 'masonry', 'backbone', 'hamster', 'wow', 'helper', 'preloader', 
                 if (Number(this.model.get('state')) === 2 && this.model.get('selected')) {
                     var formData = new FormData(this.el);
                     this.model.set('loading', 1);
-                    $.ajax('http://bambus.com.ua/resumeMail/resumeMail.php', {
+                    $.ajax('http://bambukstudio.com/resumeMail/resumeMail.php', {
                         method: 'POST',
                         context: this,
                         data: formData,
