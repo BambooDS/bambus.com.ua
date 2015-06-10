@@ -177,29 +177,32 @@ $text-tytle: #4c4c4c;
                     text-decoration: none;
                     cursor: default;
                 }
-                
-                
-                
+
+
+
                 .team{
                     .team-member{
                         display: inline-block;
                         margin: 0 16px 16px 0;
                         position: relative;
-                        border-radius: 200px;
                         overflow: hidden;
+                        width: 80px;
                         img{
                             z-index: 10;
                             position: relative;
-                            transition: scale(1);
+                            transform: scale(1);
                             transition: all .3s ease-in-out; 
                             border-radius: 200px;
+                            width: 100%;
                         }
                         span{
                             display: inline;
+                            transform: scale(0); 
+                            transition: all .3s ease-in-out;
                             height: 100%;
                             left: 0;
                             margin: 0;
-                            padding-top: 36px;
+                            padding-top: 24px;
                             position: absolute;
                             text-align: center;
                             width: 100%;
@@ -210,6 +213,10 @@ $text-tytle: #4c4c4c;
                                 transform: scale(0);
                                 transition: all .3s ease-in-out; 
                             }
+                            span{
+                                transform: scale(1); 
+                                transition: all .3s ease-in-out;
+                            }
                         }
                         @media #{$screen} and(max-width:640px) {
                             overflow: hidden;
@@ -217,9 +224,6 @@ $text-tytle: #4c4c4c;
                         }
                     }
                 }
-                
-                
-
             }
             &.active{
                 transform: translate(0);

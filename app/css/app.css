@@ -3166,20 +3166,25 @@ html.services-inner #services-menu {
           display: inline-block;
           margin: 0 16px 16px 0;
           position: relative;
-          border-radius: 200px;
-          overflow: hidden; }
+          overflow: hidden;
+          width: 80px; }
           .portfolio-single-page .header-project .meta-container .project-meta-block .team .team-member img {
             z-index: 10;
             position: relative;
-            transition: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
             transition: all 0.3s ease-in-out;
-            border-radius: 200px; }
+            border-radius: 200px;
+            width: 100%; }
           .portfolio-single-page .header-project .meta-container .project-meta-block .team .team-member span {
             display: inline;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            transition: all 0.3s ease-in-out;
             height: 100%;
             left: 0;
             margin: 0;
-            padding-top: 36px;
+            padding-top: 24px;
             position: absolute;
             text-align: center;
             width: 100%;
@@ -3187,6 +3192,10 @@ html.services-inner #services-menu {
           .portfolio-single-page .header-project .meta-container .project-meta-block .team .team-member:hover img {
             -webkit-transform: scale(0);
             transform: scale(0);
+            transition: all 0.3s ease-in-out; }
+          .portfolio-single-page .header-project .meta-container .project-meta-block .team .team-member:hover span {
+            -webkit-transform: scale(1);
+            transform: scale(1);
             transition: all 0.3s ease-in-out; }
           @media only screen and (max-width: 640px) {
             .portfolio-single-page .header-project .meta-container .project-meta-block .team .team-member {
@@ -5120,119 +5129,114 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     @media only screen and (max-width: 640px) {
       .about-page .team {
         padding-top: 24px; } }
-  .about-page .job {
-    margin-bottom: 72px; }
-    .about-page .job .columns {
-      padding: 0; }
-    .about-page .job .icon {
-      background-image: url(../img/about/icons/upload-icon.svg); }
-      .about-page .job .icon:hover {
-        -webkit-animation: slide-icon;
-        animation: slide-icon;
-        -webkit-animation-duration: 1;
-        animation-duration: 1; }
-    @media only screen and (max-width: 640px) {
-      .about-page .job .description-box {
-        padding: 0 0 0 16px;
-        width: 100%; } }
-    .about-page .job .vacancy {
-      overflow: hidden; }
-    .about-page .job #submit-profile {
-      *zoom: 1;
-      width: 300%;
-      transition: -webkit-transform 0.3s, background-color 0.3s;
-      transition: transform 0.3s, background-color 0.3s;
-      -webkit-transform: translateX(-66.6666%);
-      transform: translateX(-66.6666%); }
-      .about-page .job #submit-profile:before, .about-page .job #submit-profile:after {
-        content: " ";
-        display: table; }
-      .about-page .job #submit-profile:after {
-        clear: both; }
-      .about-page .job #submit-profile progress {
-        position: absolute;
-        top: 42px;
-        width: 252px;
-        height: 56px;
-        outline: none;
-        border: 0;
-        opacity: 0.5;
-        background: none; }
-        .about-page .job #submit-profile progress[value="0"] {
-          display: none; }
-        .about-page .job #submit-profile progress::progress-value {
-          background: #96b03c; }
-        .about-page .job #submit-profile progress::-webkit-progress-value {
-          background: #96b03c; }
-      .about-page .job #submit-profile input {
-        position: absolute;
-        top: 46px;
-        z-index: -1;
-        opacity: 0;
-        width: 26%;
-        height: 56px; }
-      .about-page .job #submit-profile button {
-        border: none;
-        outline: none; }
-        .about-page .job #submit-profile button[disabled] {
-          opacity: 0.3; }
-      .about-page .job #submit-profile label {
-        height: 56px;
-        cursor: pointer;
-        display: block;
-        line-height: 56px;
-        padding-left: 22px;
-        font-style: italic;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        background: rgba(255, 255, 255, 0.2);
-        font-size: 14px;
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        padding-right: 10px; }
-      .about-page .job #submit-profile > div {
-        float: left;
-        width: 33.3333333333%; }
-      .about-page .job #submit-profile.state-2 {
-        -webkit-transform: translateX(-33.3333%);
-        transform: translateX(-33.3333%); }
-        .about-page .job #submit-profile.state-2 .icon {
-          -webkit-transform: translateX(-100%);
-          transform: translateX(-100%); }
-      .about-page .job #submit-profile.state-3 {
-        -webkit-transform: translateX(0%);
-        transform: translateX(0%); }
-      .about-page .job #submit-profile .success, .about-page .job #submit-profile .error {
+  .about-page .job .columns {
+    padding: 0; }
+  .about-page .job .icon {
+    background-image: url(../img/about/icons/upload-icon.svg); }
+    .about-page .job .icon:hover {
+      -webkit-animation: slide-icon;
+      animation: slide-icon;
+      -webkit-animation-duration: 1;
+      animation-duration: 1; }
+  @media only screen and (max-width: 640px) {
+    .about-page .job .description-box {
+      padding: 0 0 0 16px;
+      width: 100%; } }
+  .about-page .job .vacancy {
+    overflow: hidden; }
+  .about-page .job #submit-profile {
+    *zoom: 1;
+    width: 300%;
+    transition: -webkit-transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
+    -webkit-transform: translateX(-66.6666%);
+    transform: translateX(-66.6666%); }
+    .about-page .job #submit-profile:before, .about-page .job #submit-profile:after {
+      content: " ";
+      display: table; }
+    .about-page .job #submit-profile:after {
+      clear: both; }
+    .about-page .job #submit-profile progress {
+      position: absolute;
+      top: 42px;
+      width: 252px;
+      height: 56px;
+      outline: none;
+      border: 0;
+      opacity: 0.5;
+      background: none; }
+      .about-page .job #submit-profile progress[value="0"] {
         display: none; }
-      .about-page .job #submit-profile.success .success {
+      .about-page .job #submit-profile progress::progress-value {
+        background: #96b03c; }
+      .about-page .job #submit-profile progress::-webkit-progress-value {
+        background: #96b03c; }
+    .about-page .job #submit-profile input {
+      position: absolute;
+      top: 46px;
+      z-index: -1;
+      opacity: 0;
+      width: 26%;
+      height: 56px; }
+    .about-page .job #submit-profile button {
+      border: none;
+      outline: none; }
+      .about-page .job #submit-profile button[disabled] {
+        opacity: 0.3; }
+    .about-page .job #submit-profile label {
+      height: 56px;
+      cursor: pointer;
+      display: block;
+      line-height: 56px;
+      padding-left: 22px;
+      font-style: italic;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.2);
+      font-size: 14px;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-right: 10px; }
+    .about-page .job #submit-profile > div {
+      float: left;
+      width: 33.3333333333%; }
+    .about-page .job #submit-profile.state-2 {
+      -webkit-transform: translateX(-33.3333%);
+      transform: translateX(-33.3333%); }
+      .about-page .job #submit-profile.state-2 .icon {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%); }
+    .about-page .job #submit-profile.state-3 {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%); }
+    .about-page .job #submit-profile .success, .about-page .job #submit-profile .error {
+      display: none; }
+    .about-page .job #submit-profile.success .success {
+      display: block; }
+    .about-page .job #submit-profile.error {
+      background: #c24034; }
+      .about-page .job #submit-profile.error .error {
         display: block; }
-      .about-page .job #submit-profile.error {
-        background: #c24034; }
-        .about-page .job #submit-profile.error .error {
-          display: block; }
-    .about-page .job .step-2 .head {
-      width: 84%; }
-    .about-page .job .step-3 {
-      min-height: 1px; }
-      .about-page .job .step-3 .title {
-        width: 111%;
-        padding-left: 40px; }
-    @media only screen and (max-width: 960px) {
-      .about-page .job .medium-5 {
-        width: 60%;
-        padding-right: 16px; } }
-    @media only screen and (max-width: 640px) {
-      .about-page .job .medium-5 {
-        width: 100%;
-        margin-bottom: 24px; } }
-    @media only screen and (max-width: 960px) {
-      .about-page .job .medium-offset-1 {
-        float: right !important;
-        margin-left: 0 !important; } }
-    @media only screen and (max-width: 1440px) {
-      .about-page .job {
-        margin-bottom: 0; } }
+  .about-page .job .step-2 .head {
+    width: 84%; }
+  .about-page .job .step-3 {
+    min-height: 1px; }
+    .about-page .job .step-3 .title {
+      width: 111%;
+      padding-left: 40px; }
+  @media only screen and (max-width: 960px) {
+    .about-page .job .medium-5 {
+      width: 60%;
+      padding-right: 16px; } }
+  @media only screen and (max-width: 640px) {
+    .about-page .job .medium-5 {
+      width: 100%;
+      margin-bottom: 24px; } }
+  @media only screen and (max-width: 960px) {
+    .about-page .job .medium-offset-1 {
+      float: right !important;
+      margin-left: 0 !important; } }
   .about-page .about-showreel {
     background: black;
     position: relative;
@@ -7209,27 +7213,18 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     .service-web-page .production {
       display: none; } }
 
-.service-web-page .strategy .table-row:hover .block:first-child:not(:hover) {
-  -webkit-transform: translate3d(-50%, 0, 0);
-  transform: translate3d(-50%, 0, 0); }
-  .service-web-page .strategy .table-row:hover .block:first-child:not(:hover) + .block:hover {
+@media only screen and (min-width: 1200px) {
+  .service-web-page .strategy .table-row:hover .block:first-child:not(:hover) {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0); }
-    @media only screen and (max-width: 1024px) {
-      .service-web-page .strategy .table-row:hover .block:first-child:not(:hover) + .block:hover {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0); } }
-  @media only screen and (max-width: 1024px) {
-    .service-web-page .strategy .table-row:hover .block:first-child:not(:hover) {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); } }
-.service-web-page .strategy .table-row:hover .block:first-child:hover + .block {
-  -webkit-transform: translate3d(50%, 0, 0);
-  transform: translate3d(50%, 0, 0); }
-  @media only screen and (max-width: 1024px) {
-    .service-web-page .strategy .table-row:hover .block:first-child:hover + .block {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); } }
+    .service-web-page .strategy .table-row:hover .block:first-child:not(:hover) + .block:hover {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0); }
+      .service-web-page .strategy .table-row:hover .block:first-child:not(:hover) + .block:hover .comment-holder {
+        margin-left: -1px; }
+  .service-web-page .strategy .table-row:hover .block:first-child:hover + .block {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0); } }
 .service-web-page .strategy .block {
   position: relative;
   width: 50%;
@@ -7243,45 +7238,11 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     color: white;
     background: #96b03c; }
     .service-web-page .strategy .block:hover .comment-holder {
-      background: #96b03c;
-      -webkit-transform: translate3d(-16%, 0, 0);
-      transform: translate3d(-16%, 0, 0); }
-      @media only screen and (max-width: 1024px) {
-        .service-web-page .strategy .block:hover .comment-holder {
-          -webkit-transform: translate3d(-368px, 0px, 0px);
-          transform: translate3d(-368px, 0px, 0px);
-          z-index: 1; } }
-    @media only screen and (max-width: 480px) {
-      .service-web-page .strategy .block:hover .number div {
-        display: none !important; } }
+      background: #96b03c; }
     .service-web-page .strategy .block:hover .icon {
       background: #96b03c;
       -webkit-transform: translate3d(-20%, 0, 0);
       transform: translate3d(-20%, 0, 0); }
-      @media only screen and (max-width: 1280px) {
-        .service-web-page .strategy .block:hover .icon {
-          left: 25%; } }
-      @media only screen and (max-width: 1024px) {
-        .service-web-page .strategy .block:hover .icon {
-          -webkit-transform: translate3d(0%, 0px, 0px);
-          transform: translate3d(0%, 0px, 0px); } }
-      @media only screen and (max-width: 980px) {
-        .service-web-page .strategy .block:hover .icon {
-          left: 25%;
-          -webkit-transform: translate3d(-34%, 0px, 0px);
-          transform: translate3d(-34%, 0px, 0px); } }
-    @media only screen and (max-width: 1280px) {
-      .service-web-page .strategy .block:hover .idea {
-        opacity: 0;
-        display: none; } }
-    @media only screen and (max-width: 1024px) {
-      .service-web-page .strategy .block:hover .idea {
-        display: block;
-        opacity: 1; } }
-    @media only screen and (max-width: 980px) {
-      .service-web-page .strategy .block:hover .idea {
-        opacity: 0;
-        display: none; } }
     .service-web-page .strategy .block:hover .regular {
       opacity: 0; }
     .service-web-page .strategy .block:hover .hover {
@@ -7292,27 +7253,6 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       transform: translate3d(0, 0, 0);
       transition: opacity 0.3s 0.2s, -webkit-transform 0.3s 0.2s;
       transition: opacity 0.3s 0.2s, transform 0.3s 0.2s; }
-      @media only screen and (max-width: 1210px) {
-        .service-web-page .strategy .block:hover .comment-holder-inner {
-          -webkit-transform: translate3d(-30px, 0px, 0px);
-          transform: translate3d(-30px, 0px, 0px); } }
-      @media only screen and (max-width: 1160px) {
-        .service-web-page .strategy .block:hover .comment-holder-inner {
-          -webkit-transform: translate3d(-60px, 0px, 0px);
-          transform: translate3d(-60px, 0px, 0px); } }
-      @media only screen and (max-width: 1060px) {
-        .service-web-page .strategy .block:hover .comment-holder-inner {
-          -webkit-transform: translate3d(-80px, 0px, 0px);
-          transform: translate3d(-80px, 0px, 0px); } }
-      @media only screen and (max-width: 1024px) {
-        .service-web-page .strategy .block:hover .comment-holder-inner {
-          -webkit-transform: translate3d(0px, 0px, 0px);
-          transform: translate3d(0px, 0px, 0px); } }
-  @media only screen and (max-width: 1024px) {
-    .service-web-page .strategy .block {
-      border: 0;
-      width: 100%;
-      border-bottom: #222222 solid 1px; } }
 .service-web-page .strategy .icon {
   width: 50%;
   left: 50%;
@@ -7332,9 +7272,6 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     height: 156px;
     transition: opacity 0.3s;
     background: url(../img/web/icons.png); }
-    @media only screen and (max-width: 1024px) {
-      .service-web-page .strategy .icon div {
-        left: calc(50% - 172px); } }
   .service-web-page .strategy .icon .hover {
     opacity: 0; }
   .service-web-page .strategy .icon .better-searching {
@@ -7361,22 +7298,10 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     background-position: 0 -1404px;
     -webkit-transform: scale(0.8);
     transform: scale(0.8); }
-    @media only screen and (max-width: 1060px) {
-      .service-web-page .strategy .icon .sustainability-white {
-        background-position: 14px -1404px;
-        background-repeat: no-repeat;
-        width: 400px; } }
-    @media only screen and (max-width: 1024px) {
-      .service-web-page .strategy .icon .sustainability-white {
-        background-position: -2px -1404px;
-        z-index: 1; } }
   .service-web-page .strategy .icon .they-will-stay {
     background-position: 0 -1560px; }
   .service-web-page .strategy .icon .they-will-stay-white {
     background-position: 0 -1716px; }
-  @media only screen and (max-width: 768px) {
-    .service-web-page .strategy .icon {
-      display: none; } }
 .service-web-page .strategy .text-holder {
   z-index: 2;
   width: 210px; }
@@ -7394,24 +7319,20 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     margin: 8px 0 0 0;
     padding-right: 20%;
     padding-right: 50px; }
-  @media only screen and (max-width: 768px) {
-    .service-web-page .strategy .idea {
-      width: 80%; }
-      .service-web-page .strategy .idea .text-holder {
-        width: 100%; } }
 .service-web-page .strategy .comment-holder {
   position: absolute;
-  width: 60%;
+  width: 50%;
   height: 100%;
   left: 100%;
   background: white;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   transition: -webkit-transform 0.3s, background-color 0.3s;
   transition: transform 0.3s, background-color 0.3s; }
 .service-web-page .strategy .comment-holder-inner {
   position: absolute;
   height: 100%;
+  width: 100%;
   opacity: 0;
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
@@ -7434,93 +7355,59 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
   top: calc(50% - 40px); }
 .service-web-page .strategy .comment {
   font-style: italic;
-  left: 185px;
-  width: 170px;
+  right: 0;
+  padding-right: 10px;
+  width: 50%;
   line-height: 24px; }
-  @media only screen and (max-width: 1240px) {
-    .service-web-page .strategy .comment .row .table {
-      width: 190px; } }
-@media only screen and (max-width: 1600px) {
-  .service-web-page .strategy .row .table {
-    margin: 56px 10px 72px; } }
-@media only screen and (max-width: 1160px) {
-  .service-web-page .strategy .row > p.text {
-    width: 80%;
-    float: none;
-    margin: 0 auto;
-    width: 80%; }
-  .service-web-page .strategy .row .idea p.text {
-    padding: 0; } }
-@media only screen and (max-width: 1024px) {
-  .service-web-page .strategy .row .table {
-    border-bottom: 0 none; }
-  .service-web-page .strategy .row > p.text {
-    padding: 0 24px !important; } }
-@media only screen and (max-width: 840px) {
-  .service-web-page .strategy .row > p.text {
-    padding: 0 24px;
-    width: 100%; } }
-@media only screen and (max-width: 768px) {
-  .service-web-page .strategy {
-    margin-bottom: 80px; }
-    .service-web-page .strategy .row:first-child {
-      margin-bottom: 70px; }
-    .service-web-page .strategy .row:last-child {
-      position: relative;
-      height: 1220px; }
-      .service-web-page .strategy .row:last-child .table {
-        border: 0; }
-      .service-web-page .strategy .row:last-child .comment-holder {
-        z-index: 0; }
-    .service-web-page .strategy .table-row .block {
-      position: absolute;
-      overflow: hidden;
-      border: #222222 solid 1px;
-      border-bottom: 0;
-      right: 10px;
-      left: 10px;
-      width: auto; }
-    .service-web-page .strategy .table-row:first-child .block:first-child {
-      top: 0; }
-    .service-web-page .strategy .table-row:first-child .block:last-child {
-      top: 622px; }
-    .service-web-page .strategy .table-row:nth-child(2) .block:first-child {
-      top: 207px; }
-    .service-web-page .strategy .table-row:nth-child(2) .block:last-child {
-      top: 830px; }
-    .service-web-page .strategy .table-row:last-child .block:first-child {
-      top: 414px; }
-    .service-web-page .strategy .table-row:last-child .block:last-child {
-      top: 1036px;
-      border-bottom: #222222 solid 25px; } }
-@media only screen and (max-width: 460px) {
-  .service-web-page .strategy .comment-holder {
-    width: 100%;
-    right: 0;
-    left: inherit;
-    -webkit-transform: none !important;
-    transform: none !important; }
-  .service-web-page .strategy .comment-holder-inner {
-    text-align: center;
-    width: 100%;
-    right: 10px; }
+@media only screen and (max-device-width: 1420px) {
   .service-web-page .strategy .proof {
-    position: relative;
-    top: 0;
-    font-size: 60px;
-    line-height: 100px; }
+    font-size: 64px; } }
+@media only screen and (max-device-width: 1200px) {
+  .service-web-page .strategy .table-row {
+    border: 0; }
+  .service-web-page .strategy .block {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #222222; }
+    .service-web-page .strategy .block:hover .icon {
+      display: none; }
+  .service-web-page .strategy .text-holder {
+    width: auto; }
+  .service-web-page .strategy .comment-holder {
+    width: 34%;
+    left: auto;
+    right: 0; } }
+@media only screen and (max-device-width: 900px) {
+  .service-web-page .strategy .comment-holder {
+    right: 40px;
+    width: 42%; }
+  .service-web-page .strategy .proof {
+    font-size: 42px; }
   .service-web-page .strategy .comment {
-    padding: 0 24px;
-    top: 138px;
-    left: 0;
-    width: 100%; }
+    width: 60%; } }
+@media only screen and (max-device-width: 600px) {
   .service-web-page .strategy .number {
-    width: 25%; }
-  .service-web-page .strategy .idea .text {
     display: none; }
-  .service-web-page .strategy .idea .title {
-    margin-left: -40px;
-    margin-top: -80px; } }
+  .service-web-page .strategy .idea {
+    left: 2%;
+    width: 48%; } }
+@media only screen and (max-device-width: 500px) {
+  .service-web-page .strategy .icon {
+    display: none !important; }
+  .service-web-page .strategy .idea {
+    left: 2%;
+    width: 98%;
+    transition: opacity 0.3s 0.2s; }
+  .service-web-page .strategy .comment-holder {
+    display: none; }
+  .service-web-page .strategy .table-row:hover .block:hover .idea {
+    opacity: 0;
+    transition: opacity 0.3s; }
+  .service-web-page .strategy .table-row:hover .block:hover .comment-holder {
+    padding: 0 12px;
+    right: auto;
+    width: 100%;
+    display: block; } }
 
 .service-web-page .technologies .block {
   overflow: hidden;

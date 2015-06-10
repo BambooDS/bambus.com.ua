@@ -12,6 +12,16 @@ define(['backbone','preloader'], function (Backbone, preloader) {
             "click .logo": "hideSubMenu"
         },
         initialize: function (options) {
+            var pathArray = window.location.pathname.split('/');
+            var secondLevelLocation = pathArray[1];
+            if (secondLevelLocation === 'en') {
+                var el = document.getElementById('ukr');
+                el.parentNode.removeChild(el);
+            } else {
+                var el = document.getElementById('eng');
+                el.parentNode.removeChild(el);
+            }
+            
             var el = document.querySelector('.menu-panel');
             this.setElement(el);
             this.menuWrapper = this.el.querySelector('#menu-wrapper');

@@ -1,23 +1,19 @@
 .service-web-page {
     .strategy {
-        .table-row:hover {
-            .block:first-child:not(:hover) {
-                transform: translate3d(-50%, 0, 0);
-                & + .block:hover {
+        @media #{$screen} and(min-width:1200px){
+            .table-row:hover {
+                .block:first-child:not(:hover) {
                     transform: translate3d(-50%, 0, 0);
-                    @media only screen and (max-width: 1024px) {
-                        transform: translate3d(0, 0, 0);
+                    & + .block:hover {
+                        transform: translate3d(-50%, 0, 0);
+                        .comment-holder{
+                            margin-left: -1px;
+                        }
                     }
                 }
-                @media only screen and (max-width: 1024px) {
-                    transform: translate3d(0, 0, 0);
-                }
-            }
-            .block:first-child:hover {
-                & + .block {
-                    transform: translate3d(50%, 0, 0);
-                    @media only screen and (max-width: 1024px) {
-                        transform: translate3d(0, 0, 0);
+                .block:first-child:hover {
+                    & + .block {
+                        transform: translate3d(50%, 0, 0);
                     }
                 }
             }
@@ -32,46 +28,12 @@
             &:hover {
                 .comment-holder {
                     background: $green;
-                    transform: translate3d(-16%, 0, 0);
-                    @media only screen and (max-width: 1024px) {
-                        transform: translate3d(-368px, 0px, 0px);
-                        z-index: 1;
-                    }
                 }
                 color: white;
                 background: $green;
-                .number div {
-                    @media only screen and (max-width: 480px) {
-                        display: none !important;
-                    }
-                }
                 .icon {
                     background: $green;
                     transform: translate3d(-20%, 0, 0);
-                    @media only screen and (max-width: 1280px) {
-                        left: 25%;
-                    }
-                    @media only screen and (max-width: 1024px) {
-                        transform: translate3d(0%, 0px, 0px);
-                    }
-                    @media only screen and (max-width: 980px) {
-                        left: 25%;
-                        transform: translate3d(-34%, 0px, 0px);
-                    }
-                }
-                .idea {
-                    @media only screen and (max-width: 1280px) {
-                        opacity: 0;
-                        display: none;
-                    }
-                    @media only screen and (max-width: 1024px) {
-                        display: block;
-                        opacity: 1;
-                    }
-                    @media only screen and (max-width: 980px) {
-                        opacity: 0;
-                        display: none;
-                    }
                 }
                 .regular {
                     opacity: 0;
@@ -83,24 +45,7 @@
                     opacity: 1;
                     transform: translate3d(0, 0, 0);
                     transition: opacity .3s .2s, transform .3s .2s;
-                    @media only screen and (max-width: 1210px) {
-                        transform: translate3d(-30px, 0px, 0px);
-                    }
-                    @media only screen and (max-width: 1160px) {
-                        transform: translate3d(-60px, 0px, 0px);
-                    }
-                    @media only screen and (max-width: 1060px) {
-                        transform: translate3d(-80px, 0px, 0px);
-                    }
-                    @media only screen and (max-width: 1024px) {
-                        transform: translate3d(0px, 0px, 0px);
-                    }
                 }
-            }
-            @media only screen and (max-width: 1024px) {
-                border: 0;
-                width: 100%;
-                border-bottom: rgb(34, 34, 34) solid 1px;
             }
         }
         .icon {
@@ -120,9 +65,6 @@
                 height: 156px;
                 transition: opacity .3s;
                 background: image-url("web/icons.png");
-                @media only screen and (max-width: 1024px) {
-                    left: calc(50% - 172px );
-                }
             }
             .hover {
                 opacity: 0;
@@ -158,24 +100,12 @@
             .sustainability-white {
                 background-position: 0 -1404px;
                 transform: scale(0.8);
-                @media only screen and (max-width: 1060px) {
-                    background-position: 14px -1404px;
-                    background-repeat: no-repeat;
-                    width: 400px;
-                }
-                @media only screen and (max-width: 1024px) {
-                    background-position: -2px -1404px;
-                    z-index: 1;
-                }
             }
             .they-will-stay {
                 background-position: 0 -1560px;
             }
             .they-will-stay-white {
                 background-position: 0 -1716px;
-            }
-            @media only screen and (max-width: 768px) {
-                display: none;
             }
         }
         .text-holder {
@@ -199,25 +129,20 @@
             height: 100%;
             left: 15%;
             width: 35%;
-            @media only screen and (max-width: 768px) {
-                width: 80%;
-                .text-holder {
-                    width: 100%;
-                }
-            }
         }
         .comment-holder {
             position: absolute;
-            width: 60%;
+            width: 50%;
             height: 100%;
             left: 100%;
             background: white;
-            transform: translate3d(-100%, 0, 0);
+            transform: translate3d(0, 0, 0);
             transition: transform .3s, background-color .3s;
         }
         .comment-holder-inner {
             position: absolute;
             height: 100%;
+            width: 100%;
             opacity: 0;
             transform: translate3d(0, 100%, 0);
             transition: opacity .1s, transform .1s;
@@ -244,136 +169,83 @@
         }
         .comment {
             font-style: italic;
-            left: 185px;
-            width: 170px;
+            right: 0;
+            padding-right: 10px;
+            width: 50%;
             line-height: 24px;
             @extend %center-block-vertical;
-            @media only screen and (max-width: 1240px) {
-                .row .table {
-                    width: 190px;
-                }
+        }
+        @media #{$screen} and(max-device-width:1420px){
+            .proof{
+                font-size: 64px;
             }
         }
-        @media only screen and (max-width: 1600px) {
-            .row .table {
-                margin: 56px 10px 72px;
+        @media #{$screen} and(max-device-width:1200px){
+            .table-row{
+                border: 0;
             }
-        }
-        @media only screen and (max-width: 1160px) {
-            .row > p.text {
-                width: 80%;
-                float: none;
-                margin: 0 auto;
-                width: 80%;
-            }
-            .row .idea p.text {
-                padding: 0;
-            }
-        }
-        @media only screen and (max-width: 1024px) {
-            .row .table {
-                border-bottom: 0 none;
-            }
-            .row > p.text {
-                padding: 0 24px !important;
-            }
-        }
-        @media only screen and (max-width: 840px) {
-            .row > p.text {
-                padding: 0 24px;
+            .block{
                 width: 100%;
-            }
-        }
-        @media only screen and (max-width: 768px) {
-            margin-bottom: 80px;
-            .row:first-child {
-                margin-bottom: 70px;
-            }
-            .row:last-child {
-                position: relative;
-                height: 1220px;
-                .table {
-                    border: 0;
-                }
-                .comment-holder {
-                    z-index: 0;
+                border: 0;
+                border-bottom: 1px solid #222222;
+                &:hover .icon{
+                    display: none;
                 }
             }
-            .table-row .block {
-                position: absolute;
-                overflow: hidden;
-                border: rgb(34, 34, 34) solid 1px;
-                border-bottom: 0;
-                right: 10px;
-                left: 10px;
+            .text-holder{
                 width: auto;
             }
-            .table-row:first-child {
-                .block:first-child {
-                    top: 0;
-                }
-                .block:last-child {
-                    top: 622px;
-                }
-            }
-            .table-row:nth-child(2) {
-                .block:first-child {
-                    top: 207px;
-                }
-                .block:last-child {
-                    top: 830px;
-                }
-            }
-            .table-row:last-child {
-                .block:first-child {
-                    top: 414px;
-                }
-                .block:last-child {
-                    top: 1036px;
-                    border-bottom: rgb(34, 34, 34) solid 25px;
-                }
+            .comment-holder{
+                width: 34%;
+                left: auto;
+                right: 0;
             }
         }
-        @media only screen and (max-width: 460px) {
+        @media #{$screen} and(max-device-width:900px){
             .comment-holder {
-                width: 100%;
-                right: 0;
-                left: inherit;
-                transform: none !important;
+                right: 40px;
+                width: 42%;
             }
-            .comment-holder-inner {
-                text-align: center;
-                width: 100%;
-                right: 10px;
-            }
-            .proof {
-                position: relative;
-                top: 0;
-                font-size: 60px;
-                line-height: 100px;
+            .proof{
+                font-size: 42px;
             }
             .comment {
-                padding: 0 24px;
-                top: 138px;
-                left: 0;
-                width: 100%;
+                width: 60%;
             }
-            .number {
-                width: 25%;
-            }
-            .idea .text{
+        }
+        @media #{$screen} and(max-device-width:600px){
+            .number{
                 display: none;
             }
-            .idea .title{
-                margin-left: -40px;
-                margin-top: -80px;
+            .idea {
+                left: 2%;
+                width: 48%;
+            }
+        }
+        @media #{$screen} and(max-device-width:500px){
+            .icon {
+                display: none !important;
+            }
+            .idea {
+                left: 2%;
+                width: 98%;
+                transition: opacity .3s .2s;
+            }
+            .comment-holder {
+                display: none;
+            }
+            .table-row:hover .block:hover{
+                .idea {
+                    opacity: 0;
+                    transition: opacity .3s;
+                }
+                .comment-holder {
+                    padding: 0 12px;
+                    right: auto;
+                    width: 100%;
+                    display: block;
+                }
             }
         }
     }
 }
-
-
-
-
-
-

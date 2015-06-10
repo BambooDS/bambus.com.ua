@@ -115,7 +115,6 @@
 }
 
 .job{
-    margin-bottom: 72px;
     .columns{
         padding: 0;
     }
@@ -243,8 +242,5 @@
             float: right !important;
             margin-left: 0 !important;
         }
-    }
-    @media only screen and (max-width:1440px){
-        margin-bottom: 0;
     }
 }

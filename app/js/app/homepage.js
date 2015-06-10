@@ -7,6 +7,12 @@ define(['page', 'slider'], function (Page, Slider) {
         name: 'home',
         // TODO stop and run slider on page show
         render: function () {
+            var pathArray = window.location.pathname.split('/');
+            var secondLevelLocation = pathArray[1];
+            if (secondLevelLocation === 'en') {
+                document.querySelector('[href="/about"]').setAttribute('href', '/en/about');
+            }
+            
             this.rendered = true;
             console.log('redern home');
             this.widgets = _.extend(this.widgets || {}, {
