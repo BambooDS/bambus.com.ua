@@ -1621,6 +1621,9 @@ a {
   transform: translate3d(0, 0, 0px) scale(1) !important;
   opacity: 1 !important; }
 
+.mobilka .workflow div:first-child {
+  display: none; }
+
 .swipe {
   overflow: hidden;
   visibility: hidden;
@@ -1768,7 +1771,7 @@ a {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%); }
 
-.service-web-page .intro .text-holder, .service-web-page .cta .text-holder, .service-web-page .services-section .back .holder, .service-web-page .vectors .back .holder, .service-web-page .process .holder, .service-web-page .strategy .text-holder, .service-web-page .strategy .comment {
+.service-web-page .services-section .back .holder, .service-web-page .vectors .back .holder, .service-web-page .process .holder, .service-web-page .strategy .comment {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1897,6 +1900,12 @@ a {
   .showreel video {
     display: block;
     width: 100%; }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+      .showreel video {
+        height: 570px; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+      .showreel video {
+        height: 570px; } }
   .showreel .title {
     text-align: center;
     padding-top: 24px;
@@ -3199,7 +3208,7 @@ html.services-inner #services-menu {
             transition: all 0.3s ease-in-out; }
           @media only screen and (max-width: 640px) {
             .portfolio-single-page .header-project .meta-container .project-meta-block .team .team-member {
-              overflow: hidden;
+              overflow: visible;
               width: 76px; } }
       .portfolio-single-page .header-project .meta-container.active {
         -webkit-transform: translate(0);
@@ -4813,7 +4822,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       position: relative;
       height: 100%;
       width: 50%;
-      float: left; }
+      float: left;
+      /*background: url("/pictures/about/panda/1.jpg") no-repeat scroll 100% 100%;*/ }
       .about-page .intro .panda img {
         position: absolute;
         display: block;
@@ -4830,6 +4840,24 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
         @media only screen and (max-width: 1024px) {
           .about-page .intro .panda img {
             max-width: 100%; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+          .about-page .intro .panda img {
+            position: relative;
+            -webkit-transform: translateY(220px) !important;
+            transform: translateY(220px) !important; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+          .about-page .intro .panda img {
+            -webkit-transform: translateY(100px) !important;
+            transform: translateY(100px) !important; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+          .about-page .intro .panda img {
+            position: relative;
+            -webkit-transform: translateY(220px) !important;
+            transform: translateY(220px) !important; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          .about-page .intro .panda img {
+            -webkit-transform: translateY(100px) !important;
+            transform: translateY(100px) !important; } }
       @media only screen and (max-width: 1024px) {
         .about-page .intro .panda {
           float: right;
@@ -4903,9 +4931,6 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     @media only screen and (max-width: 800px) {
       .about-page .intro .scroll-icon {
         display: none; } }
-  .about-page .mobilka .intro .copy {
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
   .about-page .about-company {
     overflow: hidden;
     position: relative; }
@@ -5000,6 +5025,9 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
           display: none; } }
     .about-page .about-company .team-switch .columns {
       padding: 0; }
+    @media only screen and (max-width: 1024px) {
+      .about-page .about-company .team-switch .columns:first-child {
+        width: 100% !important; } }
     @media only screen and (max-width: 1280px) {
       .about-page .about-company .team-switch.row .large-6, .about-page .about-company .team-switch.row .medium-6, .about-page .about-company .slider-holder.row .large-6, .about-page .about-company .slider-holder.row .medium-6 {
         width: 70%; } }
@@ -5240,10 +5268,16 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
   .about-page .about-showreel {
     background: black;
     position: relative;
-    background-size: 30%; }
+    background-size: 100%; }
     @media only screen and (min-width:641px) {
       .about-page .about-showreel {
         background-size: auto; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+      .about-page .about-showreel {
+        height: 570px; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+      .about-page .about-showreel {
+        height: 570px; } }
     .about-page .about-showreel video {
       display: block;
       width: 100%;
@@ -5251,6 +5285,12 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       transition: opacity 0.3s;
       cursor: pointer;
       padding-left: 8px; }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+        .about-page .about-showreel video {
+          height: 570px; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+        .about-page .about-showreel video {
+          height: 570px; } }
     .about-page .about-showreel .title {
       text-align: center;
       padding-top: 340px;
@@ -6462,10 +6502,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     position: relative; }
     .service-web-page .intro .columns, .service-web-page .cta .columns {
       height: 100%; }
-      @media only screen and (max-width: 1024px) {
-        .service-web-page .intro .columns .text-holder, .service-web-page .cta .columns .text-holder {
-          top: 45%;
-          padding: 0 2px; } }
+    .service-web-page .intro .text-holder, .service-web-page .cta .text-holder {
+      padding-top: 120px; }
     .service-web-page .intro .title, .service-web-page .cta .title {
       color: white;
       font-size: 44px;
@@ -7304,7 +7342,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
     background-position: 0 -1716px; }
 .service-web-page .strategy .text-holder {
   z-index: 2;
-  width: 210px; }
+  width: 210px;
+  padding-top: 40px; }
 .service-web-page .strategy .idea {
   text-align: left;
   position: absolute;
@@ -7384,7 +7423,8 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
   .service-web-page .strategy .proof {
     font-size: 42px; }
   .service-web-page .strategy .comment {
-    width: 60%; } }
+    width: 60%;
+    padding-right: 20px; } }
 @media only screen and (max-device-width: 600px) {
   .service-web-page .strategy .number {
     display: none; }
@@ -7507,9 +7547,6 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
   @media only screen and (min-width: 841px) {
     .service-web-page .intro-top .image-small, .service-web-page .intro-top .text {
       width: 50%; } }
-.service-web-page .intro-top .text {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0); }
 
 .service-web-page .cta {
   background: #2d2d2d;

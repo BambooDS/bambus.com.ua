@@ -13,7 +13,9 @@ a{
     transform: translate3d(0, 0, 0px) scale(1) !important;
     opacity: 1 !important;
 }
-
+.mobilka .workflow div:first-child{
+    display: none;
+}
 
 .swipe {
     overflow: hidden;
@@ -284,6 +286,18 @@ a{
     video {
         display: block;
         width: 100%;
+        @media only screen 
+        and (min-device-width: 768px) 
+            and (max-device-width: 1024px) 
+            and (-webkit-min-device-pixel-ratio: 1) {
+            height: 570px;
+        }
+        @media only screen 
+        and (min-device-width: 768px) 
+            and (max-device-width: 1024px) 
+            and (-webkit-min-device-pixel-ratio: 2) {
+            height: 570px;
+        }
     }
     .title {
         text-align: center;

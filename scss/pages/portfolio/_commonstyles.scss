@@ -219,7 +219,7 @@ $text-tytle: #4c4c4c;
                             }
                         }
                         @media #{$screen} and(max-width:640px) {
-                            overflow: hidden;
+                            overflow: visible;
                             width: 76px;
                         }
                     }

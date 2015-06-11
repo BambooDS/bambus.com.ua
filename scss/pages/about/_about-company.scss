@@ -126,6 +126,11 @@
     .team-switch .columns{
         padding: 0; 
     }
+    .team-switch .columns:first-child{
+        @media only screen and (max-width:1024px){
+            width: 100% !important;
+        }
+    }
     .team-switch.row, .slider-holder.row{
         .large-6, .medium-6{
             @media only screen and (max-width:1280px){

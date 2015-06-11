@@ -129,15 +129,9 @@ $delay: 0.35s;
         position: relative;
         .columns {
             height: 100%;
-            .text-holder {
-                @media only screen and (max-width: 1024px) {
-                    top: 45%;
-                    padding: 0 2px;
-                }
-            }
         }
         .text-holder {
-            @extend %center-block-vertical;
+            padding-top: 120px;
         }
         .title {
             color: white;
