@@ -1621,7 +1621,7 @@ a {
   transform: translate3d(0, 0, 0px) scale(1) !important;
   opacity: 1 !important; }
 
-.mobilka .workflow div:first-child {
+.mobilka .workflow > div:last-child {
   display: none; }
 
 .swipe {
@@ -5416,8 +5416,19 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       color: white; }
     .about-page .cta-section ul {
       list-style: none;
-      padding: 0;
-      margin: 0 0 0 140px; }
+      padding: 0 0 0 140px; }
+      @media only screen and (max-width: 1600px) {
+        .about-page .cta-section ul {
+          padding: 0 50px; }
+          .about-page .cta-section ul li {
+            float: left;
+            margin: 0 18px; } }
+      @media only screen and (max-width: 480px) {
+        .about-page .cta-section ul {
+          padding: 0 10px; } }
+      @media only screen and (max-width: 380px) {
+        .about-page .cta-section ul li {
+          float: none; } }
     .about-page .cta-section .text {
       font-size: 22px;
       line-height: 24px;
@@ -5447,7 +5458,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
       margin-bottom: 16px; }
       @media only screen and (max-width: 380px) {
         .about-page .cta-section .button {
-          width: 272px; } }
+          width: 100%; } }
     .about-page .cta-section .title {
       line-height: 48px;
       margin: 120px 0 28px 0;
@@ -5458,15 +5469,7 @@ html.portfolio-theme #menu-wrapper:before, html.portfolio-theme #menu-wrapper:af
         background-color: #96b03c;
         padding-bottom: 80px; }
         .about-page .cta-section .large-5 {
-          width: 100%; }
-        .about-page .cta-section ul {
-          margin: 0 50px; }
-          .about-page .cta-section ul li {
-            float: left;
-            margin: 0 18px; }
-          @media only screen and (max-width: 480px) {
-            .about-page .cta-section ul {
-              margin: 0 10px; } } }
+          width: 100%; } }
     @media only screen and (max-width: 1180px) {
       .about-page .cta-section {
         background: url(../img/about/footer/tree-small.jpg) -18px 18px no-repeat, url(../img/about/footer/tree-3.png) right bottom no-repeat;

@@ -13,7 +13,7 @@ a{
     transform: translate3d(0, 0, 0px) scale(1) !important;
     opacity: 1 !important;
 }
-.mobilka .workflow div:first-child{
+.mobilka .workflow > div:last-child{
     display: none;
 }
 
