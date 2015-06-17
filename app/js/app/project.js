@@ -10,15 +10,6 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
 
     var ProjectView = Page.extend({
         events: {
-            'click .close-page': function() {
-                app.navigate("portfolio", {trigger: true});
-            },
-            'click .open-meta': function() {
-                $('.meta-container').toggleClass('active');
-                setTimeout(function() {
-                    $('.meta-container').toggleClass('openup');
-                }, 500);
-            },
             'mouseleave .openup': function(e) {
                 if (e.relatedTarget.className === 'open-meta') {
                 }
@@ -221,5 +212,5 @@ define(['helper', 'portfolio_collection', 'page', 'app', 'backbone', 'mustache',
             });
         }
     });
-    return ProjectModel; 
+    return ProjectModel;
 });

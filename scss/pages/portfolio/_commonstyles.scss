@@ -5,6 +5,69 @@
 $link: #0071b3;
 $text-tytle: #4c4c4c;
 
+.close-page, .open-meta {
+    display: none;
+    transition: background 0.3s;
+    position: fixed;
+    z-index: 49;
+    top: 36px;
+    left: 0;
+
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+
+    margin-left: 8px;
+    background: rgba(45, 45, 45, 0.8);
+
+    &:after {
+        transition: opacity 0.3s;
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        background: $close-page no-repeat center center;
+        background-size: 32px;
+    }
+    &:hover {
+        background: $green;
+        background-size: 32px;
+        &:after {
+            opacity: 1;
+        }
+    }
+    @media #{$screen} and(max-width:940px) {
+        top: 0px;
+        left: 8px;
+        margin: 0;
+    }
+    @media #{$screen} and(max-width:640px) {
+        left: 0px;
+    }
+}
+.open-meta{
+    right: 18px;
+    left: auto;
+    @media #{$screen} and(max-width:940px) {
+        right: 0px;
+        left: auto;
+    }
+    &:after {
+        background: $meta-plus no-repeat center center;
+        background-size: 40px;
+    }
+}
+.portfolio-theme .close-page,
+.portfolio-theme .open-meta{
+    display: block;
+}
+
+
+
 .portfolio-single-page {
     /* page appear section */
     @include page(portfolio-theme);
@@ -68,68 +131,17 @@ $text-tytle: #4c4c4c;
                     padding-right: 60px;
                 }
             }
-            .close-page, .open-meta {
-                transition: background 0.3s;
-                position: fixed;
-                top: 36px;
-                left: 0;
-                height: 50px;
-                width: 50px;
-                border: 1px solid rgba(255,255,255,0.1);
-                cursor: pointer;
-                margin-left: 8px;
-                z-index: 100;
 
-                &:after {
-                    transition: opacity 0.3s;
-                    content: '';
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    width: 100%;
-                    height: 100%;
-                    opacity: 0.8;
-                    background: $close-page no-repeat center center;
-                    background-size: 32px;
-                }
-                &:hover {
-                    background: $green;
-                    background-size: 32px;
-                    &:after {
-                        opacity: 1;
-                    }
-                }
-                @media #{$screen} and(max-width:940px) {
-                    top: 0px;
-                    left: 8px;
-                    margin: 0;
-                }
-                @media #{$screen} and(max-width:640px) {
-                    left: 0px;
-                }
-            }
-            .open-meta{
-                right: 18px;
-                left: auto;
-                @media #{$screen} and(max-width:940px) {
-                    right: 0px;
-                    left: auto;
-                }
-                &:after {
-                    background: $meta-plus no-repeat center center;
-                    background-size: 40px;
-                }
-            }
         }
         .meta-container{
             height: 100%;
             width: 33%;
             position: fixed;
-            z-index: 50;
             right: 0;
             top: 0;
-            transform: translate(100%);
-            transition: transform 0.5s ease 0s;
+            z-index: -1;
+            transition: z-index 1s ease 0s;
+
             @media #{$screen} and(max-width:1140px) {
                 width: 50%;
             }
@@ -141,9 +153,14 @@ $text-tytle: #4c4c4c;
                 height: 100%;
                 width: 100%;
                 position: absolute;
+                transform: translate(100%);
+                transition: transform 0.5s ease 0s;
                 top: 0;
                 padding: 60px 80px 60px 40px;
                 overflow: auto;
+
+                -webkit-overflow-scrolling: touch;
+
                 @media #{$screen} and(max-width:640px) {
                     padding: 60px 40px 20px 10px;
                 }
@@ -226,8 +243,12 @@ $text-tytle: #4c4c4c;
                 }
             }
             &.active{
-                transform: translate(0);
-                transition: transform 0.5s ease 0s;
+                transition: z-index 1s ease 0s;
+                z-index: 48;
+                .project-meta-block{
+                    transform: translate(0);
+                    transition: transform 0.5s ease 0s;
+                }
             }
 
         }
@@ -259,9 +280,7 @@ $text-tytle: #4c4c4c;
         .visual .data {
             color: rgba(0, 0, 0, 0.5);
         }
-        .name-project .close-page, .name-project .open-meta {
-            background: rgba(45, 45, 45, 0.8);
-        }
+
     }
 
     // technological

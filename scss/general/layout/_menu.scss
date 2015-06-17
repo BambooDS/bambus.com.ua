@@ -2,9 +2,6 @@
     position: fixed;
     z-index: 50;
     height: 100%;
-    @media only screen and (max-height: 534px) {
-        z-index: 101;
-    }
     @media #{$medium-up} {
         .line {
             display: block;
