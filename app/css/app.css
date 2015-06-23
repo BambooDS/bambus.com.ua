@@ -1624,6 +1624,11 @@ a {
 .mobilka .workflow > div:last-child {
   display: none; }
 
+.androidNative #menu-wrapper, .androidNative #menu {
+  width: 240px !important; }
+  .androidNative #menu-wrapper .menu-list li::before, .androidNative #menu-wrapper .contact-link::before, .androidNative #menu .menu-list li::before, .androidNative #menu .contact-link::before {
+    background: none; }
+
 .swipe {
   overflow: hidden;
   visibility: hidden;

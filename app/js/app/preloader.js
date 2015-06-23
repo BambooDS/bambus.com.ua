@@ -11,9 +11,18 @@ define(['backbone', 'helper'], function(Backbone, Helper) {
         this.documentLoaded = false;
         this.duration = 4;
         this.el.parentNode.classList.add('dom-loaded');
+        
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone|WPDesktop|Lumia|NOKIA|ZuneWP7|Nokia|Opera Mini/i.test(navigator.userAgent)) {
             this.el.parentNode.classList.add('mobilka');
         }
+
+        var isAndroid = navigator.userAgent.indexOf('Android') >= 0;
+        var webkitVer = parseInt((/WebKit\/([0-9]+)/.exec(navigator.appVersion) || 0)[1], 10) || void 0;
+        var isNativeAndroid = isAndroid && webkitVer <= 534 && navigator.vendor.indexOf('Google') == 0;
+        if (isNativeAndroid) {
+            this.el.parentNode.classList.add('androidNative');
+        }
+
         this.timeStamp = new Date();
         this.dispatcher = _.clone(Backbone.Events);
         this.init();

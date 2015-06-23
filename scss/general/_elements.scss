@@ -17,6 +17,15 @@ a{
     display: none;
 }
 
+.androidNative{
+    #menu-wrapper, #menu{
+        width: 240px !important;
+        .menu-list li::before, .contact-link::before{
+            background: none;
+        }
+    }
+}
+
 .swipe {
     overflow: hidden;
     visibility: hidden;
