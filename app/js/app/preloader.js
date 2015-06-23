@@ -11,7 +11,7 @@ define(['backbone', 'helper'], function(Backbone, Helper) {
         this.documentLoaded = false;
         this.duration = 4;
         this.el.parentNode.classList.add('dom-loaded');
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone|ZuneWP7|Nokia|Opera Mini/i.test(navigator.userAgent)) {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone|WPDesktop|Lumia|NOKIA|ZuneWP7|Nokia|Opera Mini/i.test(navigator.userAgent)) {
             this.el.parentNode.classList.add('mobilka');
         }
         this.timeStamp = new Date();

@@ -3,22 +3,45 @@
 
 define(['backbone', 'preloader'], function(Backbone, preloader) {
     'use strict';
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone|WPDesktop|Lumia|NOKIA|ZuneWP7|Nokia|Opera Mini/i.test(navigator.userAgent)) {
+        window.MOBILE = true;
+    } else{
+        window.MOBILE = false; 
+    } 
+
     var Menu = Backbone.View.extend({
-        events: {
-            "mousemove": "show",
-            "mouseleave": "hideDelayed",
-            "click .parent-link": "showSubMenu",
-            "click .back": "hideSubMenu",
-            "click .logo": "hideSubMenu",
-            'click .close-page': function() {
-                Backbone.history.navigate("portfolio", {trigger: true});
-            },
-            'click .open-meta': function() {
-                $('.meta-container').toggleClass('active');
-                setTimeout(function() {
-                    $('.meta-container').toggleClass('openup');
-                }, 500);
-            }
+        events: function() {
+            return MOBILE ?
+                    {
+                        "touchstart": 'show',
+                        "touchstart .parent-link": "showSubMenu",
+                        "touchstart .logo": "hideSubMenu",
+                        'touchstart .close-page': function() {
+                            Backbone.history.navigate("portfolio", {trigger: true});
+                        },
+                        'touchstart .open-meta': function() {
+                            $('.meta-container').toggleClass('active');
+                            setTimeout(function() {
+                                $('.meta-container').toggleClass('openup');
+                            }, 500);
+                        }
+                    } :
+                    {
+                        "mousemove": "show",
+                        "mouseleave": "hide",
+                        "click .parent-link": "showSubMenu",
+                        "click .logo": "hideSubMenu",
+                        'click .close-page': function() {
+                            Backbone.history.navigate("portfolio", {trigger: true});
+                        },
+                        'click .open-meta': function() {
+                            $('.meta-container').toggleClass('active');
+                            setTimeout(function() {
+                                $('.meta-container').toggleClass('openup');
+                            }, 500);
+                        }
+                    };
         },
         initialize: function(options) {
             var pathArray = window.location.pathname.split('/');
@@ -35,14 +58,11 @@ define(['backbone', 'preloader'], function(Backbone, preloader) {
             this.setElement(el);
             this.menuWrapper = this.el.querySelector('#menu-wrapper');
             this.menu = this.menuWrapper.querySelector('.main-menu');
-            preloader.dispatcher.on('loaded', this.hideDelayed, this)
+            preloader.dispatcher.on('loaded', this.hide, this)
         },
         hide: function() {
             this.menuWrapper.classList.add('hide');
             this.hideSubMenu();
-        },
-        hideDelayed: function() {
-            this.hide();
         },
         show: function(e) {
             if (e.target.className === 'open-meta' || e.target.className === 'close-page') {
