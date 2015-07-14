@@ -3021,7 +3021,7 @@ html.services-inner #services-menu {
   transform: translate3d(0, 0, 0); }
 
 /*
-    Author: Roman Vytak
+    Author: Roman Vytak 
 */
 .close-page, .open-meta {
   display: none;
@@ -3074,6 +3074,9 @@ html.services-inner #services-menu {
 
 .portfolio-theme .close-page, .portfolio-theme .open-meta {
   display: block; }
+
+.sub-title {
+  line-height: 16px; }
 
 .portfolio-single-page {
   /* page appear section */
